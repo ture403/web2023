@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃3</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #warp{
+            width: 1200px;
+            margin: 0 auto;
+
+        }
+        #header {
+            width: 1200px;
+            height: 100px;
+            background-color: #111;
+        }
+        #nav {
+            width: 1200px;
+            height: 100px;
+            background-color: #222;
+        }
+        
+        section {
+            width: 1200px;
+            height: 780px;
+    
+        }
+        section #lab{
+            float: left;
+        }
+        section #lab #aside {
+            width: 390px;
+            height: 390px;
+            background-color: #333;
+        }
+        
+        section #lab #section {
+            width: 390px;
+            height: 390px;
+            background-color: #444;
+        }
+        
+        section #article {
+            width: 810px;
+            height: 780px;
+            float: left;
+            background-color: #555;
+        }
+        footer {
+            width: 1200px;
+            height: 100px;
+            clear: both;
+        }
+        footer #aside1{
+            width: 600px;
+            height: 100%;
+            background-color: #666;
+            float: left;
+            
+        }
+        footer #footer {
+            width: 600px;
+            height: 100%;
+            background-color: #777;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header"></div>
+        <div id="nav"></div>
+        <section>
+            <div id="lab">
+                <div id="aside"></div>
+                <div id="section"></div>
+            </div>
+            <div id="article"></div>
+        </section>
+        <footer>
+            <div id="aside1"></div>
+            <div id="footer"></div>
+        </footer>
+        
+</div>
+</body>
+</html>
