@@ -78,7 +78,7 @@
                                 <div>
                                     100<br>
                                     200<br>
-                                    "ja"
+                                    "javascirpt"
                                 </div>
                            </details>
                         </div>
@@ -118,6 +118,7 @@
                         </div>
                     </div>
                     <!-- //sample02 -->
+
                     <div id="sample03" class="sample">
                         <h3>03. 변수 : 데이터 저장 + 데이터 변경 + 데이터 추가</h3>
                         <p>변수는 데이터를 저장, 변경도 가능하고 추가도 가능하다</p>
@@ -147,8 +148,9 @@
                                 </div>
                            </details>
                         </div>
-                    
+                    </div>
                     <!-- //sample03 -->
+
                     <div id="sample04" class="sample">
                         <h3>04. 상수 : 데이터 저장 + 데이터 변경(x)</h3>
                         <p>상수는 데이터 저장은 가능하다 변경은 불가능합니다.</p>
@@ -178,33 +180,38 @@
                                 </div>
                            </details>
                         </div>
-                        <div id="sample05" class="sample">
-                            <h3>05. 배열 : 데이터 저장(여러개): 표현방법1<h3>
-                            <p>new Array를 써서 사용하는방법</p>
-                            <div class="script">
+                    </div>
+                    <!-- //sample04 -->
+                    
+                    <div id="sample05" class="sample">
+                        <h3>05. 배열 : 데이터 저장(여러개): 표현방법1<h3>
+                        <p>new Array를 써서 사용하는방법</p>
+                        <div class="script">
 <pre><code class="language-js"> {
-    const arr = new Array();
-    arr[0] = 100;
-    arr[1] = 200;
-    arr[2] = "javascript"
+const arr = new Array();
+arr[0] = 100;
+arr[1] = 200;
+arr[2] = "javascript"
 
-    // console.log(arr[0]);
-    // console.log(arr[1]);
-    // console.log(arr[2]);
+// console.log(arr[0]);
+// console.log(arr[1]);
+// console.log(arr[2]);
 }
 </code></pre>
-                            </div>
-                            <div class="result">
-                                <details>
-                                    <summary>결과확인하기</summary>
-                                    <div>
-                                        100<br>
-                                        200<br>
-                                        "javascript"
-                                    </div>
-                               </details>
-                            </div>
-                   
+                        </div>
+                        <div class="result">
+                            <details>
+                                <summary>결과확인하기</summary>
+                                <div>
+                                    100<br>
+                                    200<br>
+                                    "javascript"
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+                    <!-- //sample05 -->
+
                     <div id="sample06" class="sample">
                         <h3>06. 배열 : 데이터 저장(여러개): 표현방법2<h3>
                             <p>new Array를 사용해서 한줄로 쓰는방법</p>
@@ -228,6 +235,8 @@
                                     </div>
                                </details>
                             </div>
+                    </div>
+                    <!-- //sample06 -->
 
                     <div id="sample07" class="sample">
                         <h3>07. 배열 : 데이터 저장(여러개): 표현방법3<h3>
@@ -255,6 +264,8 @@
                                     </div>
                                </details>
                             </div>
+                    </div>
+                    <!-- //sample07 -->
 
                     <div id="sample08" class="sample">
                         <h3>08. 배열 : 데이터 저장(여러개): 표현방법4<h3>
@@ -279,6 +290,9 @@
                                     </div>
                                </details>
                             </div>
+                    </div>
+                    <!-- //sample08 -->
+
                     <div id="sample09" class="sample">
                         <h3>09. 객체 : 데이터 저장(키와 값) : 표현방법1<h3>
                             <p>new Object를 써서 인덱스 사용해서 쓰는법</p>
@@ -305,10 +319,12 @@
                                     </div>
                                </details>
                             </div>
+                    </div>
+                    <!-- //sample09 -->
 
                     <div id="sample10" class="sample">
-                        <h3>10. 객체 : 데이터 저장(키와 값) : 표현방법2<h3>
-                            <p>new Object를 써서 key값을 넣어주는 방법</p>
+                        <h3>10. 객체 : 데이터 저장(키와 값) : 표현방법2 : 생성자 방식<h3>
+                            <p>new Constructor() 방식으로 객체를 생성하는 방식</p>
                             <div class="script">
 <pre><code class="language-js">{
     const obg = new Object();
@@ -332,6 +348,8 @@
                                     </div>
                                </details>
                             </div>
+                    </div>
+                    <!-- //sample10 -->
 
                     <div id="sample11" class="sample">
                         <h3> 11. 객체 : 데이터 저장(키와 값) : 표현방법3<h3>
@@ -359,10 +377,12 @@
                                     </div>
                                </details>
                             </div>
+                    </div>
+                    <!-- //sample11 -->
 
-                    <div id="sample11" class="sample">
-                        <h3> 12. 객체 : 데이터 저장(키와 값) : 표현방법4<h3>
-                            <p>new Object 안쓰고 한줄에 넣어주는 방법</p>
+                    <div id="sample12" class="sample">
+                        <h3> 12. 객체 : 데이터 저장(키와 값) : 표현방법4 : 객체 리터럴 방식<h3>
+                            <p>변수처럼 객체를 생성하는 방식으로, 중괄호 {}안에 key:value를 쉼표로 구분하여 만듬</p>
                             <div class="script">
 <pre><code class="language-js">{
     const obj = {a:100, b:200, c:"javascript"};
@@ -383,8 +403,144 @@
                                     </div>
                                </details>
                             </div>
+                    </div>
+                    <!-- //sample12 -->
                     
-                   
+                    <div id="sample13" class="sample">
+                        <h3> 13. 객체 : 데이터 저장(키와 값) : 표현방법5 : 배열 안에 객체<h3>
+                            <p>배열안에 객체를 넣어주고 표출하는법</p>
+                            <div class="script">
+<pre><code class="language-js">{
+    const obj = [
+        {a:100, b:200},
+        {c:"javascript"}
+    ];
+    // console.log(obj[0].a);
+    // console.log(obj[0].b);
+    // console.log(obj[1].c);
+}
+</code></pre>
+                            </div>
+                            <div class="result">
+                                <details>
+                                    <summary>결과확인하기</summary>
+                                    <div>
+                                        100<br>
+                                        200<br>
+                                        "javascript"
+                                    </div>
+                               </details>
+                            </div>
+                    </div>
+                    <!-- //sample13 -->
+
+                    <div id="sample14" class="sample">
+                        <h3> 14. 객체 : 데이터 저장(키와값): 표현방법6 : 객체 안에 배열<h3>
+                            <p>객체 안에 배열 및 객체값 불러오기</p>
+                            <div class="script">
+<pre><code class="language-js">{
+    const obj = {
+        a: 100,
+        b: [200,300],
+        c:{x:400, y: 500},
+        d:"javacript"
+    }
+    // console.log(obj.a);
+    // console.log(obj.b[0]);
+    // console.log(obj.b[1]);
+    // console.log((obj.c).x);
+    // console.log((obj.c).y);
+    // console.log(obj.d);
+}
+</code></pre>
+                            </div>
+                            <div class="result">
+                                <details>
+                                    <summary>결과확인하기</summary>
+                                    <div>
+                                        100<br>
+                                        200<br>
+                                        300<br>
+                                        400<br>
+                                        500<br>
+                                        "javascript"
+                                    </div>
+                               </details>
+                            </div>
+                    </div>
+                    <!-- //sample14 -->
+
+                    <div id="sample15" class="sample">
+                        <h3> 15. 객체 : 데이터 저장(키와값): 표현방법7<h3>
+                            <p>변수에 값을 저장한뒤 객체로 변환 하는법</p>
+                            <div class="script">
+<pre><code class="language-js">{
+    const  a = 100;
+    const  b = 200;
+    const  c = "javacript";
+
+    const obj ={a, b, c}
+
+    // console.log(a);
+    // console.log(b);
+    // console.log(c);
+}
+</code></pre>
+                            </div>
+                            <div class="result">
+                                <details>
+                                    <summary>결과확인하기</summary>
+                                    <div>
+                                        100<br>
+                                        200<br>
+                                        "javascript"<br>
+                                    </div>
+                               </details>
+                            </div>
+                    </div>
+                    <!-- //sample15 -->
+
+                    <div id="sample16" class="sample">
+                        <h3> 16. 객체 : 데이터 저장(키와값): 표현방법8 : 생성자 함수<h3>
+                            <p>함수를 통해서 객체를 생성하는 방식</p>
+                            <div class="script">
+<pre><code class="language-js">{
+    const obj = {
+        a: 100,
+        b: [200,300],
+        c: "javascript",
+        d: function(){
+            console.log("javascirpt가 실행되었습니다.")
+        }
+    }
+    // console.log(obj.a);
+    // console.log(obj.b[0]);
+    // console.log(obj.b[1]);
+    // console.log(obj.b[2]); // undefined
+    // console.log(obj.c);
+    // console.log(obj.d); //함수 전체 코드가 보임 
+    // obj.d();
+}
+</code></pre>
+                            </div>
+                            <div class="result">
+                                <details>
+                                    <summary>결과확인하기</summary>
+                                    <div>
+                                        100<br>
+                                        200<br>
+                                        300<br>
+                                        undefined<br>
+                                        "javacript"<br>
+                                        "function(){
+                                            console.log("javascirpt가 실행되었습니다.")
+                                        }"<br>
+                                        "javascirpt가 실행되었습니다."
+                                    </div>
+                               </details>
+                            </div>
+                    </div>
+                    <!-- //sample16 -->
                
             </div>
         </main>
@@ -512,7 +668,7 @@
                 // console.log(obj[1].c);
             }
 
-            //객체 : 데이터 저장(키와값): 객체 안에 배열
+            //객체 : 데이터 저장(키와값): 표현방법6 : 객체 안에 배열
             //객체 안에 배열 및 객체값 불러오기
             {
                 const obj = {

@@ -10,8 +10,23 @@
     
 </body>
 <script>
-    let  data  =5
     
-    alert(typeof(data));
+    const obj = {
+                    a: 100,
+                    b: [200,300],
+                    c: "javascript",
+                    d: function(){
+                        document.write("javascirpt가 실행되었습니다.")
+                    }
+                }
+                document.write(obj.a,"<br>");
+                document.write(obj.b[0],"<br>");
+                document.write(obj.b[1],"<br>");
+                document.write(obj.c,"<br>");
+                //document.write(obj.d,"<br>"); //함수 전체 코드가 보임 
+    
+    const fun = obj.d();
+                
+                document.write(fun);
 </script>
 </html>
