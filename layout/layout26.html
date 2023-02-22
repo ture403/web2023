@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 테스트</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: #fff;
+        }
+        #wrap {
+            width: 1800px;
+            margin: 0 auto;
+        }
+        #header {
+            width: 100%;
+            height: 100px;
+            overflow: hidden;
+        }
+        #header .inner1{
+            width: 400px;
+            height: inherit;
+            background-color: blueviolet;
+            float: left;
+        }
+        #header .inner2{
+            width: 1400px;
+            height: inherit;
+            background-color: purple;
+            float: left;
+        }
+        #banner {
+            width: 100%;
+            height: 600px;
+            background-color: aqua;
+        }
+        #content {
+            width: 100%;
+            height: 400px;
+        }
+        #content .inner1 {
+            width: 600px;
+            height: inherit;
+            background-color: aquamarine;
+            float: left;
+        }
+        #content .inner2 {
+            width: 600px;
+            height: inherit;
+            background-color: red;
+            float: left;
+        }
+        #content .inner3 {
+            width: 600px;
+            height: inherit;
+            background-color: gold;
+            float: left;
+        }
+        #footer {
+            clear: both;
+            width: 100%;
+            height: 100px;
+        }
+        #footer .inner1 {
+            width: 200px;
+            height: inherit;
+            background-color: bisque;
+            float: left;
+        }
+        #footer .inner2 {
+            width: 1400px;
+            height: inherit;
+            background-color: #666;
+            float: left;
+        }
+        #footer .inner3 {
+            width: 200px;
+            height: inherit;
+            background-color: #999;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="inner1"></div>
+            <div class="inner2"></div>
+        </header>
+        <div id="banner"></div>
+        <div id="content">
+            <div class="inner1"></div>
+            <div class="inner2"></div>
+            <div class="inner3"></div>
+        </div>
+        <footer id="footer">
+            <div class="inner1"></div>
+            <div class="inner2"></div>
+            <div class="inner3"></div>
+        </footer>
+    </div>
+</body>
+</html>

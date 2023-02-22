@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃05 -grid</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #wrap {
+        }
+        #header {
+            height: 100px;
+            background-color: #EEEBE9;
+        }
+        #nav {
+            height: 100px;
+            background-color: #B9AAA5;
+        }
+        #section {
+            height: 780px;
+            background-color: #886F65;
+        }
+        #footer {
+            height: 100px;
+            background-color: #4E342E;
+        }
+        .container {
+            width: 1200px;
+            height: inherit;
+            margin: 0 auto;
+            background-color: rgba(0,0,0,0.2);
+            display: grid;
+            grid-template-areas:
+                "inner1 inner1 inner1"
+                "inner2 inner2 inner2"
+                "inner3 inner4 inner5"
+            ;
+            grid-template-columns: 400px 400px 400px;
+            grid-template-rows: 100px 200px 480px;
+        }
+        .container .inner1 {
+            background-color: #74574A;
+            grid-area: inner1;
+        }
+        .container .inner2 {
+            background-color: #684D43;
+            grid-area: inner2;
+        }
+        .container .inner3 {
+            background-color: #594139;
+            grid-area: inner3;
+        }
+        .container .inner4 {
+            background-color: #4A352F;
+            grid-area: inner4;
+        }
+        .container .inner5 {
+            background-color: red;
+            grid-area: inner5;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="container"></div>
+        </header>
+        <nav id="nav">
+            <div class="container"></div>
+        </nav>
+        <section id="section">
+            <div class="container">
+                <div class="inner1"></div>
+                <div class="inner2"></div>
+                <div class="inner3"></div>
+                <div class="inner4"></div>
+                <div class="inner5"></div>
+            </div>
+        </section>
+        <footer id="footer">
+            <div class="container"></div>
+        </footer>
+    </div>
+</body>
+</html>
