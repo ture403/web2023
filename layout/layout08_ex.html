@@ -4,126 +4,120 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>레이아웃08 - float 반응형</title>
+    <title>레이아웃 테스트</title>
     <style>
-        * {
+        *{
             margin: 0;
             padding: 0;
         }
         .clearfix::before,
         .clearfix::after {
-            content: '';
+            content: "";
             display: block;
             line-height: 0;
         }
-        .clearfix::after {
+        .clearfix::after{
             clear: both;
-        }
-        body {
-            background-color: #E1F5FE;
         }
         #wrap {
             width: 1200px;
+            height: 1000px;
             margin: 0 auto;
         }
-        #header {
-            width: 100%;
-            height: 100px;
-            background-color: #B3E5FC;
-        }
-        #nav {
-            width: 100%;
-            height: 100px;
-            background-color: #81D4FA;
-        }
-        #main{
-            width: 100%;
-        }
-        #asdie {
-            width: 30%;
-            height: 780px;
-            background-color: #4FC3F7;
+        #aside {
+            width: 300px;
+            height: 1000px;
+            background-color: aqua;
             float: left;
         }
-        #article1 {
-            width: 70%;
-            height: 260px;
-            background-color: #29B6F6;
+        .article1 {
+            height: 20%;
+            background-color: #444;
+        }
+        .article2 {
+            height: 20%;
+            background-color: #555;
+        }
+        .article3 {
+            height: 60%;
+            background-color: #666;
+        }
+        #section {
+            width: 900px;
+            height: 1000px;
             float: left;
         }
-        #article2 {
-            width: 70%;
-            height: 260px;
-            background-color: #03A9F4;
+        .inner1 {
+            height: 500px;
+            background-color: #777;
+        }
+        .inner2 {
+            height: 200px;
+        }
+        .inner2 .aside1 {
+            width: 300px;
+            height: 200px;
+            background-color: antiquewhite;
             float: left;
         }
-        #article3 {
-            width: 70%;
-            height: 260px;
-            background-color: #039BE5;
+        .inner2 .aside2 {
+            width: 300px;
+            height: 200px;
+            background-color: blueviolet;
             float: left;
         }
-        #footer {
-            width: 100%;
-            height: 100px;
-            background-color: #0288D1;
+        .inner2 .aside3 {
+            width: 300px;
+            height: 200px;
+            background-color: yellowgreen;
+            float: left;
         }
-        @media (max-width: 1220px){
-            #wrap{
-                width: 96%;
-            }
-            #article2 {
-                width: 35%;
-                height: 520px;
-            }
-            #article3 {
-                width: 35%;
-                height: 520px;
-            }
+        .inner3 {
+            height: 300px;
+            clear: both;
+            float: left;
         }
-        @media (max-width : 768px){
-            #wrap {
-                width: 100%;
-            }
-            #artcile1 {
-                width: 70%;
-                height: 390px;
-            }
-            #artcile2 {
-                width: 70%;
-                height: 390px;
-            }
-            #artcile3 {
-                display: none;
-            }
+        .inner3 .aside1{
+            width: 300px;
+            height: 300px;
+            background-color: #111;
+            float: left;
         }
-        @media (max-width : 600px){
-            #asdie {
-                width: 100%;
-                height: 200px;
-            }
-            #article1 {
-                width: 100%;
-                height: 430px;
-            }
-            #article2 {
-                width: 100%;
-                height: 150px;
-            }
+        .inner3 .aside2{
+            width: 600px;
+            height: 150px;
+            background-color: rosybrown;
+            float: left;
         }
+        .inner3 .aside3{
+            width: 600px;
+            height: 150px;
+            background-color: royalblue;
+            float: left;
+        }
+
     </style>
 </head>
 <body>
-    <div id="wrap">
-        <div id="header"></div>
-        <div id="nav"></div>
-        <div id="main" class="clearfix">
-            <div id="asdie"></div>
-            <div id="article1"></div>
-            <div id="article2"></div>
-            <div id="article3"></div>
+    <div id="wrap" class="clearfixs">
+        <div id="aside">
+            <div class="article1"></div>
+            <div class="article2"></div>
+            <div class="article3"></div>
         </div>
-        <div id="footer"></div>
+        <div id="section">
+            <div class="inner1"></div>
+            <div class="inner2 clearfix">
+                <div class="aside1"></div>
+                <div class="aside2"></div>
+                <div class="aside3"></div>
+            </div>
+            <div class="inner3 clearfix">
+                <div class="aside1"></div>
+                <div class="aside2"></div>
+                <div class="aside3"></div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
