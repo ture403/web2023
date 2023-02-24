@@ -53,7 +53,7 @@
                         <li><a href="#">02. 데이터 이팩트 : 1부터 50까지 출력하기</a></li>
                         <li><a href="#">03. 데이터 이펙트 : 0부터 100까지 짝수만 출력하기</a></li>
                         <li><a href="#">04. 데이터 이펙트 : 0부터 100까지 5의배수 출력하기</a></li>
-                        <li><a href="#">05. 05. 데이터 이펙트 : 1부터 100까지 짝수(파란색) 홀수(빨간색) 출력하기</a></li>
+                        <li><a href="#">05. 데이터 이펙트 : 1부터 100까지 짝수(파란색) 홀수(빨간색) 출력하기</a></li>
                         <li><a href="#">06. 데이터 이펙트 : for문을 이용해서 100칸 테이블 만들기</a></li>
                         <li><a href="#">07. 데이터 이펙트 : 중첩 for문을 이용해서 구구단 만들기</a></li>
                         
@@ -65,9 +65,11 @@
                         <h3>01. 데이터 이펙트 : 1부터 100까지 출력하기</h3>
                         <p>for문을 이용해서 1-100까지 출력하는 예제입니다.</p>
                         
-<pre class="line-numbers"><code class="language-js">for(let i=1; i&lt;=100; i++){ // let i =0 으로 초기화 한후 i 를 100 까지 1씩 증가
-    console.log(i); // 값을 출력
+<pre class="line-numbers"><code class="language-js">{
+    for(let i=1; i&lt;=100; i++){ // let i =0 으로 초기화 한후 i 를 100 까지 1씩 증가
+        console.log(i); // 값을 출력
     }
+}
 
 // 1,2,3,4,5,6~~~100
 </code></pre>
@@ -77,9 +79,11 @@
                         <h3>02. 데이터 이펙트 : 0부터 50까지 출력하기</h3>
                         <p>for문을 이용해서 1-50까지 출력하는 예제입니다.</p>
                         
-<pre class="line-numbers"><code class="language-js">for(let i=1; i&lt;=50; i++){ // let i =1 으로 초기화 한후 i 를 50 까지 1씩 증가
-    console.log(i); // 값을 출력
+<pre class="line-numbers"><code class="language-js">{
+    for(let i=1; i&lt;=50; i++){ // let i =1 으로 초기화 한후 i 를 50 까지 1씩 증가
+        console.log(i); // 값을 출력
     }
+}
 
 // 1,2,3,4,5,6~~~50
 </code></pre>
@@ -89,8 +93,10 @@
                         <h3>03. 데이터 이펙트 : 0부터 100까지 짝수만 출력하기</h3>
                         <p>for문을 이용해서 0-100까지 짝수만 출력하는 예제입니다.</p>
                         
-<pre class="line-numbers"><code class="language-js">for(let i=0; i&lt;=100; i+=2){ // i = i + 2 , let i =0 으로 초기화 한후 i 를 100 까지 2씩 증가
-console.log(i) // 값을 출력 
+<pre class="line-numbers"><code class="language-js">{
+    for(let i=0; i&lt;=100; i+=2){ // i = i + 2 , let i =0 으로 초기화 한후 i 를 100 까지 2씩 증가
+        console.log(i); // 값을 출력 
+    }
 }
 
 // 2,4,8,6,10 ~~ 50
@@ -101,14 +107,16 @@ console.log(i) // 값을 출력
                         <h3>04. 데이터 이펙트 : 0부터 100까지 5의배수 출력하기</h3>
                         <p>for문을 이용해서 0-100까지 5의배수를 출력하는 예제입니다.</p>
                         
-<pre class="line-numbers"><code class="language-js">for(let i=0; i&lt;=100; i+=5){ // let i = 0 으로 초기화 한후 i 를 100 까지 5씩 증가
- console.log(i)
-}
+<pre class="line-numbers"><code class="language-js">{
+    for(let i=0; i&lt;=100; i+=5){ // let i = 0 으로 초기화 한후 i 를 100 까지 5씩 증가
+        console.log(i);
+    }
 
 // if문을 사용해서 출력하기
-for(let i=0; i&lt;=100; i++){ // let i = 0 으로 초기화 한후 i 를 100 까지 증가
-    if( i % 5 == 0)" //만약 i가 5로 나눈후 나머지가 0이면
-        console.log(i) //값을 출력
+    for(let i=0; i&lt;=100; i++){ // let i = 0 으로 초기화 한후 i 를 100 까지 증가
+        if( i % 5 == 0)" //만약 i가 5로 나눈후 나머지가 0이면
+            console.log(i); //값을 출력
+        }
     }
 }
 
@@ -120,12 +128,14 @@ for(let i=0; i&lt;=100; i++){ // let i = 0 으로 초기화 한후 i 를 100 까
                         <h3>05. 데이터 이펙트 : 1부터 100까지 짝수(파란색) 홀수(빨간색) 출력하기</h3>
                         <p>for문을 이용해서 1-100까지 짝수는 파란색 홀수는 빨간색으로 출력하는 예제입니다.</p>
                         
-<pre class="line-numbers"><code class="language-js">for(let i=1; i&lt;100; i++){ // 변수 i에 0으로 초기화 후 i가100 전까지 i가 1씩 증가
-    if(i % 2 == 0){ // 만약 i를 2로 나눈 나머지 값이 0 이면
-        document.write("&lt;span style='color:blue';&gt;"+i+"&lt;/span>") // 파란색으로 출력하라
-    }
-    if(i % 2 == 1){ // 만약 i를 2로 나눈 나머지 값이 1이면
-        document.write("&lt;span style='color:red';&gt;"+i+"&lt;/span&gt;") //빨간색으로 출력하라
+<pre class="line-numbers"><code class="language-js">{
+    for(let i=1; i&lt;100; i++){ // 변수 i에 0으로 초기화 후 i가100 전까지 i가 1씩 증가
+        if(i % 2 == 0){ // 만약 i를 2로 나눈 나머지 값이 0 이면
+            document.write("&lt;span style='color:blue';&gt;"+i+"&lt;/span>") // 파란색으로 출력하라
+        }
+        if(i % 2 == 1){ // 만약 i를 2로 나눈 나머지 값이 1이면
+            document.write("&lt;span style='color:red';&gt;"+i+"&lt;/span&gt;") //빨간색으로 출력하라
+        }
     }
 }
 
@@ -161,148 +171,30 @@ for(let i=0; i&lt;=100; i++){ // let i = 0 으로 초기화 한후 i 를 100 까
                         <h3>07. 데이터 이펙트 : 중첩 for문을 이용해서 구구단 만들기</h3>
                         <p>중첩for문을 이용해서 구구단을 출력하는 예제입니다.</p>
                         
-<pre class="line-numbers"><code class="language-js">for(let i=2; i&lt;=9; i++){ // i를 2로 초기화 한후 i가 9까지 i를 1씩 증가
-    document.write(i+"단","br&gt;"); //HTML에 i값출력
+<pre class="line-numbers"><code class="language-js">{
+    
+    for(let i=2; i&lt;=9; i++){ // i를 2로 초기화 한후 i가 9까지 i를 1씩 증가
+        document.write(i+"단","br&gt;"); //HTML에 i값출력
 
-    for(let j=1; j&lt;=9; j++){ // j를 1로 초기화 한후 j가 9까지 j를 1씩 증가
-        document.write(i + "*" + j + "=" + i*j); // HTML에 i*j값 출력
-        document.write("&lt;br&gt;"); // 줄바꿈
+        for(let j=1; j&lt;=9; j++){ // j를 1로 초기화 한후 j가 9까지 j를 1씩 증가
+            document.write(i + "*" + j + "=" + i*j); // HTML에 i*j값 출력
+            document.write("&lt;br&gt;"); // 줄바꿈
+        }
+        document.write("&lt;br&gt;&lt;br&gt;"); // 줄바꿈 2번
     }
-    document.write("&lt;br&gt;&lt;br&gt;"); // 줄바꿈 2번
 }
 
 // 2*1=2
 // 2*2=4
 // 2*3=6
-// 2*4=9
+// 2*4=8
 // 2*5=10
-// ...
+// 2*6=12
+// 2*7=14
+// 2*8=16
 // 2*9=18
 </code></pre>
                     </div>
-                    
-                    <!-- <table border="1">
-                        <tr>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>5</td>
-                            <td>6</td>
-                            <td>7</td>
-                            <td>8</td>
-                            <td>9</td>
-                            <td>10</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>5</td>
-                            <td>6</td>
-                            <td>7</td>
-                            <td>8</td>
-                            <td>9</td>
-                            <td>10</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>5</td>
-                            <td>6</td>
-                            <td>7</td>
-                            <td>8</td>
-                            <td>9</td>
-                            <td>10</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>5</td>
-                            <td>6</td>
-                            <td>7</td>
-                            <td>8</td>
-                            <td>9</td>
-                            <td>10</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>5</td>
-                            <td>6</td>
-                            <td>7</td>
-                            <td>8</td>
-                            <td>9</td>
-                            <td>10</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>5</td>
-                            <td>6</td>
-                            <td>7</td>
-                            <td>8</td>
-                            <td>9</td>
-                            <td>10</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>5</td>
-                            <td>6</td>
-                            <td>7</td>
-                            <td>8</td>
-                            <td>9</td>
-                            <td>10</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>5</td>
-                            <td>6</td>
-                            <td>7</td>
-                            <td>8</td>
-                            <td>9</td>
-                            <td>10</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>5</td>
-                            <td>6</td>
-                            <td>7</td>
-                            <td>8</td>
-                            <td>9</td>
-                            <td>10</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>5</td>
-                            <td>6</td>
-                            <td>7</td>
-                            <td>8</td>
-                            <td>9</td>
-                            <td>10</td>
-                        </tr>
-                    </table> -->
                 </div>
             </div>
         </main>
