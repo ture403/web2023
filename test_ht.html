@@ -10,57 +10,18 @@
     
 </body>
 <script>
-    // // 테이블 100칸 만들기
-    // let table = "<table border='1'>"
+    let number = prompt("1보다 큰 숫자를 입력하세요.");
+    // 변수 sum 0 으로 초기화
+    let sum = 0;
 
-    // for(let i=1; i<=15; i++){
-    //     table += "<tr>"
-        
-    //     for(let j=1; j<=15; j++){
-    //         table += "<td>" + j + "</td>"
-    //     }
-        
-    //     table += "</tr>"
-    // }
-    // table += "</table>"
-    // document.write(table);
-
-    // //구구단 만들기
-
-    // for(let i=2; i<=9; i++){
-    //     document.write(i+"단입니다.")
-    //     document.write("<br>")
-    //     for(let j=1; j<=9; j++){
-    //         document.write( i +"*"+ j +"="+ i*j)
-    //         document.write("<br>")
-    //     }
-    // }
-    // document.write("<br>")
-
-    // //짝수 출력하기
-    // for(let i = 0; i<=10; i+=2){
-    //     document.write(i);
-    //     document.write("<br>");
-    //     if(i % 2 !== 0){
-    //         document.write(i);
-    //     }
-    // }
-
-    //
-    for(let i = 0; i<10; i++){
-        if(i == 5){
-           continue;
-           document.write("1");
+    if( number !== null && number > 1) { //입력한 숫자가 null이 아니고 1보다 크면
+    for(let i = 1; i <= number ; i++) { // number의 숫자 만큼 1씩 증가시킵니다.
+        if(i % 2 == 1) { // 만약 i값이 소수이면
+            continue; // 건너뜁니다.
         }
-        console.log(i);
-
+        sum += i; //sum 값에 i값을 추가 합니다.
+        document.write(i + "-----" + sum + "<br>"); // html로 출력해서 보여 집니다.
     }
-
-    {
-    var i = 0;
-    var n = 0;
-
-    while( i<5)
     }
 </script>
 </html>

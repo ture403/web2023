@@ -4,95 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>자바스크립트 이용한 표만들기</title>
+    <title>자바스크립트 문제</title>
 </head>
 <body>
-    <!-- <table border="1">
-        <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
-        </tr>
-    </table> -->
-
     <script>
-      //  중첩for문을 이용해서 테이블 만들기
-        {
-            let table = "<table border ='1'>";
-
-            for(let i=1; i<=10; i++){
-                table += "<tr>";
-
-                for(j=1; j<=10; j++){
-                    table += "<td>"+j+"</td>";
-                }
-
-                table += "</tr>";
-            }
-
-            table += "</table>";
-
-            document.write(table);
-        }
         
-        // 중첩for문을 이용해서 구구단 만들기
-        // {
-        //     for(let i=2; i<=9; i++){
-        //         console.log(`구구단 ${i} 단입니다.`)
-
-        //         for(let j=1; j<=9; j++){
-        //             console.log(`${j} * ${i} 는 : ${i*j} 입니다.`)
-        //         }
-        //     }
-        // }
-        // 테이블 만들기
-        {
-            let table = "<table border = '1'>";
-
-                for(let i=1; i<=10; i++){
-                    table += "<tr>";
-                        
-                    for(j=1; j<=10; j++){
-                        table += "<td>"+j+"</td>";
-                    }
-                    
-                    table += "</tr>";
-                }
-                
-                table += "</table>";
-
-            document.write(table);
-        }
     </script>
 </body>
 </html>
