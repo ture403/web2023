@@ -56,6 +56,8 @@
                         <li><a href="#">05. 데이터 이펙트 : 1부터 100까지 짝수(파란색) 홀수(빨간색) 출력하기</a></li>
                         <li><a href="#">06. 데이터 이펙트 : for문을 이용해서 100칸 테이블 만들기</a></li>
                         <li><a href="#">07. 데이터 이펙트 : 중첩 for문을 이용해서 구구단 만들기</a></li>
+                        <li><a href="#">08. 데이터 이펙트 : 테이블 25칸(짝수:빨간색, 홀수/파란색</a></li>
+                        <li><a href="#">09. 데이터 이펙트 : 테이블 25칸(3의배수:빨간색, 5의배수/파란색</a></li>
                         
                     </ul>
                 </div>
@@ -112,7 +114,7 @@
         console.log(i);
     }
 
-// if문을 사용해서 출력하기
+    // if문을 사용해서 출력하기
     for(let i=0; i&lt;=100; i++){ // let i = 0 으로 초기화 한후 i 를 100 까지 증가
         if( i % 5 == 0)" //만약 i가 5로 나눈후 나머지가 0이면
             console.log(i); //값을 출력
@@ -147,7 +149,8 @@
                         <h3>06. 데이터 이펙트 : for문을 이용해서 100칸 테이블 만들기</h3>
                         <p>중첩for문을 이용해서 100칸 테이블을 출력하는 예제입니다.</p>
                         
-<pre class="line-numbers"><code class="language-js">let table = "&lt;table border='1'&gt;"; // 변수에 테이블 코드 저장
+<pre class="line-numbers"><code class="language-js">{
+    let table = "&lt;table border='1'&gt;"; // 변수에 테이블 코드 저장
 
     for(let i=1; i&lt;=10; i++){ // i를 0으로 초기화 한후 i가 10이 되는 동안 i를 1씩 증가
         table += "&lt;tr&gt;"; // tr 추가
@@ -162,7 +165,7 @@
     table += "&lt;/table&gt;"; // /table 추가
 
     document.write(table); // HTMl 화면에 출력
-
+}
 // 가로 10 세로 10 칸의 테이블이 만들어짐
 </code></pre>
                     </div>
@@ -193,6 +196,70 @@
 // 2*7=14
 // 2*8=16
 // 2*9=18
+</code></pre>
+                    </div>
+
+                    <div id="sample08" class="sample">
+                        <h3>08. 데이터 이펙트 : 테이블 25칸(짝수:빨간색, 홀수/파란색</h3>
+                        <p>짝수 빨간색 홀수 파란색으로 표를 만듭니다.</p>
+                        
+<pre class="line-numbers"><code class="language-js">{
+
+    let table = "&lt;table border='1'&gt;"; //테이블 생성
+    let count =0; //변수 count 초기화
+
+    for(let i=1; i&lt;=5; i++){ //for 반복문 i가 1부터 5까지
+        table  += "&lt;tr&gt;"; // 테이블 tr 추가
+        for(let j=1; j&lt;=5; j++){ // 중첩 반복문 j가 1부터 5까지
+            count++; //카운터 증가
+            if(count % 2 == 0){ // 만약 count 값을 나눈 나머지 값이 0 이면
+                table += "&lt;td style='color: red'>" + count+ "&lt;/td&gt;"; //tr 글자를 빨간색
+            } else { //아니면
+                table += "&lt;td style='color: blue'>" + count+ "&lt;/td&gt;"; //글자를 파란색
+            }
+        }
+        table += "&lt;tr&gt;"; // tr 태그 끝맺음
+    }
+
+    table += "&lt/table&gt;"; //table 태그 끝맺음
+
+    document.write(table); //표출
+
+}
+//5*5표가 만들어지고 짝수는 빨간색 짝수가 아니면 파란색
+</code></pre>
+                    </div>
+
+                    <div id="sample09" class="sample">
+                        <h3>09. 데이터 이펙트 : 테이블 25칸(3의배수:빨간색, 5의배수/파란색</h3>
+                        <p>3의배수빨간색 5의배수파란색 나머지는검은색 표를 만듭니다.</p>
+                        
+<pre class="line-numbers"><code class="language-js">{
+    let table = "&lt;table border='1'&gt;"; //변수 table에 table 생성
+    let count =0; //변수 카운트 0으로 초기화
+
+    for(let i=1; i&lt;=5; i++){ // i가 1에서 5까지 반복
+        table  += "&lt;tr&gt;"; //tr 태그 생성
+        for(let j=1; j&lt;=5; j++){ //j가 1에서 5까지 반복
+            count++; //count 1씩 증가
+            if(count % 3 == 0){ //만약 count값을 3으로 나눈 나머지 값이 0 이면
+                table += "&lt;td style='color: red'&gt;" + count+ "&lt;/td&gt;"; //td에 글자색을 빨간색으로 넣어줌
+            } else if( count % 5 ==0) { //만약 count값을 5으로 나눈 나머지 값이 0 이면
+                table += "&lt;td style='color: blue'&gt;" + count+ "&lt;/td&gt;"; //td에 글자색을 파란색으로 넣어줌
+            } else { //아니면
+                table += "&lt;td style='color: #000'&gt;" + count+ "&lt;/td&gt;"; //td에 글자색을 검은색으로 넣어줌
+            }
+
+        }
+        table += "&lt;/tr&gt;"; // tr 태그 끝맺음
+    }
+
+    table += "&lt;/table&gt;"; //table 태그 끝맺음
+
+    document.write(table); //html 표출
+
+}
+//5*5표가 만들어지고 3의배수는 빨간색 5의배수는 파란색 나머지는 검은색
 </code></pre>
                     </div>
                 </div>
@@ -270,7 +337,6 @@
         //         }
         //         document.write("<br><br>");
         //     }
-
         // }
     </script>
    

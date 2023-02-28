@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            width: 100%;
+            height: 100px;
+            background-color: red;
+        }
+        nav {
+            width: 100%;
+            height: 100px;
+            background-color: green;
+        }
+        section {
+            width: 100%;
+            height: 780px;
+            background-color: blue;
+        }
+        footer {
+            width: 100%;
+            height: 100px;
+            background-color: yellow;
+        }
+        .container{
+            width: 1200px;
+            height: inherit;
+            margin: 0 auto;
+            background-color: rgba(0,0,0,0.2);
+            display: flex;
+            flex-wrap: wrap;
+        }
+        section .container article{
+            width: 100%;
+            height: 100px;
+            background-color: aqua;
+        }
+        section .container .inner{
+            width: 50%;
+        }
+        section .container .inner .aside1 {
+            width: 100%;
+            height: 200px;
+            background-color: #555;
+        }
+        section .container .inner .aside2 {
+            width: 100%;
+            height: 480px;
+            background-color: #666;
+        }
+        section .container .article{
+            width: 50%;
+            height: 680px;
+            background-color: #888;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container"></div>
+    </header>
+    <nav>
+        <div class="container"></div>
+    </nav>
+    <section>
+        <div class="container">
+            <article></article>
+            <div class="inner">
+                <aside class="aside1"></aside>
+                <aside class="aside2"></aside>
+            </div>
+            <div class="article"></div>
+        </div>
+    </section>
+    <footer>
+        <div class="container"></div>
+    </footer>
+</body>
+</html>

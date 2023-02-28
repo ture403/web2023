@@ -57,9 +57,9 @@
                         <li><a href="#">08. 화살표 함수 : 리턴값 함수</a></li>
 
                         <li><a href="#">09. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값</a></li>
-                        <li><a href="#">06. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략</a></li>
-                        <li><a href="#">07. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴생략</a></li>
-                        <li><a href="#">08. 화살표 함수 : 선언적 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴생략</a></li>
+                        <li><a href="#">10. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략</a></li>
+                        <li><a href="#">11. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴생략</a></li>
+                        <li><a href="#">12. 화살표 함수 : 선언적 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴생략</a></li>
 
                         <li><a href="#">01. 함수 유형 : 함수와 매개변수를 이용한 형태</a></li>
                         <li><a href="#">01. 함수 유형 : 함수와 변수를 이용한 형태</a></li>
@@ -136,7 +136,7 @@
 
                     <div id="sample03" class="sample">
                         <h3>03. 매개변수 함수</h3>
-                        <p>함수 정의 시 함수 내부에서 사용할 변수를 선언합니다. 함수 호출 시 전달한 값들이 함수 내부의 매개변수에 할당됩니다.</p>
+                        <p>함수 정의 시 함수 내부에서 사용할 변수를 선언합니다. 함수 호출 시 전달한 값들이 함수 내부의 매개변수에 할당됩니다. 매개변수는 추가 가능합니다.</p>
                         <div class="script">
 <pre><code class="language-js">{
     let str ="실행되었습니다.<br>";
@@ -146,6 +146,12 @@
     }
 
     func(str);
+
+    //매개변수 추가 가능
+    function c(str1,str2){  
+        document.write(str1, str2);
+    }
+    c("실행3","실행4");
 }
 </code></pre>
                         </div>
@@ -153,7 +159,8 @@
                             <details>
                                 <summary>결과확인하기</summary>
                                 <div>
-                                    실행되었습니다.
+                                    실행되었습니다.<br>
+                                    실행3,실행4
                                 </div>
                            </details>
                         </div>
@@ -191,7 +198,7 @@
                         <p>선언적 함수를 화살표 함수로 표현하는 방식입니다.</p>
                         <div class="script">
 <pre><code class="language-js"> {
-    func = () =>{
+    func = () => {
         document.write("실행되었습니다.<br>");
     } 
 
@@ -243,7 +250,7 @@
                         <p>매겨변수 함수를 화살표 함수로 표현하는 방식입니다.</p>
                         <div class="script">
 <pre><code class="language-js"> {
-    func = () =>{
+    func = () => {
         func = (str) =>{
             document.write(str);
         }
@@ -268,7 +275,7 @@
                         <p>리턴값 함수를 화살표 함수로 표현하는 방식입니다.</p>
                         <div class="script">
 <pre><code class="language-js">{
-    func = () =>{
+    func = () => {
         const str = "실행되었습니다.&lt;br&gt;";
         return str;
     }
@@ -287,6 +294,98 @@
                         </div>
                     </div>
                     <!-- //sample08 -->
+
+                    <div id="sample09" class="sample">
+                        <h3>09. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값<h3>
+                        <p>화살표 함수로 익명함수와 매개변수와 리턴값을 같이 쓰는 법입니다.</p>
+                        <div class="script">
+<pre><code class="language-js">{
+    const func = (str) => {
+        return str;
+    }
+
+    document.write(func("실행되었습니다."));
+}
+</code></pre>
+                        </div>
+                        <div class="result">
+                            <details>
+                                <summary>결과확인하기</summary>
+                                <div>
+                                  실행되었습니다.
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+                    <!-- //sample08 -->
+
+                    <div id="sample10" class="sample">
+                        <h3>10. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략<h3>
+                        <p>화살표 함수로 익명함수와 매개변수와 리턴값을 매개변수 괄호 생략을 쓰는 법입니다.</p>
+                        <div class="script">
+<pre><code class="language-js">{
+    const func = str => {
+        return str;
+    }
+
+    document.write(func("실행되었습니다."));
+}
+</code></pre>
+                        </div>
+                        <div class="result">
+                            <details>
+                                <summary>결과확인하기</summary>
+                                <div>
+                                  실행되었습니다.
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+                    <!-- //sample10 -->
+
+                    <div id="sample11" class="sample">
+                        <h3>11. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴생략<h3>
+                        <p>화살표 함수로 익명함수와 매개변수와 리턴값을 매개변수 괄호 생략,리턴생략을 쓰는 법입니다.</p>
+                        <div class="script">
+<pre><code class="language-js">{
+    const func = str => str;
+
+    document.write(func("실행되었습니다."));
+}
+</code></pre>
+                        </div>
+                        <div class="result">
+                            <details>
+                                <summary>결과확인하기</summary>
+                                <div>
+                                  실행되었습니다.
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+                    <!-- //sample11 -->
+
+                    <div id="sample12" class="sample">
+                        <h3>12. 화살표 함수 : 선언적 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴생략<h3>
+                        <p>화살표 함수로 선억적함수와 매개변수와 리턴값을 매개변수 괄호 생략,리턴생략을 쓰는 법입니다.</p>
+                        <div class="script">
+<pre><code class="language-js">{
+    func = str => str;
+
+    document.write(func("실행되었습니다."));
+}
+</code></pre>
+                        </div>
+                        <div class="result">
+                            <details>
+                                <summary>결과확인하기</summary>
+                                <div>
+                                  실행되었습니다.
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+                    <!-- //sample11 -->
                 </div>
             </div>
         </main>
@@ -297,173 +396,59 @@
         <!-- footer -->
 
         <script>
-            // 변수, 상수, 배열, 객체 : 데이터 저장
-            // 함수 : 데이터 실행
-            //  식별자를 쓰는 규칙
-            //  1. _har 
-            //  2. 2kd
-            //  3. var
-            //  4. $ab
-
-            // 01. 선언적 함수
-            // 함수 선언문을 사용하여 함수를 정의합니다. 함수 이름이 정의되어 있으며, 함수 호출 이전에 선언되어야 합니다.
             // {
-            //     function func(){
-            //         document.write("실행되었습니다.<br>");
-            //     } 
-            
-            //     func();
-            // }
-
-            // // 02. 익명 함수
-            // //함수 표현식을 사용하여 함수를 정의합니다. 함수 이름이 없으며, 변수에 함수를 할당합니다. 함수 호출은 변수를 통해 이루어집니다.
-            // {
-            //     const func = function(){
-            //         document.write("실행되었습니다.<br>");
+            //     a = ()=> {
+            //         document.write("실행1");
             //     }
+            //     a();
 
-            //     func();
-            // }
-
-            // // 03. 매개변수 함수
-            // //함수 정의 시 함수 내부에서 사용할 변수를 선언합니다. 함수 호출 시 전달한 값들이 함수 내부의 매개변수에 할당됩니다.
-            // {
-            //     let str ="실행되었습니다.<br>";
-
-            //     function func(str){
-            //         document.write(str);
+            //     const b = ()=> {
+            //         document.write("실행2");
             //     }
+            //     b();
 
-            //     func(str);
-            // }
-
-            // // 04. 리턴값 함수
-            // //작업을 수행하는 코드 블록을 나타냅니다. 함수는 매개변수를 사용하여 입력값을 받아들이고, return 문을 사용하여 출력값을 반환합니다.
-            // {
-            //     function func(){
-            //         const str = "실행되었습니다.<br>";
-            //         return str;
-                    
+            //     const c = (str1,str2,str3)=> {
+            //         document.write(str1, str2,str3);
             //     }
+            //     c("실행3","실행4","실행5");
 
-            //     document.write(func());
-            // }
+            //     document.write("/")
 
-            // document.write("<br><br>");
-
-            // //05. 화살표 함수 : 선언적 함수
-            // {
-            //     func = () =>{
-            //         document.write("실행되었습니다.<br>");
-            //     } 
-            
-            //     func();
-            // }
-
-            // //06. 화살표 함수 : 익명 함수
-            // {
-            //     const func = () => {
-            //         document.write("실행되었습니다.<br>");
+            //     const d = (x,y,z)=> {
+            //         return x+y+z;
             //     }
-
-            //     func();
+            //     document.write(d(1,2,3));
             // }
-            
-            // //07. 화살표 함수 : 매개변수 함수
-            // {
-            //     func = (str) =>{
-            //         document.write(str);
-            //     }
+            //09. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값
+            {
+                const func = (str) => {
+                    return str;
+                }
 
-            //     func("실행되었습니다.<br>");
-            // }
+                document.write(func("실행되었습니다."));
+            }
 
-        //     // //08. 화살표 함수 : 리턴값 함수
-        //     {
-        //         func = () =>{
-        //             const str = "실행되었습니다.<br>";
-        //             return str;
-        //         }
+            //10. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략
+            {
+                const func = str => {
+                    return str;
+                }
 
-        //         document.write(func());
-        //     }
+                document.write(func("실행되었습니다."));
+            }
 
-        //     // 10~88까지 짝수만 출력하세요!
-        //     {   
-        //         for(let i=10; i<=88; i+=2){
-        //             document.write(i,"/");
-        //         }
-        //     }
-        //     document.write("<br><br>");
+            // 11. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴생략
+            {
+                const func = str => str;
 
-        //     //구구단
-        //    {
-        //         for(let i=2; i<=9; i++){
-        //             document.write(i + "단입니다. <br>");
-        //             for(j=1; j<=9; j++){
-        //                 document.write( i +"*"+ j +"="+ i*j);
-        //                 document.write("<br>");
-        //             }
-        //         }
-        //    }
-           
-        //    //테이블
-        //    {
-        //         let table = "<table border='1'>";
-        //         let num =1;
+                document.write(func("실행되었습니다."));
+            }
+            // 12. 화살표 함수 : 선언적 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴생략
+            {
+                func = str => str;
 
-        //             for(let i =1; i<=10; i++){
-        //                 table += "<tr>"
-        //                     for(let j=1; j<=10; j++){
-        //                         table += "<td>" + num + "</td>";
-        //                         num ++;
-        //                     }
-                           
-        //                 table += "</tr>"
-                      
-        //             }
-        //             table += "</table>"
-
-        //            document.write(table)
-        //    }
-
-        //    //선언적 함수
-
-        //    {
-        //     function func() {
-        //         document.write("함수입니다.")
-        //     }
-        //     func();
-        //    }
-        //    document.write("<br>")
-
-        //    //익명함수
-        //    {
-        //     const func = function(){
-        //         document.write("함수입니다")
-        //     }
-        //     func();
-        //    }
-        //    document.write("<br>")
-        //    //매개변수
-        //    {
-        //     const a = "함수입니다."
-        //     function func(a) {
-        //         document.write(a)
-        //     }
-        //     func(a)
-        //    }
-        //    document.write("<br>")
-        //    //리턴값
-        //    {
-        //     function func(){
-        //         const a = "함수입니다"
-        //         return a;
-        //     }
-            
-        //     document.write(func());
-        //    }
-        //    document.write("<br>")
+                document.write(func("실행되었습니다."));
+            }
         </script>
 
         <script src="assets/js/highlight.min.js"></script>
