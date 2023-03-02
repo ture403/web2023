@@ -8,7 +8,103 @@
 </head>
 <body>
     <script>
+        {
+            // 01. 선언적 함수
+            function func(){
+                document.write("01.함수가 실행되었습니다.");
+            }
+            func();
+        }
+
+        document.write("<br>");
+
+        {
+            // 02. 익명 함수
+            const func = function (){
+                document.write("02.함수가 실행되었습니다.");
+            }
+            func();
+        }
+
+        document.write("<br>");
+
+        {
+            //03. for문 이용해서 함수 10번
+            function func(){
+                for(let i=1; i<=10; i++){
+                    document.write("함수가 실행되었습니다.");
+                }
+            }
+            func();
+        }
+
+        document.write("<br>");
+
+        {
+            //04. 리턴값 함수
+
+            function func(){
+                let str = "04.함수가 실행되었습니다."
+                return str;
+            }
+            document.write(func());
+        }
+
+        document.write("<br>");
         
+        {
+            //05. 매개변수 함수
+
+            function func(str){
+                document.write(str)
+            }
+
+            func("05.함수가 실행되었습니다.")
+        }
+
+        document.write("<br>");
+
+        {
+            //06. 선언적 함수 (화살표 함수)
+            func =() => {
+                document.write("06.함수가 실행되었습니다.");
+            }
+            func();
+        }
+        
+        document.write("<br>");
+
+        {
+            //07. 10칸 테이블
+            function func(){
+                let table = "<table border='1'>"
+                    
+                    for(let i=0; i<=10; i++){
+                        table += "<tr>"
+                            for(let j=0; j<=10; j++){
+                                table += "<td>"+j+"</td>"
+                            }
+                        table += "</tr>"
+                    }
+
+                    table += "</table>"
+                    document.write(table);
+            }
+            func();
+        }
+
+        {
+            const person = {
+                name: 'John',
+                age: 30,
+                city: 'New York'
+                };
+
+                for (const property in person) {
+                //console.log(`${property}: ${person[property]}`);
+                console.log(person);
+                }
+        }
     </script>
 </body>
 </html>
