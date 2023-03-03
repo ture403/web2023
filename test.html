@@ -9,22 +9,111 @@
 <body>
     <script>
         {
-            const obj = [
-                {a:100,b:200},
-                {c:"javascript"}
-            ]
-
-            console.log(obj[0].a)
-            console.log(obj[0].b)
-            console.log(obj[1].c)
+            for(let i=1; i<=50; i++){
+                document.write(i+"/");
+            }
         }
+        
+        document.write("<br>");
+        
         {
-            const num = [100,200,300,400,500,600,700,800,900];
+            for(let i=2; i<=100; i+=2){
+                document.write(i+"/");
+            }
+        }
+        document.write("<br>");
+        {
+            for(let i=1; i<=100; i++){
+               if( i % 2 ==1){
+                    document.write(i);
+               }
+            }
+        }
+        document.write("<br>");
+        {
+            let table = "<table border='1'>"
+            let num =1;
+                for(let i=1; i<=5; i++){
+                    table += "<tr>"
+                    for(let j=1; j<=10; j++){
+                        table += "<td>"+num+"</td>"
+                        num ++;
+                    }
+                    table += "</tr>"
+                }
+                table += "</table>";
 
-            num.forEach((el,index,arr)=>{
-                console.log(el,index,arr);
-            })
-        }       
+            document.write(table);
+        }
+        document.write("<br>");
+        {
+            let num =0;
+            for(let i =0; i<=10; i++){
+                num = num + i
+            }
+            document.write(num);
+        }
+        document.write("<br>");
+        {
+            for(let i=1; i<=5; i++){
+                document.write( i + "단입니다.<br>");
+                for(let j=1; j<=5; j++){
+                    document.write(`${i}*${j} = ${i*j} <br>`)
+                }
+            }
+        }
+        document.write("<br>");
+        {
+            // 선언적 함수
+            function func(){
+                document.write("함수1");
+            }
+            func();
+            // 익명함수
+            const a =function(){
+                document.write("함수2");
+            }
+            a();
+            // 매개변수 함수
+            function b(str){
+                document.write(str)
+            }
+            b("함수3");
+            // 리턴값 함수
+            function c(){
+                let str = "함수4";
+                return str;
+            }
+            document.write(c());
+        }
+        document.write("<br>");
+        {
+             // 선언적 함수 화살표
+            func =() => {
+                document.write("함수1");
+            }
+            func();
+            // 익명함수 화살표
+            const a = () => {
+                document.write("함수2");
+            }
+            a();
+            // 매개변수 함수 화살표
+            b =  (str) => {
+                document.write(str)
+            }
+            b("함수3");
+            // 리턴값 함수 화살표
+            c =() =>{
+                let str = "함수4";
+                return str;
+            }
+            document.write(c());
+        }
+
+        
     </script>
+    10.추후 실무에서 어떻게 쓰일지 궁금 합니다.
 </body>
 </html>
+
