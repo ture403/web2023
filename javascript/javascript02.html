@@ -87,14 +87,14 @@
 </code></pre>
                         </div>
                         <div class="result">
-                           <details>
+                            <details>
                                 <summary>결과확인하기</summary>
                                 <div>
                                     100<br>
                                     200<br>
                                     "javascirpt"
                                 </div>
-                           </details>
+                            </details>
                         </div>
                     </div>
                     <!-- //sample01 -->
@@ -119,7 +119,7 @@
                                     200<br>
                                     "javascirpt"
                                 </div>
-                           </details>
+                            </details>
                         </div>
                     </div>    
                     <!-- //sample02 -->
@@ -143,7 +143,7 @@
                                     200<br>
                                     "javascript"
                                 </div>
-                           </details>
+                            </details>
                         </div>
                     </div>
                     <!-- //sample03 -->
@@ -171,7 +171,7 @@
                                     "javascirpt"<br>
                                     "react"
                                 </div>
-                           </details>
+                            </details>
                         </div>
                     </div>
                     <!-- //sample04 -->
@@ -191,7 +191,7 @@
                             <details>
                                 <summary>결과확인하기</summary>
                                 <div>
-                                   3
+                                    3
                                 </div>
                             </details>
                         </div>
@@ -236,7 +236,7 @@
                                         800<br>
                                         900<br>
                                     </div>
-                               </details>
+                                </details>
                             </div>
                             <div class="notice">
                                 <h4>배열 for문 동작 순서</h4>
@@ -450,13 +450,12 @@
                                 <details>
                                     <summary>결과확인하기</summary>
                                     <div>
-                                        (5) [100, 200, 300, 400, 500] <br>                                     
+                                        (5) [100, 200, 300, 400, 500] <br>                                     
                                         100 200 300 400 500<br>
-                                       100 200 300 400 500 600 700                     
+                                        100 200 300 400 500 600 700                     
                                     </div>
-                               </details>
+                                </details>
                             </div>
-                           
                     </div>
                     <!-- //sample12 -->
 
@@ -479,13 +478,12 @@
                                 <details>
                                     <summary>결과확인하기</summary>
                                     <div>
-                                       100<br>                     
-                                       200<br>                     
-                                       javascript<br>                     
+                                        100<br>                     
+                                        200<br>                     
+                                        javascript<br>                     
                                     </div>
-                               </details>
+                                </details>
                             </div>
-                           
                     </div>
                     <!-- //sample13 -->
 
@@ -498,7 +496,7 @@
         a: 100,
         b: 200, 
         c: "javscript"
-    }
+    };
 
     console.log(obj.a);
     console.log(obj.b);
@@ -528,7 +526,7 @@
         a : 100,
         b : 200,
         c : "javascript"
-    }
+    };
 
     console.log(obj.a);
     console.log(obj.b);
@@ -565,7 +563,7 @@
         a : 100,
         b : 200,
         c : "javascript"
-    }
+    };
 
     const name1 = obj.a;
     const name2 = obj.b;
@@ -585,9 +583,8 @@
                                         200<br>                     
                                         javascript
                                     </div>
-                               </details>
+                                </details>
                             </div>
-                           
                     </div>
                     <!-- //sample16 -->
 
@@ -600,7 +597,7 @@
         a : 100,
         b : 200,
         c : "javascript"
-    }
+    };
 
     for(let key in obj){
 
@@ -621,9 +618,8 @@
                                         200<br>                     
                                         javascript
                                     </div>
-                               </details>
+                                </details>
                             </div>
-                           
                     </div>
                     <!-- //sample17 -->
 
@@ -634,16 +630,14 @@
 <pre><code class="language-js">{
     const obj =[
         {a:100, b:300, c: "javascript"}
-    ]
+    ];
 
     obj.map(function(el){
 
         console.log(el.a);
-
         console.log(el.b);
-
         console.log(el.c);
-    })
+    });
 }
 </code></pre>
                             </div>
@@ -655,9 +649,8 @@
                                         300<br>                     
                                         javascript
                                     </div>
-                               </details>
+                                </details>
                             </div>
-                           
                     </div>
                     <!-- //sample18 -->
 
@@ -670,7 +663,7 @@
         a : 100,
         b : 200,
         c : "javascript"
-    }
+    };
     console.log(obj.hasOwnProperty("a"));
     console.log(obj.hasOwnProperty("b"));
     console.log(obj.hasOwnProperty("c"));
@@ -687,18 +680,17 @@
                                 <details>
                                     <summary>결과확인하기</summary>
                                     <div>
-                                       ture<br>
-                                       ture<br>
-                                       ture<br>
-                                       flase<br>
-                                       ture<br>
-                                       ture<br>
-                                       ture<br>
-                                       flase<br>
+                                        ture<br>
+                                        ture<br>
+                                        ture<br>
+                                        flase<br>
+                                        ture<br>
+                                        ture<br>
+                                        ture<br>
+                                        flase<br>
                                     </div>
-                               </details>
+                                </details>
                             </div>
-                           
                     </div>
                     <!-- //sample19 -->
 
@@ -712,20 +704,20 @@
             a : 100,
             b : 200,
             c : "javascript"
-        }
+        };
 
         const spread = {...obj};
 
         console.log(spread.a);
         console.log(spread.b);
         console.log(spread.c);
-    }
+    };
     {
         const obj ={
             a : 100,
             b : 200,
             c : "javascript"
-        }
+        };
 
         const spread = {...obj, d:"react"};
 
@@ -738,11 +730,11 @@
         const obj1 ={
             a : 100,
             b : 200,
-        }
+        };
         const obj2 ={
             c : "javascript",
             d : "react",
-        }
+        };
 
         const spread = {...obj1, ...obj2};
 
@@ -784,7 +776,7 @@
         a : 100,
         b : 200,
         c : "javascript"
-    }
+    };
 
     const {a, b, c} = obj;
 
@@ -1251,50 +1243,50 @@
             //     console.log("d" in obj);
             // }
             // 20. 객체 : 데이터 불러오기 :객체 펼침연산자
-            {
-                const obj ={
-                    a : 100,
-                    b : 200,
-                    c : "javascript"
-                }
+            // {
+            //     const obj ={
+            //         a : 100,
+            //         b : 200,
+            //         c : "javascript"
+            //     }
 
-                const spread = {...obj};
+            //     const spread = {...obj};
 
-                console.log(spread.a);
-                console.log(spread.b);
-                console.log(spread.c);
-            }
-            {
-                const obj ={
-                    a : 100,
-                    b : 200,
-                    c : "javascript"
-                }
+            //     console.log(spread.a);
+            //     console.log(spread.b);
+            //     console.log(spread.c);
+            // }
+            // {
+            //     const obj ={
+            //         a : 100,
+            //         b : 200,
+            //         c : "javascript"
+            //     }
 
-                const spread = {...obj, d:"react"};
+            //     const spread = {...obj, d:"react"};
 
-                console.log(spread.a);
-                console.log(spread.b);
-                console.log(spread.c);
-                console.log(spread.d);
-            }
-            {
-                const obj1 ={
-                    a : 100,
-                    b : 200,
-                }
-                const obj2 ={
-                    c : "javascript",
-                    d : "react",
-                }
+            //     console.log(spread.a);
+            //     console.log(spread.b);
+            //     console.log(spread.c);
+            //     console.log(spread.d);
+            // }
+            // {
+            //     const obj1 ={
+            //         a : 100,
+            //         b : 200,
+            //     }
+            //     const obj2 ={
+            //         c : "javascript",
+            //         d : "react",
+            //     }
 
-                const spread = {...obj1, ...obj2};
+            //     const spread = {...obj1, ...obj2};
 
-                console.log(spread.a);
-                console.log(spread.b);
-                console.log(spread.c);
-                console.log(spread.d);
-            }
+            //     console.log(spread.a);
+            //     console.log(spread.b);
+            //     console.log(spread.c);
+            //     console.log(spread.d);
+            // }
 
             // // 21. 객체 : 데이터 불러오기 : 비구조화 할당(객체구조분해할당)
             // {
@@ -1316,6 +1308,7 @@
             //     console.log(name2);
             //     console.log(name3);
             // }
+
         </script>
 
         <script src="assets/js/highlight.min.js"></script>
