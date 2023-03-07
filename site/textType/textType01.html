@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>텍스트 유형01</title>
+
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            text-decoration: none;
+            color: #000;
+        }
+        h1,h2,h3,h4,h5,h6{
+            font-weight: normal;
+        }
+        img{
+            vertical-align: top;
+            /* 화면 여백 없애기 */
+            width: 100%;
+        }
+        .mt10 {margin-top: 10px !important;}
+        .mt20 {margin-top: 20px !important;}
+        .mt30 {margin-top: 30px !important;}
+        .mt40 {margin-top: 40px !important;}
+        .mt50 {margin-top: 50px !important;}
+        .mt60 {margin-top: 60px !important;}
+        .mt70 {margin-top: 70px !important;}
+
+        .mb10 {margin-bottom: 10px !important;}
+        .mb20 {margin-bottom: 20px !important;}
+        .mb30 {margin-bottom: 30px !important;}
+        .mb40 {margin-bottom: 40px !important;}
+        .mb50 {margin-bottom: 50px !important;}
+        .mb60 {margin-bottom: 60px !important;}
+        .mb70 {margin-bottom: 70px !important;}
+
+        .container {
+            width: 1160px;
+            margin: 0 auto;
+            padding: 0px 20px;
+            /* background-color: rgba(0,0,0,0.1); */
+        }
+        .nexon {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 400;
+        }
+        .section {
+            padding: 120px 0;
+        }
+        .center {
+            text-align: center;
+        }
+        .section_small {
+            font-size: 14px;
+            border-radius: 50px;
+            background-color: #d85050;
+            color: #fff;
+            padding: 0 23px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        .section_h2 {
+            font-size: 50px;
+            font-weight: 400;
+            margin-bottom: 30px;
+            line-height: 1;
+        }
+        .section_desc {
+            font-size: 22px;
+            color: #666666;
+            margin-bottom: 70px;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+        /* text_wrap */
+        .text_wrap {}
+        .text_inner {
+            text-align: left;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .text_inner .text {
+            width: 32.33333%;
+            border: 1px solid #f5f5f5;
+            padding: 90px 20px 20px 20px;;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            transition: all 0.3s;
+            cursor: pointer;
+            position: relative;
+        }
+        .text_inner .text:hover{
+            background-color: #f5f5f5;
+        }
+        .text_inner .text::before {
+            content: "";
+            width: 60px;
+            height: 60px;
+            background: #ccc;
+            background-image: url(../asset/img/textType01_01.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            border-radius: 50%;
+        }
+        .text_inner .text.t1::before {
+            background-color: #ffa;
+            background-image: url(../asset/img/textType01_01.svg);
+        }
+        .text_inner .text.t2::before {
+            background-color: #b2fdeb;
+            background-image: url(../asset/img/textType01_02.svg);
+        }
+        .text_inner .text.t3::before {
+            background-color: #77eedf;
+            background-image: url(../asset/img/textType01_03.svg);
+        }
+        .text_inner .text.t4::before {
+            background-color: #a6cfe2;
+            background-image: url(../asset/img/textType01_04.svg);
+        }
+        .text_inner .text.t5::before {
+            background-color: #e57066;
+            background-image: url(../asset/img/textType01_05.svg);
+        }
+        .text_inner .text.t6::before {
+            background-color: #eed974;
+            background-image: url(../asset/img/textType01_06.svg);
+        }
+        .text_title {
+            font-style: 24px;
+            margin-bottom: 10px;
+        }
+        .text_desc {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        .text_btn {
+            float: right;
+            position: relative;
+            padding-right: 20px;
+        }
+        .text_btn:hover::before {
+            transform: rotate(360deg);
+        }
+        .text_btn::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 15px;
+            height: 15px;
+            background-image: url(../asset/img/icon_plus.svg);
+            transition: all 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <section class="text_wrap section center nexon">
+        <div class="container">
+            <span class="section_small">notice</span>
+            <h2 class="section_h2 mb70" >고양이를 키울떄 주의할점</h2>
+            <div class="text_inner">
+                <div class="text t1">
+                    <h3 class="text_title">건강 검진</h3>
+                    <p class="text_desc">새로운 고양이를 입양하면 즉시 수의사를 방문하여 건강 검진을 받도록 하십시오. 정기적으로 예방 접종, 통합 검진, 벼룩 예방 등을 시행하십시오.</p>
+                    <a href="#" class="text_btn">더보기</a>
+                </div>
+                <div class="text t2">
+                    <h3 class="text_title">실내 환경</h3>
+                    <p class="text_desc">고양이는 실내에서 살아가므로 안전한 실내 환경을 제공해야 합니다. 미끄러운 바닥이나 위험한 물건을 없애고, 고양이에게 안전한 장소를 마련하십시오. 캣타워와 스크레처는 꼭 준비하세요.</p>
+                    <a href="#" class="text_btn">더보기</a>
+                </div>
+                <div class="text t3">
+                    <h3 class="text_title">적절한 사료</h3>
+                    <p class="text_desc">고양이는 고양이 전용 사료를 먹어야 합니다. 고양이에게 인간 식품을 주면 안 되며, 물과 식사 그릇은 매일 청소하십시오.물과 식사 그릇은 매일 청소하십시오. 그릇은 매일 청소하십시오.</p>
+                    <a href="#" class="text_btn">더보기</a>
+                </div>
+                <div class="text t4">
+                    <h3 class="text_title">꼬리 취급</h3>
+                    <p class="text_desc">고양이의 꼬리는 중요한 신호입니다. 꼬리가 고개를 향하면 고양이는 기분이 좋다는 신호이고, 꼬리가 어느 정도 옆으로 튀어나오면 겁을 먹거나 화를 내는 신호입니다. 고양이의 꼬리를 강하게 잡거나 휘두르면 안 됩니다.</p>
+                    <a href="#" class="text_btn">더보기</a>
+                </div>
+                <div class="text t5">
+                    <h3 class="text_title">놀이</h3>
+                    <p class="text_desc">고양이는 활발한 동물이므로 놀이 시간을 가지고 놀이를 할 수 있는 장난감을 제공해야 합니다. 굳이 비싼 장난감일 필요는 없고, 종이나 박스, 뒤집은 종이컵 등 간단한 물건으로도 고양이의 호기심을 자극할 수 있습니다.</p>
+                    <a href="#" class="text_btn">더보기</a>
+                </div>
+                <div class="text t6">
+                    <h3 class="text_title">사랑</h3>
+                    <p class="text_desc">고양이는 집안에서 가장 사랑받는 가족 중 한 명이어야 합니다. 고양이는 훈련과 관심을 통해 지능과 행동을 향상시킬 수 있습니다. 따라서 고양이와 교감하며 사랑으로 가득 찬 환경을 제공하는 것이 중요합니다.</p>
+                    <a href="#" class="text_btn">더보기</a>
+                </div>
+
+                
+            </div>
+        </div>
+    </section>
+</body>
+</html>

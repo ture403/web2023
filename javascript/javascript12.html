@@ -139,7 +139,7 @@
 <pre class="line-numbers"><code class="language-js">{
     for(let i=1; i&lt;100; i++){ // 변수 i에 0으로 초기화 후 i가100 전까지 i가 1씩 증가
         if(i % 2 == 0){ // 만약 i를 2로 나눈 나머지 값이 0 이면
-            document.write("&lt;span style='color:blue';&gt;"+i+"&lt;/span>") // 파란색으로 출력하라
+            document.write("&lt;span style='color:blue';&gt;"+i+"&lt;/span&gt;") // 파란색으로 출력하라
         }
         if(i % 2 == 1){ // 만약 i를 2로 나눈 나머지 값이 1이면
             document.write("&lt;span style='color:red';&gt;"+i+"&lt;/span&gt;") //빨간색으로 출력하라
@@ -219,15 +219,15 @@
         for(let j=1; j&lt;=5; j++){ // 중첩 반복문 j가 1부터 5까지
             count++; //카운터 증가
             if(count % 2 == 0){ // 만약 count 값을 나눈 나머지 값이 0 이면
-                table += "&lt;td style='color: red'>" + count+ "&lt;/td&gt;"; //tr 글자를 빨간색
+                table += "&lt;td style='color: red'&gt;" + count+ "&lt;/td&gt;"; //tr 글자를 빨간색
             } else { //아니면
-                table += "&lt;td style='color: blue'>" + count+ "&lt;/td&gt;"; //글자를 파란색
+                table += "&lt;td style='color: blue'&gt;" + count+ "&lt;/td&gt;"; //글자를 파란색
             }
         }
-        table += "&lt;tr&gt;"; // tr 태그 끝맺음
+        table += "&lt;tr&gt;"; // tr 끝맺음
     }
 
-    table += "&lt/table&gt;"; //table 태그 끝맺음
+    table += "&lt/table&gt;"; //table 끝맺음
 
     document.write(table); //표출
 
@@ -344,7 +344,16 @@
         //         document.write("<br><br>");
         //     }
         // }
+        // {
+        //     let num=0;
+
+        //     for(let i=0; i<=50; i++){
+        //         num = num + i
+        //     }
+        //     document.write(num)
+        // }
     </script>
    
 </body>
 </html>
+
