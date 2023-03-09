@@ -673,10 +673,11 @@
                     <!-- //sample18 -->
 
                     <div id="sample19" class="sample">
-                        <h3> ++연산자(전치,후치)<h3>
+                        <h3> ++연산자(전치,후치) 비트연산자<h3>
                             <p>++,--연산자는 변수의 값을 1씩 증가 시키거나 감소시키는데 사용하는 연산자입니다.</p>
                             <div class="script">
 <pre><code class="language-js">{
+    //전치,후치 연산자
     {
         let a =1, b=2, c=3, result;
         result = ++a + b++ + ++c;
@@ -707,6 +708,20 @@
         console.log(b+c);
         console.log(c);
     }
+    //비트 연산자
+    {
+        let a= 9;
+        let b = 11;
+        let c = a^b; //비트연산자
+        console.log(c);
+    }
+    {
+        let num1 = 16, num2 = 80;
+        let result;
+    
+        result = num1^num2 ;
+        console.log(result);
+    }
 }
 </code></pre>
                             </div>
@@ -725,8 +740,21 @@
                                         20<br>
                                         61<br>
                                         30<br>
+                                        2<br>
+                                        64
                                     </div>
                                 </details>
+                            </div>
+                            <div class="notice">
+                                <h4>비트 연산자란?</h4>
+                                <p>비트 연산자(Bitwise Operator)는 컴퓨터에서 이진수로 표현된 데이터의 비트(bit) 단위 연산을 수행하는 연산자입니다. 주로 플래그(flag) 비트를 조작하거나 비트 단위의 논리 연산을 수행하는 데 사용됩니다.</p>
+                                <ul>
+                                    <li>AND(&) 연산자 :두 비트 모두 1일 경우에만 결과가 1이 됩니다. (ex: 1010 & 1100 = 1000)</li>
+                                    <li>OR(|) 연산자 : 두 비트 중 하나 이상이 1일 경우 결과가 1이 됩니다. (ex: 1010 | 1100 = 1110)</li>
+                                    <li>XOR(^) 연산자 : 두 비트가 서로 다를 경우에만 결과가 1이 됩니다. (ex: 1010 ^ 1100 = 0110)</li>
+                                    <li>NOT(~) 연산자 : 비트를 반전시킵니다. 1은 0으로, 0은 1로 변환됩니다. (ex: ~1010 = 0101)</li>
+                                    <li>Shift(&lt;&lt;, &gt;&gt;) 연산자 :비트를 왼쪽(&lt;&lt;)이나 오른쪽(&gt;&gt;)으로 이동시킵니다. 왼쪽으로 이동할수록 2의 배수만큼 곱해지고,<br> 오른쪽으로 이동할수록 2의 배수만큼 나눠집니다. (ex: 0011 &lt;&lt; 2 = 1100, 1100 &gt;&gt; 2 = 0011)</li>
+                                </ul>
                             </div>
                     </div>
                     <!-- //sample19 -->
