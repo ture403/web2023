@@ -284,7 +284,13 @@
 //5*5표가 만들어지고 3의배수는 빨간색 5의배수는 파란색 나머지는 검은색
 </code></pre>
                     </div>
-
+                    <!-- <div class="result">
+                        <details>
+                            <summary>결과확인하기</summary>
+                            <div class="result_table">
+                            </div>
+                        </details>
+                    </div> -->
                     <div id="sample11" class="sample">
                         <h3>11. 데이터 이펙트 : 배열 데이터에서 10보다 큰수 찾기</h3>
                         <p>배열안에 10보다 큰수를 불러오는 방법입니다.</p>
@@ -394,6 +400,35 @@
         //     }
         //     console.log(sum)
         // }
+
+        // {
+        //     const result_Table = document.querySelector(".result_table");
+
+        //         let table = "<table border='1'>"; //변수 table에 table 생성
+        //         let count =0; //변수 카운트 0으로 초기화
+
+        //         for(let i=1; i<=5; i++){ // i가 1에서 5까지 반복
+        //             table  += "<tr>"; //tr 태그 생성
+        //             for(let j=1; j<=5; j++){ //j가 1에서 5까지 반복
+        //                 count++; //count 1씩 증가
+        //                 if(count % 3 == 0){ //만약 count값을 3으로 나눈 나머지 값이 0 이면
+        //                     table += "<td style='color: red'>" + count+ "</td>"; //td에 글자색을 빨간색으로 넣어줌
+        //                 } else if( count % 5 ==0) { //만약 count값을 5으로 나눈 나머지 값이 0 이면
+        //                     table += "<td style='color: blue'>" + count+ "</td>"; //td에 글자색을 파란색으로 넣어줌
+        //                 } else { //아니면
+        //                     table += "<td style='color: #000'>" + count+ "</td>"; //td에 글자색을 검은색으로 넣어줌
+        //                 }
+        //             }
+        //             table += "</tr>"; // tr 태그 끝맺음
+        //         }
+
+        //         table += "</table>" //table 태그 끝맺음
+
+        //         // document.write(table); //html 표출
+        //         result_Table.innerHTML = table
+        // }
+            
+        
     </script>
     
 </body>
