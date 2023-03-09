@@ -151,8 +151,24 @@
 </code></pre>
                     </div>
 
-                    <div id="sample06" class="sample">
-                        <h3>06. 데이터 이펙트 : for문을 이용해서 100칸 테이블 만들기</h3>
+                      <div id="sample06" class="sample">
+                        <h3>데이터 이펙트 : 1부터 100까지 합 구하기</h3>
+                        <p>for문을 이용해서 1-100까지 합을 예제입니다.</p>
+                        
+<pre class="line-numbers"><code class="language-js">{
+    let sum = 0;
+    for(let i=1; i&lt;=100; i++){
+        sum = i+ sum
+    }
+    document.write(sum)
+}
+
+//5050
+</code></pre>
+                    </div>
+
+                    <div id="sample07" class="sample">
+                        <h3>07. 데이터 이펙트 : for문을 이용해서 100칸 테이블 만들기</h3>
                         <p>중첩for문을 이용해서 100칸 테이블을 출력하는 예제입니다.</p>
                         
 <pre class="line-numbers"><code class="language-js">{
@@ -176,8 +192,8 @@
 </code></pre>
                     </div>
 
-                    <div id="sample07" class="sample">
-                        <h3>07. 데이터 이펙트 : 중첩 for문을 이용해서 구구단 만들기</h3>
+                    <div id="sample08" class="sample">
+                        <h3>08. 데이터 이펙트 : 중첩 for문을 이용해서 구구단 만들기</h3>
                         <p>중첩for문을 이용해서 구구단을 출력하는 예제입니다.</p>
                         
 <pre class="line-numbers"><code class="language-js">{
@@ -205,8 +221,8 @@
 </code></pre>
                     </div>
 
-                    <div id="sample08" class="sample">
-                        <h3>08. 데이터 이펙트 : 테이블 25칸(짝수:빨간색, 홀수/파란색</h3>
+                    <div id="sample09" class="sample">
+                        <h3>09. 데이터 이펙트 : 테이블 25칸(짝수:빨간색, 홀수/파란색)</h3>
                         <p>짝수 빨간색 홀수 파란색으로 표를 만듭니다.</p>
                         
 <pre class="line-numbers"><code class="language-js">{
@@ -236,8 +252,8 @@
 </code></pre>
                     </div>
 
-                    <div id="sample09" class="sample">
-                        <h3>09. 데이터 이펙트 : 테이블 25칸(3의배수:빨간색, 5의배수/파란색</h3>
+                    <div id="sample10" class="sample">
+                        <h3>10. 데이터 이펙트 : 테이블 25칸(3의배수:빨간색, 5의배수/파란색)</h3>
                         <p>3의배수빨간색 5의배수파란색 나머지는검은색 표를 만듭니다.</p>
                         
 <pre class="line-numbers"><code class="language-js">{
@@ -266,6 +282,25 @@
 
 }
 //5*5표가 만들어지고 3의배수는 빨간색 5의배수는 파란색 나머지는 검은색
+</code></pre>
+                    </div>
+
+                    <div id="sample11" class="sample">
+                        <h3>11. 데이터 이펙트 : 배열 데이터에서 10보다 큰수 찾기</h3>
+                        <p>배열안에 10보다 큰수를 불러오는 방법입니다.</p>
+                        
+<pre class="line-numbers"><code class="language-js">{
+    const arr =  [1, 3, 5, 7, 9, 11, 13, 15, 17, 19];
+
+    // for문
+    for(let i=0; i&lt;arr.length; i++){ // i 가 arr의갯수 만큼 반복을 돕니다.
+        if(arr[i] &gt; 10){ // arr의 숫자가 10 이상이면
+            document.write(arr[i]+","); //document.write로 출력합니다.
+        }
+    }
+
+}
+//11,13,15,17,19
 </code></pre>
                     </div>
                 </div>
@@ -352,8 +387,15 @@
         //     }
         //     document.write(num)
         // }
+        // {
+        //     let sum = 0;
+        //     for(let i=1; i<=100; i++){
+        //         sum = i+ sum
+        //     }
+        //     console.log(sum)
+        // }
     </script>
-   
+    
 </body>
 </html>
 
