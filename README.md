@@ -14,7 +14,8 @@
 데이터 실행하기:https://ture403.github.io/web2023/javascript/javascript03.html   
 데이터 제어하기:https://ture403.github.io/web2023/javascript/javascript04.html   
  
-퀴즈 이펙트 :ture403.github.io/web2023/javascript/quiz/quizEffect01.html   
+퀴즈 이펙트01 :ture403.github.io/web2023/javascript/quiz/quizEffect01.html   
+퀴즈 이펙트02 :ture403.github.io/web2023/javascript/quiz/quizEffect02.html   
 
 # 사이트   
 이미지 유형 01 : ture403.github.io/web2023/site/imageType/imageType01.html   
