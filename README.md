@@ -18,8 +18,8 @@
 퀴즈 이펙트02 :https://ture403.github.io/web2023/javascript/quiz/quizEffect02.html   
 
 # 사이트   
-이미지 유형 01 : ture403.github.io/web2023/site/imageType/imageType01.html   
-카드 유형01 : ture403.github.io/web2023/site/cardType/cardType01.html   
-텍스트 유형 01 : ture403.github.io/web2023/site/textType/textType01.html   
-슬라이드 유형 01 :ture403.github.io/web2023/site/silderType/silderType01.html   
+이미지 유형 01 : https://ture403.github.io/web2023/site/imageType/imageType01.html   
+카드 유형01 : https://ture403.github.io/web2023/site/cardType/cardType01.html   
+텍스트 유형 01 : https://ture403.github.io/web2023/site/textType/textType01.html   
+슬라이드 유형 01 :https://ture403.github.io/web2023/site/silderType/silderType01.html   
 
