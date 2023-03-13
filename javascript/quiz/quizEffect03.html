@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퀴즈 이펙트03</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/quiz.css">
+</head>
+<body>
+    <header id="header">
+        <h1><a href="../javascript14.html">Quiz</a><em>주관식 확인하기(여러문제) 유형</em></h1>
+        <ul>
+            <li><a href="quizEffect01.html">1</a></li>
+            <li><a href="quizEffect02.html">2</a></li>
+            <li class="active"><a href="quizEffect03.html">3</a></li>
+        </ul>
+    </header>
+    <!-- //header -->
+    
+    <main id="main">
+        <div class="quiz_wrap">
+
+            <div class="quiz">
+                <div class="quiz_header">
+                    <h2 class="quiz_title"></h2>
+                </div>
+                <div class="quiz_main">
+                    <div class="quiz_quection">
+                        <em></em>. <span></span>
+                    </div>
+                    <div class="quiz_view">
+                        <div class='dog_wrap'>
+                            <div class="ture">정답입니다.</div>
+                            <div class="false">틀렸습니다!</div>
+                            <div class='card-container'>
+                                <div class="dog">
+                                    <div class="head">
+                                        <div class="ears"></div>
+                                        <div class="face"></div>
+                                        <div class="eyes">
+                                            <div class="teardrop"></div>
+                                        </div>
+                                        <div class="nose"></div>
+                                        <div class="mouth">
+                                            <div class="tongue"></div>
+                                        </div>
+                                        <div class="chin"></div>
+                                    </div>
+                                    <div class="body">
+                                        <div class="tail"></div>
+                                        <div class="legs"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quiz_answer">
+                        <input class="input" type="text" placeholder="정답을 적어주세요">
+                        <button class="confirm">정답 확인 하기</button>
+                        <div class="result"></div>
+                    </div>
+                </div>
+                <div class="quiz_desc"></div>
+            </div>
+
+            <div class="quiz">
+                <div class="quiz_header">
+                    <h2 class="quiz_title"></h2>
+                </div>
+                <div class="quiz_main">
+                    <div class="quiz_quection">
+                        <em></em>. <span></span>
+                    </div>
+                    <div class="quiz_view">
+                        <div class='dog_wrap'>
+                            <div class="ture">정답입니다!</div>
+                            <div class="false">틀렸습니다!</div>
+                            <div class='card-container'>
+                                <div class="dog">
+                                    <div class="head">
+                                        <div class="ears"></div>
+                                        <div class="face"></div>
+                                        <div class="eyes">
+                                            <div class="teardrop"></div>
+                                        </div>
+                                        <div class="nose"></div>
+                                        <div class="mouth">
+                                            <div class="tongue"></div>
+                                        </div>
+                                        <div class="chin"></div>
+                                    </div>
+                                    <div class="body">
+                                        <div class="tail"></div>
+                                        <div class="legs"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quiz_answer">
+                        <input class="input" type="text" placeholder="정답을 적어주세요">
+                        <button class="confirm">정답 확인 하기</button>
+                        <div class="result"></div>
+                    </div>
+                </div>
+                <div class="quiz_desc"></div>
+            </div>
+
+            <div class="quiz">
+                <div class="quiz_header">
+                    <h2 class="quiz_title"></h2>
+                </div>
+                <div class="quiz_main">
+                    <div class="quiz_quection">
+                        <em></em>. <span></span>
+                    </div>
+                    <div class="quiz_view">
+                        <div class='dog_wrap'>
+                            <div class="ture">정답입니다!</div>
+                            <div class="false">틀렸습니다!</div>
+                            <div class='card-container'>
+                                <div class="dog">
+                                    <div class="head">
+                                        <div class="ears"></div>
+                                        <div class="face"></div>
+                                        <div class="eyes">
+                                            <div class="teardrop"></div>
+                                        </div>
+                                        <div class="nose"></div>
+                                        <div class="mouth">
+                                            <div class="tongue"></div>
+                                        </div>
+                                        <div class="chin"></div>
+                                    </div>
+                                    <div class="body">
+                                        <div class="tail"></div>
+                                        <div class="legs"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quiz_answer">
+                        <input class="input" type="text" placeholder="정답을 적어주세요">
+                        <button class="confirm">정답 확인 하기</button>
+                        <div class="result"></div>
+                    </div>
+                    <div class="quiz_desc"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+    
+    <footer id="footer">
+        <a href="mailto:ture403@gmail.com">ture403@gmail.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script>
+        //선택자
+        const quizWrap =document.querySelector(".quiz_wrap");
+        const quizTitle =quizWrap.querySelectorAll(".quiz_title");  //시험 종목,시간
+        const quizNumer = quizWrap.querySelectorAll(".quiz_quection em"); //시험 번호
+        const quizQuection = quizWrap.querySelectorAll(".quiz_quection span"); //시험 문제
+        const quizAnswerConfirm = quizWrap.querySelectorAll(".quiz_answer .confirm"); //시험 정답 확인
+        const quizAnswerResult = quizWrap.querySelectorAll(".quiz_answer .result"); //시험 정답
+        const quizAnswerInput = quizWrap.querySelectorAll(".quiz_answer .input"); // 정답 박스
+        const quizDesc = quizWrap.querySelectorAll(".quiz_desc"); //문제 해설
+        const dogWrap = quizWrap.querySelectorAll(".dog_wrap");
+        
+        //문제정보
+        const quizInfo = [
+            {
+                infoType : "정보처리 기능사",
+                infoTime : "2011년도 4회",
+                infoNumber : "1",
+                infoQuection : "UNIX에서 현재 작업 디렉터리 경로를 화면에 출력하는 명령어는?",
+                infoAnswer : "pwd",
+                infoDesc : "pwd는 디렉토리의 절대경로를 표시합니다."
+            },{
+                infoType : "정보처리 기능사",
+                infoTime : "2011년도 4회",
+                infoNumber : "2",
+                infoQuection : "윈도우 98에서 ‘시스템 도구’ 메뉴에 포함되지 않는 것은?",
+                infoAnswer : "디스크 포맷",
+                infoDesc : "디스크 공간늘림(DBLSPACE) 디스크 검사(SCANDISK) 디스크 조각 모음(DEFRAG) 디스크 정리 백업 등이 있어요"
+            },{
+                infoType : "정보처리 기능사",
+                infoTime : "2011년도 4회",
+                infoNumber : "3",
+                infoQuection : "DOS 명령어 중 텍스트 파일의 내용을 출력하는 명령은?",
+                infoAnswer : "TYPE",
+                infoDesc : "DOS의 여러 명령어중 TYPE 명령어가 텍스트 파일의 내용을 출력하는 명령어 입니다."
+            },
+        ];
+
+        // 문제 출력
+        
+        //#1 //문제 종류
+        // quizTitle[0].textContent = quizInfo[0].infoType;
+        // quizTitle[1].textContent = quizInfo[1].infoType;
+        // quizTitle[2].textContent = quizInfo[2].infoType;
+
+        // // 문제 시간
+        // quizTime[0].textContent = quizInfo[0].infoTime;
+        // quizTime[1].textContent = quizInfo[1].infoTime;
+        // quizTime[2].textContent = quizInfo[2].infoTime;
+
+        // //문제 번호
+        // quizNumer[0].textContent = quizInfo[0].infoNumber;
+        // quizNumer[1].textContent = quizInfo[1].infoNumber;
+        // quizNumer[2].textContent = quizInfo[2].infoNumber;
+
+        // //문제 질문
+        // quizQuection[0].textContent = quizInfo[0].infoQuection;
+        // quizQuection[1].textContent = quizInfo[1].infoQuection;
+        // quizQuection[2].textContent = quizInfo[2].infoQuection;
+
+        // //문제 결과
+        // quizAnswerResult[0].textContent = quizInfo[0].infoAnswer;
+        // quizAnswerResult[1].textContent = quizInfo[1].infoAnswer;
+        // quizAnswerResult[2].textContent = quizInfo[2].infoAnswer;
+
+        // //문제 해설
+        // quizDesc[0].textContent = quizInfo[0].infoDesc;
+        // quizDesc[1].textContent = quizInfo[1].infoDesc;
+        // quizDesc[2].textContent = quizInfo[2].infoDesc;
+
+        // #2
+        // 문제 종류 + 문제 시간
+        // quizTitle[0].innerHTML = quizInfo[0].infoType +" "+ quizInfo[0].infoTime;
+        // quizTitle[1].innerHTML = quizInfo[1].infoType +" "+ quizInfo[1].infoTime;
+        // quizTitle[2].innerHTML = quizInfo[2].infoType +" "+ quizInfo[2].infoTime;
+
+        // //문제 번호
+        // quizNumer[0].textContent = quizInfo[0].infoNumber;
+        // quizNumer[1].textContent = quizInfo[1].infoNumber;
+        // quizNumer[2].textContent = quizInfo[2].infoNumber;
+
+        // //문제 질문
+        // quizQuection[0].textContent = quizInfo[0].infoQuection;
+        // quizQuection[1].textContent = quizInfo[1].infoQuection;
+        // quizQuection[2].textContent = quizInfo[2].infoQuection;
+
+        // for(let i=0; i<quizInfo.length; i++){
+        //     quizTitle[i].innerHTML = quizInfo[i].infoType +" "+ quizInfo[i].infoTime;
+        //     quizNumer[i].textContent = quizInfo[i].infoNumber;
+        //     quizQuection[i].textContent = quizInfo[i].infoQuection;
+        //     quizAnswerResult[i].textContent = quizInfo[i].infoAnswer;
+        //     quizDesc[i].textContent = quizInfo[i].infoDesc;
+        // }
+
+
+        quizInfo.forEach(function(el,index){
+            quizTitle[index].innerHTML = quizInfo[index].infoType +" "+ quizInfo[index].infoTime;
+            quizNumer[index].textContent = quizInfo[index].infoNumber;
+            quizQuection[index].textContent = quizInfo[index].infoQuection;
+            quizAnswerResult[index].textContent = quizInfo[index].infoAnswer;
+            quizDesc[index].textContent = quizInfo[index].infoDesc;
+        })
+
+        //정답 숨기기
+
+        // quizAnswerResult[0].style.display = "none";
+        // quizAnswerResult[1].style.display = "none";
+        // quizAnswerResult[2].style.display = "none";
+
+        // quizDesc[0].style.display = "none";
+        // quizDesc[1].style.display = "none";
+        // quizDesc[2].style.display = "none";
+
+        // for(let i=0; i<quizInfo.length; i++){
+        //     quizAnswerResult[i].style.display = "none";
+        //     quizDesc[i].style.display = "none";
+        // };
+
+        quizInfo.forEach(function(el,index){
+            quizAnswerResult[index].style.display = "none";
+            quizDesc[index].style.display = "none";
+        });
+
+        quizAnswerConfirm.forEach((btn,num)=>{
+            btn.addEventListener("click", function(){
+                //사용자 정답
+                const userAnswer = quizAnswerInput[num].value.trim();
+                quizAnswerInput[num].style.display = "none"; //input 숨김
+                quizAnswerConfirm[num].style.display = "none"; //정답 확인 버튼 숨김
+                quizAnswerResult[num].style.display = "block"; // 정답 화면 보이기
+                quizDesc[num].style.display = "block"; //해설 보이기
+
+                //사용자 정답 == 문제 정답
+                if(userAnswer == quizInfo[num].infoAnswer){
+                    dogWrap[num].classList.add("like");
+                }else {
+                    dogWrap[num].classList.add("dislike");
+                }
+
+            })
+        });
+
+        
+
+        
+
+    </script>
+</body>
+</html>

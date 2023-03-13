@@ -14,6 +14,7 @@
         <ul>
             <li><a href="quizEffect01.html">1</a></li>
             <li class="active"><a href="quizEffect02.html">2</a></li>
+            <li><a href="quizEffect03ㄴ.html">3</a></li>
         </ul>
     </header>
     <!-- //header -->
@@ -83,7 +84,6 @@
         const quizAnswerResult = quizWrap.querySelector(".quiz_answer .result");
         const quizAnswerInput = quizWrap.querySelector(".quiz_answer .input");
         const dogWrap = quizWrap.querySelector(".dog_wrap");
-        const quizFooter = quizWrap.querySelector(".quiz_footer");
 
         //문제 정보
         const infoType = "정보처리 기능사";
@@ -104,7 +104,7 @@
 
         //정답 & 해설 숨기기
         quizAnswerResult.style.display = "none";
-        quizFooter.style.display = "none";
+        quizDesc.style.display = "none";
 
         //사용자 정답
         quizAnswerConfirm.addEventListener("click", function(){
@@ -112,7 +112,7 @@
             quizAnswerInput.style.display = "none"; //input 숨김
             quizAnswerConfirm.style.display = "none"; //정답 확인 버튼 숨김
             quizAnswerResult.style.display = "block"; // 정답 화면 보이기
-            quizFooter.style.display = "block"; //해설 보이기
+            quizDesc.style.display = "block"; //해설 보이기
             
             if( infoAnswer == userAnswer){
                 // alert("정답입니다.");
