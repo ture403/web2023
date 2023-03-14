@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 텍스트 유형01</title>
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+    <style>
+        /* reset */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            text-decoration: none;
+            color: #000;
+        }
+        h1, h2, h3, h4, h5, h6{
+            font-weight: normal;
+        }
+        img{
+            vertical-align: top;
+            width: 100%;
+            /* 화면 여백 없애기 */
+        }
+        /* common */
+        .container {
+            width: 1160px;
+            margin: 0 auto;
+            padding: 0px 20px;
+            /* background-color: rgba(0,0,0,0.1); */
+        }
+        .nexon {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 400;
+        }
+        .section {
+            padding: 120px 0;
+        }
+        /* card_type */
+        .card_inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .card_inner .card {
+            width: 32.333%;
+            /* background-color: #f8f8f8; */
+        }
+        .card h1 {
+            font-style: normal;
+            font-size: 50px;
+            line-height: 1.2;
+            padding-right: 50px;
+            margin-bottom: 25px;
+            color: #000;
+        }
+        .card h2 {
+            font-style: normal;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #666;
+            padding-right: 10px;
+            margin-bottom: 15px;
+        }
+        .card ul li {
+            font-style: normal;
+            font-size: 16px;
+            line-height: 1.55;
+            color: #666;
+            margin-left: 17px;
+        }
+        .card_header {
+            width: 373px;
+            height: 500px;
+        }
+        .card_notice {
+            font-size: 14px;
+            border-radius: 30px;
+            background-color: #d85050;
+            color: #fff;
+            padding: 0 23px;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 16px;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+    <section class="card_wrap section nexon">
+        <div class="container">
+            <div class="card_inner">
+                <acticle class="card">
+                    <span class="card_notice">notice</span>
+                    <h1 class="nexon">고양이 종류 10가지</h1>
+                    <h2 class="nexon">GPT한테 물어본 고양이 종류가 10가지가 있습니다.다음은 그 목록입니다.</h2>
+                    <ul>
+                        <li>샴 고양이 (Siamese Cat)</li>
+                        <li>페르시안 고양이 (Persian Cat)</li>
+                        <li>스코티시 폴드 고양이 (Scottish Fold Cat)</li>
+                        <li>먼치킨 고양이 (Manx Cat)</li>
+                        <li>시베리안 고양이 (Siberian Cat)</li>
+                        <li>아비시니안 고양이 (Abyssinian Cat)</li>
+                        <li>브리티시 쇼트헤어 고양이 (British Shorthair Cat)</li>
+                        <li>미묘 (Munchkin Cat)</li>
+                        <li>벵골 고양이 (Bengal Cat)</li>
+                        <li>러시안 블루 고양이 (Russian Blue Cat)</li>
+                    </ul>
+                </acticle>
+                <acticle class="card">
+                    <figure class="card_header">
+                        <img src="../asset/img/img_text_Type01.png" alt="집에서 보내는 시간">
+                    </figure>
+                </acticle>
+                <acticle class="card">
+                    <figure class="card_header">
+                        <img src="../asset/img/img_text_Type02.png" alt="동물에 대해 공부했는가">
+                    </figure>
+                </acticle>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
