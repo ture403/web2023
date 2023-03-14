@@ -304,7 +304,7 @@ Query OK, 0 rows affected (0.03 sec)
 <pre><code class="language-js">SELECT * FROM member where memberID= &lt;&gt; 1;
 </code></pre>
                     <h4>memberID가 5-10 경우에만 불러오기</h4>
-<pre><code class="language-js">SELECT * FROM member where memberID &gt;=5  AND memberID = &lt;=10;
+<pre><code class="language-js">SELECT * FROM member where memberID &gt;=5  AND memberID  &lt;=10;
 </code></pre>
                     <h4>youAge가 30-40 경우에만 불러오기</h4>
 <pre><code class="language-js">SELECT * FROM member where youAge BETWEEN 30 AND 40;
