@@ -477,10 +477,10 @@
                 infoNumber : "20110530",
                 infoQuection : "웹 문서에 mp3 사운드 파일을 삽입하여 재생되도록 하고자 할 때 사용되는 태그는?",
                 infoChoice : {
-                    1 : "<IMG>",
-                    2 : "<EMBED>",
-                    3 : "<BK>",
-                    4 : "<MP3>"
+                    1 : "&lt;IMG&gt;",
+                    2 : "&lt;EMBED&gt;",
+                    3 : "&lt;BK&gt;",
+                    4 : "&lt;MP3&gt;"
                 },
                 infoAnswer :"2",
                 infoDesc : ""
@@ -503,10 +503,10 @@
                 infoNumber : "20110532",
                 infoQuection : "웹 페이지 제작 시 배경 색상 설정이 흰색으로 지정되지 않는 것은?",
                 infoChoice : {
-                    1 : "<BODY bgcolor='#ffffff'>",
-                    2 : "<BODY bgcolor='white'>",
-                    3 : "<BODY bgcolor='ffffff'>",
-                    4 : "<BODY bgcolor='#000000'>"
+                    1 : "&lt;BODY bgcolor='#ffffff'&gt;",
+                    2 : "&lt;BODY bgcolor='white'&gt;",
+                    3 : "&lt;BODY bgcolor='ffffff'&gt;",
+                    4 : "&lt;BODY bgcolor='#000000'&gt;"
                 },
                 infoAnswer :"4",
                 infoDesc : ""
@@ -581,10 +581,10 @@
                 infoNumber : "20110538",
                 infoQuection : "HTML 태그의 설명으로 틀린 것은?",
                 infoChoice : {
-                    1 : "<I> … </I> : 이탤릭체를 보여준다.",
-                    2 : "<OL> … </OL> : 순서를 매기지 않은 목록을 작성할 때 사용한다",
-                    3 : "<CENTER> … </CENTER> : 태그사이에 있는 문단을 가운데로 정렬한다.",
-                    4 : "<BR> : 줄을 바꿀 때에 사용한다."
+                    1 : "&lt;I&gt; … &lt;/I&gt; : 이탤릭체를 보여준다.",
+                    2 : "&lt;OL&gt; … &lt;/OL&gt; : 순서를 매기지 않은 목록을 작성할 때 사용한다",
+                    3 : "&lt;CENTER&gt; … &lt;/CENTER&gt; : 태그사이에 있는 문단을 가운데로 정렬한다.",
+                    4 : "&lt;BR&gt; : 줄을 바꿀 때에 사용한다."
                 },
                 infoAnswer :"2",
                 infoDesc : ""
@@ -878,6 +878,7 @@
         ];
         //선택자
         const quizWrap = document.querySelector(".quiz_wrap");
+        let quizScore = 0;
         
 
         //문제 출력
@@ -891,7 +892,7 @@
                         <h2 class="quiz_title">${qusection.infoType} ${qusection.infoTime}</h2>
                     </div>
                     <div class="quiz_main">
-                        <div class="quiz_quection"><em>${qusection.infoNumber}</em>. ${qusection.infoQuection}
+                        <div class="quiz_quection"><em>${number+1}</em>. ${qusection.infoQuection}
                         </div>
                         <div class="quiz_view">
                             <div class='dog_wrap'>
@@ -939,18 +940,53 @@
                             
                         </div>
                     </div>
-                    <div class="quiz_desc">${qusection.infoDesc}</div>
+                    <div class="quiz_desc">정답은 <em>${qusection.infoAnswer}</em>번 입니다.<br>${qusection.infoDesc}</div>
                 </div>
                 `);
-            })
+            });
 
-            quizWrap.innerHTML = exam;
-            console.log(exam)
+            exam.push(`
+                <div class="quiz_info">??점</div>
+                <div class="quiz_check">정답 확인</div>
+            `);
+
+            quizWrap.innerHTML = exam.join('');
+
+            //설명 숨기기
+            document.querySelectorAll(".quiz_desc").forEach(el=> el.style.display = "none");
         };
-
-
         updateQuiz();
-        
+
+        // 정답 확인
+        const answerQuiz = () => {
+            const quizChoices = document.querySelectorAll(".quiz_choice");
+            
+            //사용자가 체크한 정답 == 문제 정답
+            quizInfo.forEach((qusection, number)=>{
+                const userSelector = `input[name=choice${number}]:checked`;
+                const quizSelectorWrap = quizChoices[number];
+                const userAnswer = (quizSelectorWrap.querySelector(userSelector) || {}).value; //사용자가 체크한 정답 찾기
+                const dogWrap = quizWrap.querySelectorAll(".dog_wrap");
+
+                if(userAnswer == qusection.infoAnswer){
+                    dogWrap[number].classList.add("like");
+                    quizScore++;
+                } else{
+                    dogWrap[number].classList.add("dislike");
+                    
+                }
+            });
+
+            //설명 보이기
+            document.querySelectorAll(".quiz_desc").forEach(el=> el.style.display = "block");
+            
+
+            //점수 보이기
+            document.querySelector(".quiz_info").innerHTML = Math.ceil((quizScore / quizInfo.length) * 100) + "점";
+        }
+
+        // 정답 클릭
+        document.querySelector(".quiz_check").addEventListener("click", answerQuiz);
         
     </script>
 </body>
