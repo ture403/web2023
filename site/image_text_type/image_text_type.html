@@ -8,27 +8,52 @@
     <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
     <style>
         /* reset */
-        *{
+         /* reset */
+         * {
             margin: 0;
             padding: 0;
         }
-        a{
+        a {
             text-decoration: none;
             color: #000;
         }
-        h1, h2, h3, h4, h5, h6{
+        h1, h2, h3, h4, h5, h6 {
             font-weight: normal;
         }
-        img{
+        img {
             vertical-align: top;
             width: 100%;
-            /* 화면 여백 없애기 */
         }
+        li {
+            list-style: none;
+        }
+        .blind {
+            position: absolute;
+            clip: rect(0 0 0 0);
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+        }
+        .mt10 {margin-top: 10px !important;}
+        .mt20 {margin-top: 20px !important;}
+        .mt30 {margin-top: 30px !important;}
+        .mt40 {margin-top: 40px !important;}
+        .mt50 {margin-top: 50px !important;}
+        .mt60 {margin-top: 60px !important;}
+        .mt70 {margin-top: 70px !important;}
+        .mb10 {margin-bottom: 10px !important;}
+        .mb20 {margin-bottom: 20px !important;}
+        .mb30 {margin-bottom: 30px !important;}
+        .mb40 {margin-bottom: 40px !important;}
+        .mb50 {margin-bottom: 50px !important;}
+        .mb60 {margin-bottom: 60px !important;}
+        .mb70 {margin-bottom: 70px !important;}
         /* common */
         .container {
             width: 1160px;
             margin: 0 auto;
-            padding: 0px 20px;
+            padding: 0 20px;
             /* background-color: rgba(0,0,0,0.1); */
         }
         .nexon {
@@ -38,87 +63,129 @@
         .section {
             padding: 120px 0;
         }
-        /* card_type */
-        .card_inner {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
+        .section.center {
+            text-align: center;
         }
-        .card_inner .card {
-            width: 32.333%;
-            /* background-color: #f8f8f8; */
-        }
-        .card {
-            width: 373px;
-            height: 500px;
-        }
-        .card_notice {
-            font-size: 14px;
-            border-radius: 30px;
-            background-color: #d85050;
-            color: #fff;
-            padding: 0 23px;
-            text-transform: uppercase;
-            display: inline-block;
-            margin-bottom: 16px;
-            line-height: 1.4;
-        }
-        .card h1 {
-            font-style: normal;
+        .section__h2 {
             font-size: 50px;
-            line-height: 1.2;
-            padding-right: 50px;
-            margin-bottom: 25px;
-            color: #000;
+            font-weight: 400;
+            margin-bottom: 30px;
+            line-height: 1;
         }
-        .card h2 {
-            font-style: normal;
+        .section__desc {
+            font-size: 22px;
+            color: #666;
+            margin-bottom: 70px;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+        /* imgText__wrap */
+        .imgText__inner {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .imgText__inner article {
+            width: 31.333%;
+        }
+        .imgText__inner .text span {
+            background-color: #FF7C7C;
+            font-size: 14px;
+            color: #fff;
+            padding: 1px 20px;
+            border-radius: 50px;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+        .imgText__inner .text h3 {
+            font-size: 50px;
+            margin-bottom: 17px;
+            display: block;
+            padding-right: 30px;
+        }
+        .imgText__inner .text p {
             font-size: 16px;
             line-height: 1.5;
             color: #666;
-            padding-right: 10px;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
-        .card ul li {
-            font-style: normal;
-            font-size: 16px;
-            line-height: 1.55;
+        .imgText__inner .text li {
+            position: relative;
+            padding-left: 14px;
+        }
+        .imgText__inner .text li::before {
+            content: "";
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: #666;
+            position: absolute;
+            left: 0;
+            top: 8px;
+        }
+        .imgText__inner .text li a {
             color: #666;
-            margin-left: 17px;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+        .imgText__inner .img {
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 500px;
+            border-radius: 10px;
+            position: relative;
+        }
+        .imgText__inner .img a {
+            position: absolute;
+            left: 20px;
+            bottom: 20px;
+            background: #000;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 40px;
+        }
+        .imgText__inner .img.i1 {
+            background-image: url(../asset/img/img_text_Type01.png);
+        }
+        .imgText__inner .img.i2 {
+            background-image: url(../asset/img/img_text_Type02.png);
+        }
+        .imgText__inner .img.i1 a {
+            background-color: #37150A;
+        }
+        .imgText__inner .img.i2 a {
+            background-color: #112C32;
         }
     </style>
 </head>
 <body>
-    <section class="card_wrap section nexon">
+    <section class="imgText__wrap section nexon">
+        <h2 class="blind">300종 이상의 반려견</h2>
         <div class="container">
-            <div class="card_inner">
-                <acticle class="card">
-                    <span class="card_notice">notice</span>
-                    <h1 class="nexon">고양이 종류 10가지</h1>
-                    <h2 class="nexon">GPT한테 물어본 고양이 종류가 10가지가 있습니다.다음은 그 목록입니다.</h2>
+            <div class="imgText__inner">
+                <article class="text">
+                    <span>notice</span>
+                    <h3>고양이 종류 10가지</h3>
+                    <p>GPT한테 물어본 고양이 종류가 10가지가 있습니다.다음은 그 목록입니다.</p>
                     <ul>
-                        <li>샴 고양이 (Siamese Cat)</li>
-                        <li>페르시안 고양이 (Persian Cat)</li>
-                        <li>스코티시 폴드 고양이 (Scottish Fold Cat)</li>
-                        <li>먼치킨 고양이 (Manx Cat)</li>
-                        <li>시베리안 고양이 (Siberian Cat)</li>
-                        <li>아비시니안 고양이 (Abyssinian Cat)</li>
-                        <li>브리티시 쇼트헤어 고양이 (British Shorthair Cat)</li>
-                        <li>미묘 (Munchkin Cat)</li>
-                        <li>벵골 고양이 (Bengal Cat)</li>
-                        <li>러시안 블루 고양이 (Russian Blue Cat)</li>
+                        <li><a href="#">샴 고양이 (Siamese Cat)</a></li>
+                        <li><a href="#">페르시안 고양이 (Persian Cat)</a></li>
+                        <li><a href="#">스코티시 폴드 고양이 (Scottish Fold Cat)</a></li>
+                        <li><a href="#">먼치킨 고양이 (Manx Cat)</a></li>
+                        <li><a href="#">시베리안 고양이 (Siberian Cat)</a></li>
+                        <li><a href="#">아비시니안 고양이 (Abyssinian Cat)</a></li>
+                        <li><a href="#">브리티시 쇼트헤어 고양이 (British Shorthair Cat)</a></li>
+                        <li><a href="#">미묘 (Munchkin Cat)</a></li>
+                        <li><a href="#">벵골 고양이 (Bengal Cat)</a></li>
+                        <li><a href="#">러시안 블루 고양이 (Russian Blue Cat)</a></li>
                     </ul>
-                </acticle>
-                <acticle class="card">
-                    <figure class="card_header">
-                        <img src="../asset/img/img_text_Type01.png" alt="샴 고양이">
-                    </figure>
-                </acticle>
-                <acticle class="card">
-                    <figure class="card_header">
-                        <img src="../asset/img/img_text_Type02.png" alt="뱅갈 고양이">
-                    </figure>
-                </acticle>
+                </article>
+                <article class="img i1">
+                    <a href="#">인기있는 고양이</a>
+                </article>
+                <article class="img i2">
+                    <a href="#">스트레칭 고양이</a>
+                </article>
             </div>
         </div>
     </section>
