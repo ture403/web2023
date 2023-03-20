@@ -1,0 +1,69 @@
+@import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
+@import url('https://webfontworld.github.io/hallym/Hallym.css');
+@import url('https://webfontworld.github.io/TheJamsil/TheJamsil.css');
+@import url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo.css');
+@import url('https://webfontworld.github.io/NanumSquare/NanumSquare.css');
+@import url('https://webfontworld.github.io/PyeongChang/PyeongChang.css');
+@import url('https://webfontworld.github.io/woori/Wooridaum.css');
+@import url('https://webfontworld.github.io/gimpo/GimpoGothic.css');
+@import url('https://webfontworld.github.io/BMJua/BMJua.css');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: #222;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+}
+ul,ol,li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+    width: 100%;
+}
+em {
+    font-style: normal;
+}
+.font01 {
+    font-family: 'NexonLv1Gothic';
+    font-weight: 300;
+}
+.font02 {
+    font-family: 'Hallym';
+}
+.font03 {
+    font-family: 'TheJamsil';
+}
+.font04 {
+    font-family: 'NanumSquareNeo';
+}
+.font05 {
+    font-family: 'NanumSquare';
+}
+.font06 {
+    font-family: 'PyeongChang';
+}
+.font07 {
+    font-family: 'Wooridaum';
+}
+.font08 {
+    font-family: 'GimpoGothic';
+}
+.font09 {
+    font-family: 'BMJua';
+}
+.font10 {
+    font-family: 'Orbitron';
+    font-weight: 400;
+}
