@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>푸터 유형01</title>
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            text-decoration: none;
+            color: #000;
+        }
+        h1,h2,h3,h4,h5,h6{
+            font-weight: normal;
+        }
+        img{
+            vertical-align: top;
+            /* 화면 여백 없애기 */
+            width: 100%;
+        }
+        ul,ol,li {
+            list-style: none;
+        }
+        .blind{
+            position:absolute;
+            clip:rect(0 0 0 0);
+            width:1px;
+            height:1px;
+            margin:-1px;
+            overflow:hidden;
+        }
+        .mt10 {margin-top: 10px !important;}
+        .mt20 {margin-top: 20px !important;}
+        .mt30 {margin-top: 30px !important;}
+        .mt40 {margin-top: 40px !important;}
+        .mt50 {margin-top: 50px !important;}
+        .mt60 {margin-top: 60px !important;}
+        .mt70 {margin-top: 70px !important;}
+
+        .mb10 {margin-bottom: 10px !important;}
+        .mb20 {margin-bottom: 20px !important;}
+        .mb30 {margin-bottom: 30px !important;}
+        .mb40 {margin-bottom: 40px !important;}
+        .mb50 {margin-bottom: 50px !important;}
+        .mb60 {margin-bottom: 60px !important;}
+        .mb70 {margin-bottom: 70px !important;}
+
+        .container {
+            width: 1160px;
+            margin: 0 auto;
+            padding: 0px 20px;
+            
+        }
+        .nexon {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 400;
+        }
+        .section {
+            padding: 120px 0;
+
+        }
+        .footer_wrap {
+            background-color: #F5F5F5;
+        }
+        .footer_menu {
+            display: flex;
+            align-content: center;
+            justify-content: space-between;
+        }
+        .footer_menu >div {
+            width: 16.666%;
+        }
+        .footer_menu >div li {
+            line-height: 1.6;
+            font-size: 14px;
+            
+        }
+        .footer_menu > div li > a {
+            color: #666;
+        }
+        .footer_menu > div h3 {
+            font-size: 17px;
+            font-family: 'NexonLv1Gothic';
+            line-height: 1.5;
+            margin-bottom: 13px;
+            color: #000;
+        }
+        .footer_right {
+            margin-top: 50px;
+            border-top :1px solid #d9d9d9;
+            padding-top: 50px;
+            text-align: center;
+            text-align: center;
+            font-size: 14px;
+            line-height: 1.7;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <footer class="footer_wrap nexon section">
+        <div class="container">
+            <h2 class="blind">푸터</h2>
+            <div class="footer_inner">
+                <div class="footer_menu">
+                    <div>
+                        <h3>고양이 사이트</h3>
+                        <ul>
+                            <li><a href="#">소개하기</a></li>
+                            <li><a href="#">고양이 이야기</a></li>
+                            <li><a href="#">유기묘 도움주기</a></li>
+                            <li><a href="#">반려묘 만들기</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>고양이 음식</h3>
+                        <ul>
+                            <li><a href="#">건식사료</a></li>
+                            <li><a href="#">습식사료</a></li>
+                            <li><a href="#">캣잎</a></li>
+                            <li><a href="#">츄르</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>고양이 놀이</h3>
+                        <ul>
+                            <li><a href="#">장난감</a></li>
+                            <li><a href="#">캣휠</a></li>
+                            <li><a href="#">스크래처</a></li>
+                            <li><a href="#">캣타워</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>고양이 자랑하기</h3>
+                        <ul>
+                            <li><a href="#">앨범</a></li>
+                            <li><a href="#">사진올리기</a></li>
+                            <li><a href="#">장기자랑</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>고양이 주의점</h3>
+                        <ul>
+                            <li><a href="#">책임감</a></li>
+                            <li><a href="#">털날림</a></li>
+                            <li><a href="#">비용의 측면</a></li>
+                            <li><a href="#">물건 치우기</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>안내사항</h3>
+                        <ul>
+                            <li><a href="#">찾아오시는길</a></li>
+                            <li><a href="#">회사소개</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+            <address class="footer_right">
+                2023 ture403 고양이 사이트 PortFoilo is Power<br>All Right Reserved
+            </address>
+        </div>
+    </footer>
+</body>
+</html>
