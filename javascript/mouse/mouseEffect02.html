@@ -8,6 +8,68 @@
     <title>02. 마우스 이펙트</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/mouse.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <style>
+        .mouse_wrap {
+            cursor: none;
+        }
+        .mouse_text {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .mouse_text p {
+            font-size: 2vw;
+            line-height: 2.0;
+        }
+        .mouse_text p:last-child {
+            font-size: 3vw;
+        }
+        .mouse_text p span {
+            color: yellowgreen;
+        }
+        .mouse_cursor {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 10px;
+            height: 10px;
+            z-index: 9999;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.3);
+            user-select: none;
+            pointer-events: none;
+            transition: transform 0.3s;
+        }
+        .mouse_cursor2 {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 30px;
+            height: 30px;
+            z-index: 9998;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.5);
+            user-select: none;
+            pointer-events: none;
+            transition: transform 0.3s;
+        }
+        .mouse_cursor.active {
+            transform: scale(0);
+        }
+        .mouse_cursor2.active {
+            transform: scale(5);
+            background-color: rgba(255,166,255,0.6);
+        }
+        #footer a.active {
+            transform: scale(5);
+            background-color: rgba(255,166,255,0.6);
+        }
+    </style>
 </head>
 <body class="img02 bg02 font02">
     <header id="header">
@@ -25,7 +87,14 @@
     <!-- header -->
     
     <main id="main">
-
+        <div class="mouse_wrap">
+            <div class="mouse_cursor"></div>
+            <div class="mouse_cursor2"></div>
+            <div class="mouse_text">
+                <p>If all the year were playing <span>holidays</span>; To sport would be as tedious as to work.</p>
+                <p>만약 매일매일이 <span>휴일과</span> 같다면 노는 것도 일하는 것 만큼이나 지루할 것이다.</p>
+            </div>
+        </div>
     </main>
     <!-- main -->
     
@@ -33,5 +102,66 @@
         <a href="mailto:ture403@gmail.com">ture403@gmail.com</a>
     </footer>
     <!-- footer -->
+
+    <script>
+        // 선택자
+        const cursor = document.querySelector(".mouse_cursor");
+        const cursor2 = document.querySelector(".mouse_cursor2");
+        const number = document.querySelector("#header ul li.active");
+        const mail = document.querySelector("#footer a");
+
+        // 커서 좌표값 할당
+        window.addEventListener("mousemove",(e)=>{
+            // cursor.style.left = e.pageX + "px"; 
+            // cursor.style.top = e.pageY + "px";
+            // cursor2.style.left = e.pageX + "px"; 
+            // cursor2.style.top = e.pageY + "px";
+
+            //gsap
+            gsap.to(cursor, {duration : 0.3, left : e.pageX -5, top : e.pageY-5});
+            gsap.to(cursor2, {duration : 0.8, left : e.pageX-15, top : e.pageY-15});
+
+            // 오버 효과
+            // document.querySelector(".mouse_text span").addEventListener("mouseenter", e=>{
+            //     cursor.classList.add("active");
+            //     cursor2.classList.add("active");
+            // })
+            // document.querySelector(".mouse_text span").addEventListener("mouseleave", e=>{
+            //     cursor.classList.remove("active");
+            //     cursor2.classList.remove("active");
+            // })
+
+            mail.addEventListener("mousemove", ()=>{
+                cursor.classList.add("active");
+                cursor2.classList.add("active");
+            })
+            mail.addEventListener("mouseleave", ()=>{
+                cursor.classList.remove("active");
+                cursor2.classList.remove("active");
+            })
+
+            number.addEventListener("mousemove", ()=>{
+                cursor.classList.add("active");
+                cursor2.classList.add("active");
+            })
+            number.addEventListener("mouseleave", ()=>{
+                cursor.classList.remove("active");
+                cursor2.classList.remove("active");
+            })
+
+            // forEacth문
+            document.querySelectorAll(".mouse_text span").forEach((el,index)=>{
+                el.addEventListener("mouseenter", ()=>{
+                    cursor.classList.add("active");
+                    cursor2.classList.add("active");
+                });
+                el.addEventListener("mouseleave", ()=>{
+                    cursor.classList.remove("active");
+                    cursor2.classList.remove("active");
+                    
+                });
+            });
+        });
+    </script>
 </body>
 </html>

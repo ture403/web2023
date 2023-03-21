@@ -8,6 +8,47 @@
     <title>03. 마우스 이펙트</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/mouse.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <style>
+        .mouse_wrap {
+            cursor: none;
+        }
+        .mouse_text {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .mouse_text p {
+            font-size: 3vw;
+            line-height: 2.0;
+            z-index: 1;
+        }
+        .mouse_text p:last-child {
+            font-size: 3.5vw;
+        }
+        .mouse_text p span {
+            color: yellowgreen;
+        }
+        .mouse_cursor {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            background-color: rgba(255,255,255,0.5);
+            background-image: url(img/mouseEffect03-min.jpg);
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            z-index: 0;
+        }
+    </style>
 </head>
 <body class="img03 bg03 font03">
     <header id="header">
@@ -25,7 +66,13 @@
     <!-- header -->
     
     <main id="main">
-
+        <div class="mouse_wrap">
+            <div class="mouse_cursor"></div>
+            <div class="mouse_text">
+                <p>I wasted time, and now doth time waste me.</p>
+                <p>나는 때를 놓쳤고, 그래서 지금은 시간이 나를 낭비하고 있는 거지.</p>
+            </div>
+        </div>
     </main>
     <!-- main -->
     
@@ -33,5 +80,36 @@
         <a href="mailto:ture403@gmail.com">ture403@gmail.com</a>
     </footer>
     <!-- footer -->
+
+    <script>
+        // 선택자
+        const cursor = document.querySelector(".mouse_cursor");
+
+        // console.log(cursor.clientWidth);  //190 (보더값 포함)
+        // console.log(cursor.clientHeight); //190 (보더값 포함)
+        // console.log(cursor.offsetWidth);  //200 (보더값 미포함)
+        // console.log(cursor.offsetHeight); //200 (보더값 미포함)
+
+        const circle = cursor.getBoundingClientRect();
+
+        // const DOMRect = {
+        //     bottom:200,
+        //     height: 200,
+        //     left: 0,
+        //     right: 200,
+        //     top: 0,
+        //     width: 200,
+        //     x: 0,
+        //     y: 0
+        // }
+
+        window.addEventListener("mousemove", e => {
+            gsap.to(cursor, {
+                duration: 0.5, 
+                left: e.pageX - circle.width/2, 
+                top: e.pageY - circle.height/2,
+            });
+        });
+    </script>
 </body>
 </html>
