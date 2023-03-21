@@ -19,7 +19,9 @@
 퀴즈 이펙트03 :https://ture403.github.io/web2023/javascript/quiz/quizEffect03.html   
 퀴즈 이펙트04 :https://ture403.github.io/web2023/javascript/quiz/quizEffect04.html   
 
-마우스 이펙트01 :https://ture403.github.io/web2023/javascript/mouse/mouseEffect01.html
+마우스 이펙트01 :https://ture403.github.io/web2023/javascript/mouse/mouseEffect01.html   
+마우스 이펙트02 :https://ture403.github.io/web2023/javascript/mouse/mouseEffect02.html   
+마우스 이펙트03 :https://ture403.github.io/web2023/javascript/mouse/mouseEffect03.html   
 
 # 사이트   
 이미지 유형 01 : https://ture403.github.io/web2023/site/imageType/imageType01.html   
