@@ -28,7 +28,8 @@
 카드 유형01 : https://ture403.github.io/web2023/site/cardType/cardType01.html   
 텍스트 유형 01 : https://ture403.github.io/web2023/site/textType/textType01.html   
 슬라이드 유형 01 : https://ture403.github.io/web2023/site/silderType/silderType01.html   
-이미지텍스트 유형 01 : https://ture403.github.io/web2023/site/image_text_type/image_text_type.html   
+이미지텍스트 유형 01 : https://ture403.github.io/web2023/site/image_text_type/image_text_type.html  
+푸터 유형 01 : https://ture403.github.io/web2023/site/footerType/footerType01.html
 
 # 애니메이션
 https://ture403.github.io/web2023/animation/webgl/webgl01.html   
