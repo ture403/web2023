@@ -8,67 +8,103 @@
 </head>
 <body>
     <script>
-        // 1-10 까지 출력
-        {
-            for(let i=1; i<=10; i++){
-                document.write(i);
-            }
+       {
+    let cnt = 0;
+    let sum = 0;
+    for(let i=0; i<=7; i++){
+        if(i%2 == 1){
+            cnt++;
+            sum = sum + i;
         }
-        document.write("<br>");
-        // 1-10 까지 짝수 출력
-        {
-            for(let i=1; i<=10; i++){
-                if( i % 2 == 0 ){
-                    document.write(i)
-                }
-            }
-        }
-        document.write("<br>");
-        // 1부터10까지 출력 홀수 빨간색 짝수 파란색
-        {
-            for(let i=1; i<=10; i++){
-                if( i % 2 == 0 ){
-                    document.write(`<span style="color:blue">${i}</span>`)
-                } else {
-                    document.write(`<span style="color:red">${i}</span>`)
-                }
-            }
-        }
-        document.write("<br>");
-        // 배열 num
-        {
-            const num = [100,200,300,400,500,600,700,800,900];
+    }
+    console.log(cnt + ", "+sum);
+}
 
-            for(let i=0; i<num.length; i++){
-                document.write(num[i]+",");
-            }
-        }
-        document.write("<br>");
+        // // 1-10 까지 출력
+        // {
+        //     for(let i=1; i<=10; i++){
+        //         document.write(i);
+        //     }
+        // }
+        // document.write("<br>");
+        // // 1-10 까지 짝수 출력
+        // {
+        //     for(let i=1; i<=10; i++){
+        //         if( i % 2 == 0 ){
+        //             document.write(i)
+        //         }
+        //     }
+        // }
+        // document.write("<br>");
+        // // 1부터10까지 출력 홀수 빨간색 짝수 파란색
+        // {
+        //     for(let i=1; i<=10; i++){
+        //         if( i % 2 == 0 ){
+        //             document.write(`<span style="color:blue">${i}</span>`)
+        //         } else {
+        //             document.write(`<span style="color:red">${i}</span>`)
+        //         }
+        //     }
+        // }
+        // document.write("<br>");
+        // // 배열 num
+        // {
+        //     const num = [100,200,300,400,500,600,700,800,900];
+
+        //     for(let i=0; i<num.length; i++){
+        //         document.write(num[i]+",");
+        //     }
+        // }
+        // document.write("<br>");
         // forEach
-        {
-            const num = [100,200,300,400,500,600,700,800,900];
+        // {
+        //     const num = [100,200,300,400,500,600,700,800,900];
 
-            num.forEach((el)=>{ 
-                document.write(el);
-            })
-        }
-        document.write("<br>");
-        // for in
-        {
-            const num = [100,200,300,400,500,600,700,800,900];
+        //     num.forEach((el,i,arr)=>{ 
+        //         console.log(el);
+        //         console.log(i);
+        //         console.log(arr);
+        //     })
+        // }
+        // document.write("<br>");
+        // // for in
+        // {
+        //     const num = [100,200,300,400,500,600,700,800,900];
 
-            for(let key in num){
-                document.write(num[key]);
-            }
-        }
-        document.write("<br>");
-        //for of
-        {
-            const num = [100,200,300,400,500,600,700,800,900];
-            for(let i of num){
-                document.write(i);
-            }
-        }
+        //     for(let key in num){
+        //         document.write(num[key]);
+        //     }
+        // }
+        // document.write("<br>");
+        // //for of
+        // {
+        //     const num = [100,200,300,400,500,600,700,800,900];
+        //     for(let i of num){
+        //         document.write(i);
+        //     }
+        // }
+        // {
+        //     {
+        // const obj1 ={
+        //     a : 100,
+        //     b : 200,
+        //     c : "javascript"
+        // };
+        // const obj2 ={
+        //     d : 1000,
+        //     e : 2000,
+        //     f : "ajavascript"
+        // };
+
+        // const spread = {...obj2, ...obj1};
+        // console.log(spread)
+
+        // console.log(spread.a);
+        // console.log(spread.b);
+        // console.log(spread.c);
+    //     // console.log(spread.d);
+    // }
+    //     }
     </script>
 </body>
 </html>

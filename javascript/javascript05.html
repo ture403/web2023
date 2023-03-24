@@ -151,24 +151,13 @@
                             </ul>
                         <div class="script">                       
 <pre><code class="language-js">{
-    "javascript refercence".indexOf("javascript"); // 0
-    "javascript refercence".indexOf("javascripts"); // -1
-    "javascript refercence".indexOf("J"); // -1
-    "javascript refercence".indexOf("j"); // 0
-    "javascript refercence".indexOf("a"); // 1
-    "javascript refercence".indexOf("ja"); // 0
-    "javascript refercence".indexOf("jv"); // -1
-    "javascript refercence".indexOf("jv"); // -1
-    "javascript refercence".indexOf("refercence"); // 11
-    "javascript refercence".indexOf("r"); // 6
-    "javascript refercence".indexOf("re"); // 11
-    "javascript refercence".indexOf("javascript",0); // 0
-    "javascript refercence".indexOf("javascript",1); // -1
-    "javascript refercence".indexOf("refercence",0); // 11
-    "javascript refercence".indexOf("refercence",11); // 11
-    "javascript refercence".indexOf("refercence",12); // -1
-    "javascript refercence".indexOf("r",7); // 11
-    "javascript refercence".indexOf("r",12); // 15
+    "javascript refercence".lastIndexOf("javascript"); //0
+    "javascript refercence".lastIndexOf("javascripts"); //-1
+    "javascript refercence".lastIndexOf("j"); //0
+    "javascript refercence".lastIndexOf("a"); //3
+    "javascript refercence".lastIndexOf("jv"); //-1
+    "javascript refercence".lastIndexOf("refercence"); //11
+    "javascript refercence".lastIndexOf("r"); //15
 }
 </code></pre>
                         </div>
@@ -183,40 +172,6 @@
                                 <li>문자열을 검색하여, 주어진 값과 일치하는 것이 없으면 null을 반환합니다.</li>
                                 <li>대소문자를 구별합니다.</li>
                                 <li>match() 메서드는 문자값(배열)을 반환하고, search() 메서드는 위치값(숫자)를 반환하는 것이 다릅니다. </li>
-                            </ul>
-                        <div class="script">                       
-<pre><code class="language-js">{
-    "javascript refercence".indexOf("javascript"); // 0
-    "javascript refercence".indexOf("javascripts"); // -1
-    "javascript refercence".indexOf("J"); // -1
-    "javascript refercence".indexOf("j"); // 0
-    "javascript refercence".indexOf("a"); // 1
-    "javascript refercence".indexOf("ja"); // 0
-    "javascript refercence".indexOf("jv"); // -1
-    "javascript refercence".indexOf("jv"); // -1
-    "javascript refercence".indexOf("refercence"); // 11
-    "javascript refercence".indexOf("r"); // 6
-    "javascript refercence".indexOf("re"); // 11
-    "javascript refercence".indexOf("javascript",0); // 0
-    "javascript refercence".indexOf("javascript",1); // -1
-    "javascript refercence".indexOf("refercence",0); // 11
-    "javascript refercence".indexOf("refercence",11); // 11
-    "javascript refercence".indexOf("refercence",12); // -1
-    "javascript refercence".indexOf("r",7); // 11
-    "javascript refercence".indexOf("r",12); // 15
-}
-</code></pre>
-                        </div>
-                    </div>
-                    <!-- sample10 -->
-
-                    <div id="sample18" class="sample">
-                        <h3>07 : search() </h3>
-                        <div class="notice">"문자열".search(검색값) <br>"문자열".search(정규식표현)</div>
-                            <ul>
-                                <li>문자열(정규식)을 검색하고, 위치값(숫자)을 반환합니다.</li>
-                                <li>문자열을 검색하여, 주어진 값과 일치하는 것이 없으면 -1을 반환합니다.</li>
-                                <li>대소문자를 구별합니다.</li>
                             </ul>
                         <div class="script">                       
 <pre><code class="language-js">{
@@ -235,6 +190,33 @@
 </code></pre>
                         </div>
                     </div>
+                    <!-- sample10 -->
+
+                    <div id="sample18" class="sample">
+                        <h3>07 : search() </h3>
+                        <div class="notice">"문자열".search(검색값) <br>"문자열".search(정규식표현)</div>
+                            <ul>
+                                <li>문자열(정규식)을 검색하고, 위치값(숫자)을 반환합니다.</li>
+                                <li>문자열을 검색하여, 주어진 값과 일치하는 것이 없으면 -1을 반환합니다.</li>
+                                <li>대소문자를 구별합니다.</li>
+                            </ul>
+                        <div class="script">                       
+<pre><code class="language-js">{
+    "javascript reference".search("javascript");    //0
+    "javascript reference".search("reference");    //11
+    "javascript reference".search("r");             //6
+    "javascript reference".search("a");             //1
+    "javascript reference".search("jv");            //-1
+    "javascript reference".search("J");             //-1
+    "javascript reference".search(/reference/);    //11    //정규식 표현을 썼음
+    "javascript reference".search(/Reference/);    //-1
+    "javascript reference".search(/Reference/i);   //11   //i가 소문자로 인식해줌 reference
+    "javascript reference".search(/[a-z]/g);        //0
+    "자바스크립트".search(/[a-z]/g);                  //-1
+}
+</code></pre>
+                        </div>
+                    </div>
                     <!-- sample18 -->
                 </div>
         </main>
@@ -248,21 +230,21 @@
         <script>hljs.highlightAll();</script>
 
         <script>
-            // "javascript refercence".lastIndexOf("javascript"); //0
-            // "javascript refercence".lastIndexOf("javascripts"); //-1
-            // "javascript refercence".lastIndexOf("j"); //0
-            // "javascript refercence".lastIndexOf("a"); //3
-            // "javascript refercence".lastIndexOf("jv"); //-1
-            // "javascript refercence".lastIndexOf("refercence"); //11
-            // "javascript refercence".lastIndexOf("r"); //15
-            // "javascript refercence".lastIndexOf("javascript", 0); //0
-            // "javascript refercence".lastIndexOf("javascript", 1); //0
-            // "javascript refercence".lastIndexOf("refercence", 0); //-1
-            // "javascript refercence".lastIndexOf("refercence", 1); //-1
-            // "javascript refercence".lastIndexOf("refercence", 11); //11
-            // "javascript refercence".lastIndexOf("refercence", 12); //11
-
+            // console.log("javascript refercence".search("javascript"))
+            // console.log("javascript refercence".search("refercence"))
+            // console.log("javascript refercence".search("r"))
+            // console.log("javascript refercence".search("R"))
+            // console.log("javascript refercence".search("/refercence/"))
+            // console.log("javascript refercence".search("/Refercence/"))
+            // console.log("javascript refercence".search("/Refercence/i"))
+            // console.log("javascript refercence".search("/r/"))
+            // console.log("javascript refercence".search("/r/g"))
+            // console.log("javascript refercence".search("/w/g"))
+            // console.log("javascript refercence".search("/R/ig"); // r r r)
             // console.log(first)
+
+            console.log("javascript reference".search(/reference/));
+            console.log("javascript reference".search(/r/));
         </script>
 
 </body>
