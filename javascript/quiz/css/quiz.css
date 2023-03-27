@@ -141,8 +141,23 @@
     transition: all 0.3s;
     text-shadow: 2px 2px 0px rgba(212, 153, 153, 0.7);
 }
+.quiz_answer .next {
+    background-color: #f19d9d;
+    border: 6px ridge #f19d9d;
+    width: 100%;
+    font-family: 'NanumSquareNeo';
+    padding: 10px 20px;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-shadow: 2px 2px 0px rgba(212, 153, 153, 0.7);
+}
 .quiz_answer .confirm:hover{
     background-color: #c77676;
+}
+.quiz_answer .confirm:hover{
+    background-color: #f07f7f;
 }
 .quiz_answer .result {
     background-color: #fff;
