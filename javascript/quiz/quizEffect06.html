@@ -34,6 +34,7 @@
                     <div class="quiz_view">
                         <div class='dog_wrap'>
                             <p></p>
+                            <span></span>
                             <div class="ture">정답입니다.</div>
                             <div class="false">틀렸습니다!</div>
                             <div class='card-container'>
@@ -82,6 +83,7 @@
                     </div>
                 </div>
                 <div class="quiz_desc"></div>
+                <div class="quiz_info">??점</div>
             </div>
         </div>
     </main>
@@ -156,9 +158,12 @@
         const quizAnswer = quizWrap.querySelector(".quiz_answer");
         const quizDesc = quizWrap.querySelector(".quiz_desc");
         const dowWrapP = quizWrap.querySelector(".dog_wrap p");
+        const dowWrapspan = quizWrap.querySelector(".dog_wrap span");
+        const quizReulstAnswer = quizWrap.querySelector(".quiz_info");
 
         let quizCount = 0;
         let quizScore = 0;
+        let z;
             
         //  문제 출력
         const updateQuiz = (index , number)=>{
@@ -201,6 +206,9 @@
             quziChoice.innerHTML = choiceTag;
             quizDesc.innerHTML = descTag;
 
+            // 갯수
+            dowWrapP.textContent = `총갯수 :  ${quizCount+1}개 / ${quizInfo.length}개`;
+
             // 보기 선택자
             const quizChoiceSpan = quizWrap.querySelectorAll(".quiz_choice span");
             const quizChoiceInput = quizWrap.querySelectorAll(".quiz_choice input");
@@ -220,7 +228,6 @@
             quizDesc.style.display = "none";
             
             // 갯수 표시
-            dowWrapP.textContent = `총갯수 : ${quizInfo.length}`;
         };
         
         updateQuiz(quizCount);
@@ -230,22 +237,33 @@
                 let userAnswer = answer.textContent; //사용자 정답
                 let currentAnswer = quizInfo[quizCount].infoAnswer; //문제 정답
                 if( userAnswer == currentAnswer){
-                    quizScore+=
+                    quizScore++
                     dogWrap.classList.add("like");
+                    
                 } else {
                     dogWrap.classList.add("dislike");
                 }
+                // 정답갯수
+                dowWrapspan.textContent = `정답갯수 : ${quizScore}`;
+
+                // 정답 해설 보이기
                 quizAnswer.style.display ="block";
                 quizDesc.style.display = "block";
         }
         // 정답 확인
         quizNext.addEventListener("click", () =>{
             quizCount++;
-            updateQuiz(quizCount);
-
+            if(quizCount == quizInfo.length){
+                quizReulstAnswer.textContent= Math.ceil((quizScore / quizInfo.length) * 100) + "점";
+            } else {
+                updateQuiz(quizCount);
+            }
+            
             dogWrap.classList.remove("like","dislike");
+            dowWrapP.textContent = `총갯수 :  ${quizCount+1}개 / ${quizInfo.length}개`;
         })
         
+    
     </script>
 </body>
 </html>
