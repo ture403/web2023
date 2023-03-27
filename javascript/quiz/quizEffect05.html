@@ -261,6 +261,7 @@
             //사용자가 체크한 정답 == 문제 정답
             quizInfo.forEach((qusection, number)=>{
                 const userSelector = `input[name=choice${number}]:checked`;
+                console.log(userSelector)
                 const quizSelectorWrap = quizChoices[number];
                 const userAnswer = (quizSelectorWrap.querySelector(userSelector) || {}).value; //사용자가 체크한 정답 찾기
                 const dogWrap = quizWrap.querySelectorAll(".dog_wrap");

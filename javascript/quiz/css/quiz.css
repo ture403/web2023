@@ -114,7 +114,7 @@
 .quiz_quection {
     padding: 20px;
     font-size: 24px;
-    font-family: 'arial';
+    font-family: 'NanumSquareNeo';
     line-height: 1.4;
     font-weight: bold;
     border-bottom: 6px ridge #ecb2b2;
@@ -125,7 +125,7 @@
 .quiz_answer {
     padding: 20px;
     font-size: 24px;
-    font-family: 'arial';
+    font-family: 'NanumSquareNeo';
     text-align: center;
     /* border-bottom: 6px ridge #cacaca; */
 }
@@ -133,7 +133,7 @@
     background-color: #ecb2b2;
     border: 6px ridge #ecb2b2;
     width: 100%;
-    font-family: 'arial';
+    font-family: 'NanumSquareNeo';
     padding: 10px 20px;
     font-size: 22px;
     font-weight: bold;
@@ -148,7 +148,7 @@
     background-color: #fff;
     border: 6px ridge #ecb2b2;
     width: 100%;
-    font-family: 'arial';
+    font-family: 'NanumSquareNeo';
     padding: 10px 20px;
     font-size: 22px;
     /* display: none; */
@@ -157,7 +157,7 @@
     background-color: #fff;
     border: 6px groove #ecb2b2;
     width: 100%;
-    font-family: 'arial';
+    font-family: 'NanumSquareNeo';
     padding: 10px 20px;
     font-size: 22px;
     text-align: center;
@@ -170,7 +170,7 @@
 .quiz_desc {
     border-top: 6px ridge #ecb2b2;
     padding: 20px;
-    font-family: "arial";
+    font-family: "NanumSquareNeo";
     background-color: #f5f5f5;
 }
 .quiz_desc::before {
@@ -230,7 +230,7 @@
     background-color: #444;
     color: #fff;
     text-align: center;
-    font-family: "arial";
+    font-family: "NanumSquareNeo";
     cursor: pointer;
 }
 .quiz_info {
@@ -243,7 +243,7 @@
     height: 50px;
     line-height: 50px;
     border-radius: 10px;
-    font-family: "arial";
+    font-family: "NanumSquareNeo";
     color: #fff;
 }
 .quiz_info::after {
