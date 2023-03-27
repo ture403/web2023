@@ -249,18 +249,17 @@
         }
         // 정답 확인
         quizNext.addEventListener("click", () =>{
-            quizCount++;
-            if(quizCount == quizInfo.length){
+            
+            if(quizCount == quizInfo.length-1){
                 quizReulstAnswer.textContent= Math.ceil((quizScore / quizInfo.length) * 100) + "점";
-                
             } else {
+                quizCount++;
                 updateQuiz(quizCount);
             }
             
             dogWrap.classList.remove("like","dislike");
             dowWrapP.textContent = `총갯수 :  ${quizCount+1}개 / ${quizInfo.length}개`;
         })
-        
     
     </script>
 </body>
