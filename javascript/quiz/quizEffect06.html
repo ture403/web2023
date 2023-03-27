@@ -163,6 +163,7 @@
 
         let quizCount = 0;
         let quizScore = 0;
+        let z;
             
         //  문제 출력
         const updateQuiz = (index , number)=>{
@@ -226,6 +227,7 @@
             quizAnswer.style.display ="none";
             quizDesc.style.display = "none";
             
+            // 갯수 표시
         };
         
         updateQuiz(quizCount);
@@ -241,10 +243,7 @@
                 } else {
                     dogWrap.classList.add("dislike");
                 }
-                // 정답갯수
                 dowWrapspan.textContent = `정답갯수 : ${quizScore}`;
-
-                // 정답 해설 보이기
                 quizAnswer.style.display ="block";
                 quizDesc.style.display = "block";
         }
@@ -252,14 +251,13 @@
         quizNext.addEventListener("click", () =>{
             quizCount++;
             if(quizCount == quizInfo.length){
-                // 점수 표현
                 quizReulstAnswer.textContent= Math.ceil((quizScore / quizInfo.length) * 100) + "점";
+                
             } else {
                 updateQuiz(quizCount);
             }
             
             dogWrap.classList.remove("like","dislike");
-            //  총갯수 / 현재 문제
             dowWrapP.textContent = `총갯수 :  ${quizCount+1}개 / ${quizInfo.length}개`;
         })
         
