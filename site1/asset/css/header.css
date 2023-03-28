@@ -8,6 +8,20 @@
 }
 .header_logo {
     width: 20%;
+    position: relative;
+}
+.header_logo::after {
+    content: "";
+    display: block;
+    clear: both;
+    width: 40px;
+    height: 40px;
+    background-image: url(../img/hedaerType01.svg);
+    background-image: cover;
+    position: absolute;
+    top:-5px;
+    left: 40px;
+    transform: translate(-50% -50%);
 }
 .header_memu {
     width: 60%;

@@ -99,6 +99,19 @@
         }
         .header_logo {
             width: 20%;
+            position: relative;
+        }
+        .header_logo::after {
+            content: "";
+            display: block;
+            clear: both;
+            width: 40px;
+            height: 40px;
+            background-image: url(../asset/img/hedaerType01.svg);
+            background-image: cover;
+            position: absolute;
+            top:-1px;
+            left: 60px;
         }
         .header_memu {
             width: 60%;
