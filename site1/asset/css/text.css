@@ -1,0 +1,107 @@
+.section_small {
+    font-size: 14px;
+    border-radius: 50px;
+    background-color: #d85050;
+    color: #fff;
+    padding: 0 23px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+.text_wrap {}
+.text_inner {
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.text_inner .text {
+    width: 32.33333%;
+    border: 1px solid #f5f5f5;
+    padding: 90px 20px 20px 20px;;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    transition: all 0.3s;
+    cursor: pointer;
+    position: relative;
+}
+.text_inner .text:hover{
+    background-color: #f5f5f5;
+}
+.text_inner .text::before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    background: #ccc;
+    background-image: url(../asset/img/textType01_01.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    border-radius: 50%;
+}
+.text_inner .text.t1::before {
+    background-color: #ffa;
+    background-image: url(../img/textType01_01.svg);
+}
+.text_inner .text.t2::before {
+    background-color: #b2fdeb;
+    background-image: url(../img/textType01_02.svg);
+}
+.text_inner .text.t3::before {
+    background-color: #77eedf;
+    background-image: url(../img/textType01_03.svg);
+}
+.text_inner .text.t4::before {
+    background-color: #a6cfe2;
+    background-image: url(../img/textType01_04.svg);
+}
+.text_inner .text.t5::before {
+    background-color: #e57066;
+    background-image: url(../img/textType01_05.svg);
+}
+.text_inner .text.t6::before {
+    background-color: #eed974;
+    background-image: url(../img/textType01_06.svg);
+}
+.text_title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.text_desc {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+.text_btn {
+    float: right;
+    position: relative;
+    padding-right: 20px;
+}
+.text_btn:hover::before {
+    transform: rotate(360deg);
+}
+.text_btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 15px;
+    height: 15px;
+    background-image: url(../asset/img/icon_plus.svg);
+    transition: all 0.3s;
+}
+
+@media (max-width:960px) {
+    .text_inner .text {
+        width: 49%;
+    }
+}
+@media (max-width:600px) {
+    .text_inner .text {
+        width: 100%;
+    }
+}
