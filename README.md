@@ -35,12 +35,13 @@
 이미지텍스트 유형 01 : https://ture403.github.io/web2023/site/image_text_type/image_text_type.html  
 푸터 유형 01 : https://ture403.github.io/web2023/site/footerType/footerType01.html
 
+싸이트 완성 :https://ture403.github.io/web2023/site1/index.html   
+
 # 애니메이션
 https://ture403.github.io/web2023/animation/webgl/webgl01.html   
 
 #퀴즈 문제
 https://ture403.github.io/web2023/javascript/quiz/quizEffect_test.html   
 
-#싸이트01
-https://ture403.github.io/web2023/site1/index.html
+
 
