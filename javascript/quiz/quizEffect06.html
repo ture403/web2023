@@ -18,6 +18,7 @@
             <li><a href="quizEffect04.html">4</a></li>
             <li><a href="quizEffect05.html">5</a></li>
             <li class="active"><a href="quizEffect06.html">6</a></li>
+            <li><a href="quizEffect07.html">7</a></li>
         </ul>
     </header>
     <!-- //header -->
@@ -156,7 +157,6 @@
         const dogWrap = quizWrap.querySelector(".dog_wrap");
         const quizNext = quizWrap.querySelector(".quiz_answer .next");
         const quizAnswer = quizWrap.querySelector(".quiz_answer");
-        const quizAnswerNext = quizWrap.querySelector(".quiz_answer .next");
         const quizDesc = quizWrap.querySelector(".quiz_desc");
         const dowWrapP = quizWrap.querySelector(".dog_wrap p");
         const dowWrapspan = quizWrap.querySelector(".dog_wrap span");
@@ -249,11 +249,12 @@
                 quizDesc.style.display = "block";
         }
         // 정답 확인
-        quizNext.addEventListener("click", () =>{
+        quizNext.addEventListener("click", (e) =>{
             
             if(quizCount == quizInfo.length-1){
                 quizReulstAnswer.textContent= Math.ceil((quizScore / quizInfo.length) * 100) + "점";
-                quizAnswerNext.style.display ="none";
+                quizAnswer.style.display ="none";
+                
             } else {
                 quizCount++;
                 updateQuiz(quizCount);
