@@ -156,6 +156,7 @@
         const dogWrap = quizWrap.querySelector(".dog_wrap");
         const quizNext = quizWrap.querySelector(".quiz_answer .next");
         const quizAnswer = quizWrap.querySelector(".quiz_answer");
+        const quizAnswerNext = quizWrap.querySelector(".quiz_answer .next");
         const quizDesc = quizWrap.querySelector(".quiz_desc");
         const dowWrapP = quizWrap.querySelector(".dog_wrap p");
         const dowWrapspan = quizWrap.querySelector(".dog_wrap span");
@@ -252,6 +253,7 @@
             
             if(quizCount == quizInfo.length-1){
                 quizReulstAnswer.textContent= Math.ceil((quizScore / quizInfo.length) * 100) + "점";
+                quizAnswerNext.style.display ="none";
             } else {
                 quizCount++;
                 updateQuiz(quizCount);
