@@ -34,6 +34,10 @@
     display: inline-block;
 }
 @media (max-width: 960px){
+    .image_body {
+        box-sizing: border-box;
+        width: 100%;
+    }
     .image_body .desc {
         display: none;
     }
