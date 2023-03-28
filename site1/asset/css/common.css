@@ -50,6 +50,16 @@
     font-weight: 300;
     line-height: 1.5;
 }
+.section_small {
+    font-size: 14px;
+    border-radius: 50px;
+    background-color: #d85050;
+    color: #fff;
+    padding: 0 23px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    display: inline-block;
+}
 /* 미디어쿼리 */
 @media (max-width : 1200px) {
     .container {

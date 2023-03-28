@@ -1,13 +1,4 @@
-.section_small {
-    font-size: 14px;
-    border-radius: 50px;
-    background-color: #d85050;
-    color: #fff;
-    padding: 0 23px;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    display: inline-block;
-}
+
 .text_wrap {}
 .text_inner {
     text-align: left;
@@ -91,7 +82,7 @@
     right: 0;
     width: 15px;
     height: 15px;
-    background-image: url(../asset/img/icon_plus.svg);
+    background-image: url(../img/icon_plus.svg);
     transition: all 0.3s;
 }
 

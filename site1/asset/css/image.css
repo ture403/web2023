@@ -11,10 +11,12 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    color: #fff;
+    color: #000;
     text-align: left;
     padding: 30px;
+    background-color: rgba(217, 217, 217, 0.6);;
 }
+
 .image_body .title {
     margin-bottom: 15px;
     font-size: 32px;
