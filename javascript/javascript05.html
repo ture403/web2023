@@ -77,12 +77,12 @@
                         <li><a href="#sample28">28. <strong>string.prototype.toUpperCase()</strong>        메서드는 문자열을 대문자로 설정하고, 대문자 문자열을 반환합니다.</a></li>
                         <li><a href="#sample29">29. <strong>string.prototype.toString()</strong>           메서드는 데이터를 문자열로 변환하고, 문자열을 반환합니다.</a></li>
                         <li><a href="#sample30">30. <strong>string.prototype.trim()</strong>🧨            메서드는 문자열의 앞/뒤 공백을 제거하고, 새로운 문자열을 반환합니다.</a></li>
-                        <li><a href="#sample31">31. <strong>string.prototype.trimEnd()</strong>            메서드는 문자열의 앞 공백을 제거하고, 새로운 문자열을 반환합니다.</a></li>
-                        <li><a href="#sample32">32. <strong>string.prototype.trimStart()</strong>          메서드는 문자열의 뒤 공백을 제거하고, 새로운 문자열을 반환합니다.</a></li>
+                        <li><a href="#sample31">31. <strong>string.prototype.trimEnd()</strong>            메서드는 문자열의 뒤 공백을 제거하고, 새로운 문자열을 반환합니다.</a></li>
+                        <li><a href="#sample32">32. <strong>string.prototype.trimStart()</strong>          메서드는 문자열의 앞 공백을 제거하고, 새로운 문자열을 반환합니다.</a></li>
                         <li><a href="#sample33">33. <strong>string.prototype.valueOf()</strong>            메서드는 객체의 원시값을 반환합니다.</a></li>
                     </ul>
                 </div>
-
+                
                 <div class="main__sample" >
                     <div id="sample06" class="sample">
                         <h3>06 : includes()</h3>
@@ -218,6 +218,123 @@
                         </div>
                     </div>
                     <!-- sample18 -->
+
+                    <div id="sample19" class="sample">
+                        <h3>19. slice()</h3>
+                        <div class="notice">"배열".sllice(시작위치, [끝나는 위치])</div>
+                        <ul>
+                            <li>시작 위치에서 종료 위치 값을 추출하여, 새로운 배열을 반환합니다.</li>
+                        </ul>
+                        <div class="script">
+<pre><code class="language-js">{
+    ["j","a","v","a","s","c","r","i","p","t"].slice(0); //["j","a","v","a","s","c","r","i","p","t"]
+    ["j","a","v","a","s","c","r","i","p","t"].slice(1); //["a","v","a","s","c","r","i","p","t"]
+    ["j","a","v","a","s","c","r","i","p","t"].slice(2); //["v","a","s","c","r","i","p","t"]
+    ["j","a","v","a","s","c","r","i","p","t"].slice(0,1); //["j"]
+    ["j","a","v","a","s","c","r","i","p","t"].slice(1,2); //["a"]
+    ["j","a","v","a","s","c","r","i","p","t"].slice(0,2); //["j","a"]
+    ["j","a","v","a","s","c","r","i","p","t"].slice(0,3); //["j","a","v"]
+    ["j","a","v","a","s","c","r","i","p","t"].slice(5,10); //['c', 'r', 'i', 'p', 't']
+    ["j","a","v","a","s","c","r","i","p","t"].slice(5,-1); //['c', 'r', 'i', 'p']
+    ["j","a","v","a","s","c","r","i","p","t"].slice(5,-2); //['c', 'r', 'i']
+    ["j","a","v","a","s","c","r","i","p","t"].slice(-1); //["t"]
+    ["j","a","v","a","s","c","r","i","p","t"].slice(-2); //["p","t"]
+    ["j","a","v","a","s","c","r","i","p","t"].slice(-3); //["i","p","t"]
+    ["j","a","v","a","s","c","r","i","p","t"].slice(-3,-1); //["i","p"]
+    ["j","a","v","a","s","c","r","i","p","t"].slice(-3,-2); //["i"]
+}
+</code></pre>
+                        </div>
+                    </div>
+                    <!-- sample19 -->
+
+                    <div id="sample22" class="sample">
+                        <h3>22. split()</h3>
+                        <div class="notice">"문자열".split(구분자, [제한])</div>
+                        <ul>
+                            <li>구분자를 이용하여, 여러개의 문자열(배열)을 반환합니다.</li>
+                        </ul>
+                        <div class="script">
+<pre><code class="language-js">{
+    "javascript".split(""); //['j', 'a', 'v', 'a', 's', 'c', 'r', 'i', 'p', 't']
+    "java script".split(" "); //['java', 'script']
+    "java scr ipt".split(" "); //['java', 'scr', ipt']
+    "javascript".split("",1); //['j']
+    "javascript".split("",2); //['j','a']
+    "javascript".split("",3); //['j','a','v']
+
+    "java script".split(" ",1); //['java']
+    "java script".split(" ",2); //['java','script']
+
+    "javascript".split("j"); //['','avascript']
+    "javascript".split("a"); //['j','v','script']
+    "javascript".split("e"); //['javascript']
+
+    "java/scr/ipt".split("/"); //['java', 'scr', ipt']
+    "java&scr!ipt".split("&"); //['java', 'scr!ipt']
+    "java&scr!ipt".split("!"); //['java&scr, 'ipt']
+
+    // 정규식 표현
+    "java&scr!ipt".split(/&|\!/); //['java', 'scr', 'ipt']
+
+    "javascript".split("").join() //j,a,v,a,s,c,r,i,p,t
+    "javascript".split("").join("*") //j*a*v*a*s*c*r*i*p*t
+    "javascript".split("").reverse().join("*") //t*p*i*r*c*s*a*v*a*j
+    "javascript".split("").reverse().join("/") //t/p/i/r/c/s/a/v/a/j
+}
+</code></pre>
+                        </div>
+                    </div>
+                    <!-- sample22 -->
+
+                    <div id="sample30" class="sample">
+                        <h3>30. trim()</h3>
+                        <div class="notice">"문자열".trim()</div>
+                        <ul>
+                            <li>문자열의 앞/뒤 공백을 제거하고, 새로운 문자열을 반환합니다.</li>
+                        </ul>
+                        <div class="script">
+<pre><code class="language-js">{
+    "javascript".trim("") //javascript
+    "javascript ".trim("") //javascript
+    "java script ".trim("") //javascript
+}
+</code></pre>
+                        </div>
+                    </div>
+                    <!-- sample30 -->
+
+                    <div id="sample31" class="sample">
+                        <h3>30. trimEnd()</h3>
+                        <div class="notice">"문자열".trim()</div>
+                        <ul>
+                            <li>문자열의 뒤 공백을 제거하고, 새로운 문자열을 반환합니다.</li>
+                        </ul>
+                        <div class="script">
+<pre><code class="language-js">{
+    " javascript ".trimEnd("") //javascript
+}
+</code></pre>
+                        </div>
+                    </div>
+                    <!-- sample30 -->
+
+                    <div id="sample32" class="sample">
+                        <h3>30. trimStart()</h3>
+                        <div class="notice">"문자열".trim()</div>
+                        <ul>
+                            <li>문자열의 앞 공백을 제거하고, 새로운 문자열을 반환합니다.</li>
+                        </ul>
+                        <div class="script">
+<pre><code class="language-js">{
+
+    " javascript ".trimStart("") //javascript
+    
+}
+</code></pre>
+                        </div>
+                    </div>
+                    <!-- sample30 -->
                 </div>
         </main>
         <!-- //main -->
@@ -230,21 +347,7 @@
         <script>hljs.highlightAll();</script>
 
         <script>
-            // console.log("javascript refercence".search("javascript"))
-            // console.log("javascript refercence".search("refercence"))
-            // console.log("javascript refercence".search("r"))
-            // console.log("javascript refercence".search("R"))
-            // console.log("javascript refercence".search("/refercence/"))
-            // console.log("javascript refercence".search("/Refercence/"))
-            // console.log("javascript refercence".search("/Refercence/i"))
-            // console.log("javascript refercence".search("/r/"))
-            // console.log("javascript refercence".search("/r/g"))
-            // console.log("javascript refercence".search("/w/g"))
-            // console.log("javascript refercence".search("/R/ig"); // r r r)
-            // console.log(first)
-
-            console.log("javascript reference".search(/reference/));
-            console.log("javascript reference".search(/r/));
+            console.log(["j","a","v","a","s","c","r","i","p","t"].slice(5,-2))
         </script>
 
 </body>
