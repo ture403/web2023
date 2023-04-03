@@ -225,7 +225,7 @@
             });
         }
         const answerSelect = (e) => {
-            const countInput = document.querySelectorAll("input[type='radio']:checked");
+            const countInput = document.querySelectorAll("input[type='radio']");
             let inputcount = 0;
             countInput.forEach((input)=>{
                 if(input.checked) {
@@ -235,9 +235,9 @@
             ScoreEm2.textContent = questionAll.length - inputcount +"문항";
         }
         
-        
-        dataQuestion();
         cbtSubmit.addEventListener("click", answerQuiz);
+        dataQuestion();
+        
     </script>
 </body>
 </html>
