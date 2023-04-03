@@ -20,6 +20,7 @@
 퀴즈 이펙트04 :https://ture403.github.io/web2023/javascript/quiz/quizEffect04.html   
 퀴즈 이펙트05 :https://ture403.github.io/web2023/javascript/quiz/quizEffect05.html   
 퀴즈 이펙트06 :https://ture403.github.io/web2023/javascript/quiz/quizEffect06.html   
+퀴즈 이펙트07 :https://ture403.github.io/web2023/javascript/quiz/quizEffect07.html   
 
 마우스 이펙트01 :https://ture403.github.io/web2023/javascript/mouse/mouseEffect01.html   
 마우스 이펙트02 :https://ture403.github.io/web2023/javascript/mouse/mouseEffect02.html   
