@@ -62,7 +62,6 @@
                             <span>전체 문제수 : <em class="mon">60</em>문항</span>
                             <span>남은 문제수 : <em class="mon2">59문항</em></span>
                         </div>
-                        <div class="count"></div>
                     </div>
                 </div>
                 <div class="cbt__omr">
@@ -101,7 +100,6 @@
         const cbtSubmit = document.querySelector(".cbt__submit");
         const ScoreEm = document.querySelector(".cbt__score .mon");
         const ScoreEm2 = document.querySelector(".cbt__score .mon2");
-        const countResult = document.querySelector(".count");
 
         let questionAll = [];  //모든 퀴즈 정보
         let count = 0;
@@ -225,7 +223,6 @@
                     quizDesc[number].classList.remove("hide");
                 }
             });
-            countResult.textContent= Math.ceil(( count / questionAll.length) * 100) + "점 입니다.";
         }
         const answerSelect = (e) => {
             const countInput = document.querySelectorAll("input[type='radio']:checked");
