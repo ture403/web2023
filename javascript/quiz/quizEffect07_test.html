@@ -57,7 +57,7 @@
             <div class="cbt__aside">
                 <div class="cbt__info">
                     <div>
-                        <div class="cbt__title">수험자 : <em>홍길동</em></div>
+                        <div class="cbt__title">수험자 : <em class="name">홍길동</em></div>
                         <div class="cbt__score">
                             <span>전체 문제수 : <em class="mon">60</em>문항</span>
                             <span>남은 문제수 : <em class="mon2">59문항</em></span>
@@ -100,12 +100,11 @@
         const cbtSubmit = document.querySelector(".cbt__submit");
         const ScoreEm = document.querySelector(".cbt__score .mon");
         const ScoreEm2 = document.querySelector(".cbt__score .mon2");
-
         let questionAll = [];  //모든 퀴즈 정보
-        let count = 0;
+        let count =0;
         //데이터 가져오기
         const dataQuestion = () => {
-            fetch("json/gisa2020_01.json")
+            fetch("json/gineungsajcWD2023_01.json")
             .then(res => res.json())
             .then(items => {
                 questionAll = items.map((item, index) => {
@@ -138,15 +137,12 @@
                     }
 
                     //console.log(formattedQuestion);
-
                     return formattedQuestion;
+                    
                 });
                 newQuestion();  //문제 만들기
                 
                 //문제 총갯수
-                ScoreEm.innerText= questionAll.length;
-                const cbtSelects = document.querySelectorAll(".cbt__selects");
-
                 
             })
             .catch((err) => console.log(err));
@@ -156,12 +152,11 @@
         const newQuestion = () => {
             const exam = [];
             const omr = [];
-            let count = 0;
             questionAll.forEach((question, number) => {
                 exam.push(`
                     <div class="cbt">
                         <div class="cbt__question"><span>${question.number}</span>. ${question.question}</div>
-                        <div class="cbt__question__img"></div>
+                        <div class="cbt__question__img"><img src='../quiz/img/quiz0${number}.png' style='width: 100%;' onerror="this.style.display='none'"></div>
                         <div class="cbt__selects">
                             <input type="radio" id="select${number}_1" name="select${number}" value="${number+1}_1" onclick="answerSelect(this)">
                             <label for="select${number}_1"><span>${question.choice1}</span></label>
@@ -189,14 +184,17 @@
                         <label for="omr${number}_4"><span class="label-inner">4</span></label>
                     </div>
                 `)
+                ScoreEm.innerText= number+1;
             });
             cbtQuiz.innerHTML = exam.join('');
             cbtOmr.innerHTML = omr.join('');
             
         }
+
         //정답 확인
         const answerQuiz = () => {
             const cbtSelects = document.querySelectorAll(".cbt__selects");
+            
             questionAll.forEach((question, number) => {
                 const quizSelectsWrap = cbtSelects[number];
                 const userSelector = `input[name=select${number}]:checked`;
@@ -222,16 +220,19 @@
                 } else {
                     quizDesc[number].classList.remove("hide");
                 }
+                const b = questionAll.length-number;
+                ScoreEm2.innerText = b;
             });
-            return answerQuiz;
         }
-        const answerSelect = () => {
+
+        const answerSelect = (e) => {
 
         }
-        
-        
-        dataQuestion();
+
+
         cbtSubmit.addEventListener("click", answerQuiz);
+        dataQuestion();
+
     </script>
 </body>
 </html>
