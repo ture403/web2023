@@ -191,6 +191,9 @@
             });
             cbtQuiz.innerHTML = exam.join('');
             cbtOmr.innerHTML = omr.join('');
+    
+
+            // if(){}
             
         }
         //정답 확인
@@ -224,12 +227,13 @@
                 }
             });
         }
-        const answerSelect = (e) => {
+        const answerSelect = () => {
             const countInput = document.querySelectorAll("input[type='radio']");
             let inputcount = 0;
             countInput.forEach((input)=>{
                 if(input.checked) {
                     inputcount++;
+
                 }
             })
             ScoreEm2.textContent = questionAll.length - inputcount +"문항";

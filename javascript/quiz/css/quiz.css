@@ -1034,28 +1034,27 @@
 
 /* 미디어 쿼리 */
 @media (min-width: 1400px){
-    .cbt_quiz .cbt {
-        width: 32.333%;
+    .cbt__quiz .cbt {
+        width: 32.3333%;
     }
 }
-@media (max-width: 960px) {
-    .cbt_quiz .cbt {
+@media (max-width: 960px){
+    .cbt__quiz .cbt {
         width: 100%;
     }
 }
-@media (max-width: 800px) {
-    .cbt_aside {
-        position: relative;
+@media (max-width: 800px){
+    .cbt__aside {
         display: none;
     }
-    .cbt_header {
+    .cbt__header {
         width: 100%;
         flex-direction: column;
     }
-    .cbt_header h2 {
+    .cbt__header h2 {
         margin-bottom: 10px;
     }
-    .cbt_conts {
+    .cbt__conts {
         width: 100%;
     }
 }
