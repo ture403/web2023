@@ -14,7 +14,7 @@
     },{
         "infoNumber" : "20120503",
         "question" : "다음 중 무엇을 구하는 도형인가?",
-        "question_img " : "quiz01.png",
+        "question_img " : "<img src='../quiz/img/quiz01.png' style='width: 100%; margin-left:60px'>",
         "incorrect_answers" : ["심메트리","루트구형","아심메트리"],
         "correct_answer" :"황금분할",
         "desc" : "황금비례 : 1:6184 "
@@ -33,7 +33,7 @@
     },{
         "infoNumber" : "20110506",
         "question" : "다음 그림에서 나타나는 착시현상은?",
-        "question_img" : "quiz02.png",
+        "question_img" : "<img src='../quiz/img/quiz02.png' style='width: 100%; margin-left:60px'>",
         "incorrect_answers" : ["방향의 착시","대비의 착시","분할의 착시"],
         "correct_answer" :"길이의 착시",
         "desc" : "길이의 착시 입니다."

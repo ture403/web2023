@@ -279,11 +279,11 @@
     font-family: 'PyeongChang';
 }
 .cbt__conts {
-    width: calc(100% - 300px);
+    width: calc(100% - 280px);
     background-color: #fff;
 }
 .cbt__header {
-    width: calc(100% - 300px);
+    width: calc(100% - 280px);
     background-color: #fff;
     border: 8px ridge #cacaca;
     margin-bottom: 20px;
@@ -298,10 +298,62 @@
     right: 20px;
     top: 135px;
     height: calc(100vh - 150px);
-    width: 280px;
+    width: 250px;
     background-color: #fff;
+}
+.cbt__info {
     border: 8px ridge #cacaca;
-    overflow-y: auto;
+    margin-bottom: 10px;
+    background-color: #e3edff;
+}
+.cbt__time {
+    padding-left: 20px;
+    background: #2f72f0;
+    border-radius: 40px;
+    color: #fff;
+    padding: 10px 20px 10px 30px;
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 16px;
+    position: relative;
+}
+.cbt__time::before {
+    content: '';
+    position: absolute;
+    left: 40px;
+    top: 9px;
+    width: 22px;
+    height: 22px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%23fff' class='w-6 h-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z' /%3E%3C/svg%3E");
+}
+.cbt__submit {
+    background: #ff3c3c;
+    border-radius: 40px;
+    color: #fff;
+    padding: 10px 20px 10px 30px;
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+    font-size: 16px;
+    position: relative;
+    cursor: pointer;
+    border: none;
+}
+.cbt__submit::before {
+    content: '';
+    position: absolute;
+    left: 45px;
+    top: 9px;
+    width: 22px;
+    height: 22px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%23fff' class='w-6 h-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10' /%3E%3C/svg%3E%0A");
+}
+
+.cbt__omr {
+    border: 8px ridge #cacaca;
+    overflow-y:auto;
+    height: 400px;
 }
 .cbt__quiz {
     display: flex;
@@ -339,56 +391,15 @@
     left: 0;
     top: 0;
 }
-.cbt__info {
-    background-color: #e3edff;
-}
 .cbt__info > div {
     border-bottom: 4px ridge #cacaca;
 }
 .cbt__info > div:first-child {
-    background-color: #546482;
+    background-color: rgb(227, 237, 255);
     color: #fff;
     padding: 10px 20px;
     text-align: center;
-}
-.cbt__time {
-    position: fixed;
-    right: 160px;
-    top: 80px;
-    padding-left: 17px;
-    background: #423cff;
-    padding: 10px 24px 10px 40px;
-    border-radius: 40px;
-    color: #fff;
-}
-.cbt__time::before {
-    content: '';
-    position: absolute;
-    left: 15px;
-    top: 9px;
-    width: 22px;
-    height: 22px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%23fff' class='w-6 h-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z' /%3E%3C/svg%3E");
-}
-.cbt__submit {
-    position: fixed;
-    right: 20px;
-    top: 80px;
-    padding-left: 20px;
-    background: #ff3c3c;
-    display: inline-block;
-    padding: 10px 27px 10px 44px;
-    border-radius: 40px;
-    color: #fff;
-}
-.cbt__submit::before {
-    content: '';
-    position: absolute;
-    left: 18px;
-    top: 9px;
-    width: 22px;
-    height: 22px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%23fff' class='w-6 h-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10' /%3E%3C/svg%3E%0A");
+    border-bottom: 8px ridge #cacaca;
 }
 .cbt__info > div:last-child {
     padding: 20px;
