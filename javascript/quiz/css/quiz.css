@@ -666,7 +666,7 @@
 }
 .result span {
     display: block;
-    color: #fff;
+    
     background-color: red;
     border-radius: 50%;
     width: 50px;
@@ -676,11 +676,15 @@
     position: absolute;
     top:0;
     right: 0;
+    font-size: 40px;
+}
+.result span a {
+    color: #fff;
 }
 .result p {
-    padding: 20px;
     font-family: 'NanumSquareNeo';
     font-size: 30px;
+    text-align: center;
 }
 .cbt__start2 {
     position: fixed;
