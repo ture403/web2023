@@ -586,6 +586,9 @@
     justify-content: center;
     align-items: center;
 }
+.cbt__start.hide {
+    display: none;
+}
 .cbt__start h2 {
     text-align: center;
     padding: 20px 0;
@@ -597,26 +600,103 @@
     background-color: #fff;
     border: 8px ridge #cacaca;
 }
-.cbt_choice {
-    text-align: center;
-}
 .cbt_choice #cbtTime {
     border: 1px solid #cacaca;
     padding: 10px 30px;
     margin-bottom: 20px;
     font-family: 'NanumSquareNeo';
 }
-.choice_button {
-    width: 100px;
-    height: 100px;
+.cbt__start {
+    text-align: center;
+}
+.cbt__start_btn {
+    width: 80px;
+    height: 80px;
     font-family: 'NanumSquareNeo';
     border: 0;
     display: block;
     margin: 0 auto;
     border-radius: 50%;
-    margin-top: 50px;
     cursor: pointer;
-    background-color: aquamarine;
+    background-color: rgba(4, 87, 63,0.5);
+    color: #fff;
+}
+.cbt__start_btn:hover {
+    color: #000;
+    background: aquamarine
+}
+.cbt__view {
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 10;
+    line-height: 1.8;
+}
+.cbt__view input {
+    border-radius: 10px;
+    border: 1px solid #dedeff;
+    padding: 3px;
+    font-family: 'NanumSquareNeo';
+}
+.cbt__view span {
+    position: relative;
+}
+.cbt__view span::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 10px;
+    z-index: -1;
+    border-radius: 20px;
+    background-color: #e0e0fff0;
+}
+.result {
+    border: 8px ridge aqua;
+    width: 50%;
+    height: 50vh;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10000;
+    text-align: center;
+    position: relative;
+}
+.p_all {
+    margin: 150px 0;
+}
+.result span {
+    display: block;
+    color: #fff;
+    background-color: red;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    position: absolute;
+    top:0;
+    right: 0;
+}
+.result p {
+    padding: 20px;
+    font-family: 'NanumSquareNeo';
+    font-size: 30px;
+}
+.cbt__start2 {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 10000;
+    background-color: rgba(255, 255, 2555, 0.5);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cbt__start2.hide {
+    display: none;
 }
 /* dog_wrap */
 

@@ -8,7 +8,7 @@
     <meta name="description" content="웹 퍼블리셔를 위한 정보 공유 사이트입니다.">
     <meta name="keywords"
         content="웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, publisher, css3, html, markup, design, Webstoryboy">
-    <title>test | Class</title>
+    <title>june | Class</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../assets/css/bootstrap.css" rel="stylesheet">
@@ -377,6 +377,12 @@ INSERT INTO members(youEmail, youName, youPass, youBirth, youAge, regTime) VALUE
                     <h4>memberID가 1,5,10,15번만 불러오기</h4>
 <pre><code class="language-js">SELECT * FROM member WHERE memberID IN(1,5,10,15);
 </code></pre>
+                    <h4>Youname 중에 데이터가 없는 것 불러오기</h4>
+<pre><code class="language-js">SELECT * FROM member WHERE youname is null;
+</code></pre>
+                    <h4>Youname 중에 데이터가 없는 것 반대 불러오기</h4>
+<pre><code class="language-js">SELECT * FROM member WHERE youname is not null;
+</code></pre>
                     <h4>youName 중에 "연"텍스트가 포함된 이름 불러오기</h4>
 <pre><code class="language-js">SELECT * FROM member WHERE youname LIKE '%연%';
 </code></pre>
@@ -462,9 +468,126 @@ SELECT * FROM member where memberID in ('9','2') and youAge &gt;= 25;
 <pre><code class="language-js">DELETE FROM member WHERE memberid IN(11,13,15);
 </code></pre>
                 </div>
+            </div>
                 <!-- //intro6 -->
+                <div class="bs-docs-section">
+                    <h3 id="intro7" class="page-header">테이블 수정</h3>
 
-                
+                    <h4 id="intro7-1" class="page-header">필드 추가하기</h4>
+                    <div class="bs-callout bs-callout-info">ALTER TABLE [테이블명] ADD [추가할필드명] AFTER [필드 위치]</div>
+                    <h4>멤버 페이블에 핸드폰 번호 필드를 추가</h4>
+<pre><code class="language-js">ALTER TABLE members ADD youPhone varchar(20) NOT NULL;
+Query OK, 0 rows affected (0.08 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+</code></pre>
+                    <h4>멤버 페이블에 핸드폰 번호 필드를 youAge 뒤에 추가</h4>
+<pre><code class="language-js">ALTER TABLE members ADD youPhone varchar(20) NOT NULL AFTER youAge;
+Query OK, 0 rows affected (0.08 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+</code></pre>
+                    <h4 id="intro7-2" class="page-header">필드 수정하기</h4>
+                    <div class="bs-callout bs-callout-info">ALTER TABLE [테이블명] MODIFY [수정할 필드명]</div>
+<pre><code class="language-js">alter table members modify youPhone int(20) NOT NULL;
+Query OK, 0 rows affected (0.09 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+</code></pre>
+                    <h4 id="intro7-3" class="page-header">필드 삭제하기</h4>
+                    <div class="bs-callout bs-callout-info">ALTER TABLE [테이블명] DROP [삭제할필드명]</div>
+                    <h4>멤버 테이블에 핸드폰 번호 필드 삭제</h4>
+<pre><code class="language-js">alter table members drop youPhone;
+Query OK, 0 rows affected (0.08 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+</code></pre>
+                <!-- //intro7 -->
+                <!-- //intro8 -->
+                <div class="bs-docs-section">
+                    <h3 id="intro8" class="page-header">테이블 합치기</h3>
+
+                    <div class="bs-callout bs-callout-info">SELECT [필드명] FROM [테이블명] [앨리어스] JOIN [연결할 테이블명 앨리어스] ON [기준이 되는 조건문]</div>
+                    <h4>두개의 테이블(members, review) 합치기</h4>
+<pre><code class="language-js">select m.youEmail, m.youname, r.youtext, r.regtime from members m JOIN reviews r on (m.memberid = r.memberid);
+
+</code></pre>
+                <h4>두개의 테이블(members, review) 합치기 : 필드명 변경하기(AS)</h4>
+<pre><code class="language-js">select m.youEmail, m.youname, r.youtext, r.regtime AS reviewRegTime from members m JOIN reviews r on (m.memberid = r.memberid);
+</code></pre>
+                <h4>두개의 테이블(members, review) 합치기 : 왼쪽 테이블 기준</h4>
+<pre><code class="language-js">select m.youEmail, m.youname, r.youtext, r.regtime from members m LEFT JOIN reviews r on (m.memberid = r.memberid);
+</code></pre>
+                </div>
+                <!-- //intro8 -->
+                <!-- //intro9 -->
+                <div class="bs-docs-section">
+                    <h3 id="intro9" class="page-header">집계 함수</h3>
+
+<pre><code class="language-js">
+CREATE TABLE schoolRecode (
+    studentID int(10) unsigned NOT NULL AUTO_INCREMENT comment "학생번호",
+    class tinytext comment "소속클래스(반)",
+    english tinytext NOT NULL comment "영어점수",
+    math tinytext NOT NULL comment "수학점수",
+    science tinytext NOT NULL comment "과학점수",
+    coding tinytext NOT NULL comment "코딩점수",
+    PRIMARY KEY(studentID)
+) charset=utf8;
+
+INSERT INTO schoolRecode(english, math, science, coding) VALUES(50, 10, 20, 100);
+INSERT INTO schoolRecode(class, english, math, science, coding) VALUES(1, 50, 10, 20, 100);
+INSERT INTO schoolRecode(class, english, math, science, coding) VALUES(2, 40, 30, 22, 90);
+INSERT INTO schoolRecode(class, english, math, science, coding) VALUES(2, 50, 40, 23, 80);
+INSERT INTO schoolRecode(class, english, math, science, coding) VALUES(3, 60, 50, 24, 70);
+INSERT INTO schoolRecode(class, english, math, science, coding) VALUES(4, 70, 60, 25, 60);
+INSERT INTO schoolRecode(class, english, math, science, coding) VALUES(5, 80, 70, 26, 50);
+</code></pre>
+                    
+                    <h4>레코드 갯수 구하기</h4>
+<pre><code class="language-js">select count(class) from schoolrecode;</code></pre>
+<pre><code class="language-js">select count(*) from schoolrecode;</code></pre>
+
+                    <h4>레코드 갯수 구하기(null 포함)</h4>
+<pre><code class="language-js">select count(*) from schoolrecode;</code></pre>
+                    
+                    <h4>레코드 합계 구하기</h4>
+<pre><code class="language-js">select sum(coding) from schoolrecode;</code></pre>
+
+                    <h4>레코드 합계 구하기 (학생 아이디가 1-4)</h4>
+<pre><code class="language-js">select sum(coding) from schoolrecode where studentid >=1 and studentId <=4;</code></pre>
+
+                    <h4>가장 높은 코딩 점수 구하기</h4>
+<pre><code class="language-js">select max(coding) from schoolrecode</code></pre>
+
+                    <h4>가장 낮은 코딩 점수 구하기</h4>
+<pre><code class="language-js">select min(coding) from schoolrecode</code></pre>
+
+                    <h4>평균값 평균 점수 구하기</h4>
+<pre><code class="language-js">select avg(coding) from schoolrecode</code></pre>
+
+                    <h4>그룹별 집계</h4>
+                    <div class="bs-callout bs-callout-info">SELECT [필드명] FROM [테이블명] GROUP BY [필드명] </div>
+
+                    <h4>반별로 학생들의 영어점수 평균값 구하기</h4>
+<pre><code class="language-js">select class, avg(english) from schoolrecode where class in(1,2,3,4,5) GROUP BY class;</code></pre>
+
+                    <h4>반별로 학생들의 수학점수 합계 구하기</h4>
+<pre><code class="language-js">select class, sum(math) from schoolrecode where class in(1,2,3,4,5) GROUP BY class;</code></pre>
+
+                    <h4>반별로 학생들의 수학점수 합계 점수가 70 이상</h4>
+<pre><code class="language-js">select class, sum(math) from schoolrecode where class in(1,2,3,4,5) GROUP BY class having sum(math) >=70;</code></pre>
+
+                    <h4>출력 결과의 정렬</h4>
+                    <div class="bs-callout bs-callout-info">SELECT [필드명] FROM [테이블명] ORDER BY [필드명] DESC 또는 ASC </div>
+
+                    <h4>영어 점수를 높은 순에서 낮은 순으로 표시(내림차순)</h4>
+<pre><code class="language-js">select studentID, english from schoolrecode order by english desc;</code></pre>
+
+                    <h4>영어 점수를 높은 순에서 낮은 순으로 표시(오름차순)</h4>
+<pre><code class="language-js">select studentID, english from schoolrecode order by english asc;</code></pre>
+
+                    <h4>반별 수학 점수를 높은 순에서 낮은 순으로 표시(내림차순)</h4>
+<pre><code class="language-js">SELECT class, SUM(math) FROM schoolRecode WHERE class IN(1,2,3,4,5) GROUP BY class ORDER BY sum(math) DESC;</code></pre>
+
+                </div>
+                <!-- //intro9 -->
             </div>
 
             <div class="col-md-3">
@@ -486,7 +609,6 @@ SELECT * FROM member where memberID in ('9','2') and youAge &gt;= 25;
                                 <li><a href="intro5-1">테이블 만들기</a></li>
                                 <li><a href="intro5-2">테이블 전체보기</a></li>
                                 <li><a href="intro5-3">테이블 삭제하기</a></li>
-                                <li><a href="intro5-4">테이블 복사하기</a></li>
                             </ul>
                         </li>
                         <li><a href="#intro6">테이블 데이터</a>
@@ -496,6 +618,17 @@ SELECT * FROM member where memberID in ('9','2') and youAge &gt;= 25;
                                 <li><a href="intro6-3">데이터 수정하기</a></li>
                                 <li><a href="intro6-4">데이터 삭제하기</a></li>
                             </ul>
+                        </li>
+                        <li><a href="#intro7">테이블 수정</a>
+                            <ul class="nav bs-sidenav">
+                                <li><a href="intro7-1">필드 추가하기</a></li>
+                                <li><a href="intro7-2">필드 수정하기</a></li>
+                                <li><a href="intro7-3">필드 삭제하기</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#intro8">테이블 합치기</a>
+                        </li>
+                        <li><a href="#intro9">집계 함수</a>
                         </li>
                     </ul>
                 </div>
@@ -527,3 +660,31 @@ SELECT * FROM member where memberID in ('9','2') and youAge &gt;= 25;
 </html>
 
 
+INSERT INTO members(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("webstoryboy@naver.com","황상연","1234","19990304","26","03140316");
+INSERT INTO members(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("dlscks0930@naver.com","황인찬","1234","19980930","26","03140316");
+INSERT INTO members(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("gp2617@naver.com","천설희","1234","19950313","29","03140316");
+INSERT INTO members(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("dsy1943@naver.com","여다슬","1943","20011227","23","03140316");
+INSERT INTO members(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("1346zany@gmail.com","이승연","1234","19991216","25","03140316");
+INSERT INTO members(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("ebmdols@naver.com","장진용","1234","19940401","26","03140316");
+INSERT INTO members(youEmail, youName, youpass, youBirth, youAge, regTime) VALUES("jo0132@naver.com","노지영","1234","19950323","29","03140316");
+INSERT INTO members(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("skadldldl123@gmail.com","안교남","1234","19920923","32","03140316");
+INSERT INTO members(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("ehcjswo1@gmail.com","김도현","123","19951003","29","03140316");
+INSERT INTO members(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("goed0522@gmail.com","변우현","1234","20000629","24","03141516");
+INSERT INTO members(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("yuna243441@naver.com","이유나","1234","20020508","22","03140316");
+INSERT INTO members(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("im.kebab00@gmail.com","이요셉","1234","19990315","26","03140316");
+INSERT INTO members(youEmail, youName, youpass, youBirth, youAge, regTime) VALUES("ture403@gmail.com","전윤기","1234","19920210","32","03140316");
+INSERT INTO members(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("dongjin6539@naver.com","신동진","1234","19960709","28","03140316");
+INSERT INTO members(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("gnsrbdi@naver.com","이훈규","1234","19950227","29","03140316");
+INSERT INTO members(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("jeongyouna_@naver.com","정유나","1234","19950606","29","03140316");
+INSERT INTO members(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("daanbi1345@gmail.com","조은경","1234","19930205","31","03140316");
+INSERT INTO members(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("hunmi961119@gmail.com","진현미","1234","19961119","28","03140316");
+INSERT INTO members(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("getgrovy@gmail.com","정희석","1234","19990101","26","03140316");
+INSERT INTO members(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("kshkmn0929@naver.com","김도현","0929","20020929","22","03140316");
+INSERT INTO members(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("hyejeong3283@gmail.com","이혜정","1234","19940622","30","03140316");
+INSERT INTO members(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("didrn94553@gmail.com","이양구","1234","19941212","30","03140316");
+INSERT INTO members(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("ghkddn132@naver.com","정황우","1234","19970130","25","03140316");
+INSERT INTO members(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("esansi@naver.com","김현빈","1234","19970524","27","03140316");
+INSERT INTO members(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("lee3ll@naver.com","이은지","1234","19930311","31","03140316");
+INSERT INTO members(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("dripidea77@gmail.com","김시연","1234","19930313","31","03140316");
+INSERT INTO members(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("itshena01@gmail.com","조한미","1234","19930211","31","03140316");
+INSERT INTO members(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("aimee00418@gmail.com","권현정","1234","19830211","39","03140316");

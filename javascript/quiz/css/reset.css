@@ -1,6 +1,9 @@
 @import url('https://webfontworld.github.io/DungGeunMo/DungGeunMo.css');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 @import url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo.css');
+@import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
+@import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
+
 
 * {
     margin: 0;
@@ -46,4 +49,8 @@ body {
     height:1px;
     margin:-1px;
     overflow:hidden;
+}
+
+.hide {
+    display: none;
 }
