@@ -1183,7 +1183,7 @@
     }
 }
 @media (max-width: 800px){
-    .cbt__aside {
+    .cbt__aside{
         display: none;
     }
     .cbt__header {
@@ -1194,6 +1194,25 @@
         margin-bottom: 10px;
     }
     .cbt__conts {
+        width: 100%;
+    }
+
+    .cbt__time {
+        position: fixed;
+        bottom: 5px;
+        left: 4px;
+        width: 48%;
+        text-align: center;
+    }
+
+    .cbt__submit {
+        position: fixed;
+        bottom: 10px;
+        right: 4px;
+        width: 48%;
+        text-align: center;
+    }
+    .cbt_choice #cbtTime {
         width: 100%;
     }
 }
