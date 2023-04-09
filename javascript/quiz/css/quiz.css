@@ -1203,6 +1203,7 @@
         left: 4px;
         width: 48%;
         text-align: center;
+        z-index: 1000;
     }
 
     .cbt__submit {
@@ -1211,8 +1212,12 @@
         right: 4px;
         width: 48%;
         text-align: center;
+        z-index: 1000;
     }
     .cbt_choice #cbtTime {
+        width: 100%;
+    }
+    .cbt__view input {
         width: 100%;
     }
 }
