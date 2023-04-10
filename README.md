@@ -28,6 +28,8 @@
 
 서치 이펙트01 : :https://ture403.github.io/web2023/javascript/search/searchEffect01.html
 
+슬라이더 이펙트 01 : https://ture403.github.io/web2023/javascript/slider/sliderEffect01.html
+
 # 사이트   
 이미지 유형 01 : https://ture403.github.io/web2023/site/imageType/imageType01.html   
 카드 유형01 : https://ture403.github.io/web2023/site/cardType/cardType01.html   
