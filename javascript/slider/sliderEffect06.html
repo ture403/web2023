@@ -196,14 +196,14 @@
             let dotActive = document.querySelectorAll(".slider_dot .dot");
 
             dotActive.forEach((el,index)=>{
-                el.addEventListener("click",(e)=>{
+                el.addEventListener("click",()=>{
                     dotActive.forEach((dot)=>{
                         dot.classList.remove("active")
                     });
                     el.classList.add("active");
                     sliderInner.style.transition = "all 400ms";
                     sliderInner.style.transform = "translateX("+ -sliderWidth * index +"px)";
-                    console.log(e.target)
+                    
                 });
                 
             })
