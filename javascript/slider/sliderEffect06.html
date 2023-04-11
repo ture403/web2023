@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="view-transition" content="same-origin">
+    <title>06. 슬라이드 이펙트</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <style>
+        /* silder_wrap */
+        .slider_wrap {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .slider_img { /* 이미지가 보이는 영역 */
+            position: relative;
+            width: 800px;
+            height: 520px;
+            overflow: hidden;
+        }
+
+        .slider_inner { /* 전체 이미지를 감싸고 있는 부모박스 : 움직이는 영역 */
+            display: flex;
+            flex-wrap: wrap;
+            width: 4800px;
+            height: 520px;
+        }
+        .slider { /* 개별적인 이미지 */
+            position: relative;
+            width: 800px;
+            height: 520px;
+        }
+        .slider_btn a {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            /* background: rgb(176, 201, 118); */
+            transition: all 0.3s ease;
+        }
+        .slider_btn a:hover {
+            border-radius: 50%;
+            /* background-color: rgb(151, 180, 83); */
+            color: #fff;
+            scale: 2;
+        } 
+        .slider_btn a.prev {
+            left: 0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'%3E%3Cpath d='M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .slider_btn a.next {
+            right: 0;
+            background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'%3E%3Cpath d='M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .slider_dot {
+            position: absolute;
+            left: 50%;
+            bottom: 30px;
+            transform: translateX(-50%);
+        }
+        .slider_dot .dot {
+            width: 20px;
+            height: 20px;
+            background-color: rgba(255, 255, 255,0.3);
+            display: inline-block;
+            border-radius: 50%;
+            text-indent: -9999px;
+            transition: all 0.3s;
+            margin:3px;
+        }
+        .slider_dot .dot.active {
+            background-color: #fff
+        }
+    </style>
+</head>
+<body class="img10 bg10 font10">
+    <header id="header">
+        <h1>Javascript slider Effect06</h1>
+        <p>슬라이드 이펙트 - 이미지 슬라이드(버튼,닷메뉴)</p>
+        <ul>
+            <li><a href="sliderEffect01.html">1</a></li>
+            <li><a href="sliderEffect02.html">2</a></li>
+            <li><a href="sliderEffect03.html">3</a></li>
+            <li><a href="sliderEffect04.html">4</a></li>
+            <li><a href="sliderEffect05.html">5</a></li>
+            <li class="active"><a href="sliderEffect06.html">6</a></li>
+        </ul>
+    </header>
+    <!-- header -->
+    <main id="main">
+        <div class="slider_wrap">
+            <div class="slider_img">
+                <div class="slider_inner">
+                    <div class="slider s1"><img src="./img/silderEffect01-1-min.jpg" alt="이미지1"></div>
+                    <div class="slider s2"><img src="./img/sliderEffect02-1-min.jpg" alt="이미지2"></div>
+                    <div class="slider s3"><img src="./img/sliderEffect03-1-min.jpg" alt="이미지3"></div>
+                    <div class="slider s4"><img src="./img/sliderEffect04-min.jpg" alt="이미지4"></div>
+                    <div class="slider s5"><img src="./img/sliderEffect05-1-min.jpg" alt="이미지5"></div>
+                </div>
+            </div>
+        </div>
+        <div class="slider_btn">
+            <a href="#" class="prev" title="이전이미지"></a>
+            <a href="#" class="next" title="다음이미지"></a>
+            
+        </div>
+        <div class="slider_dot">
+            <!-- <a href="#" class="active dot">이미지1</a> -->
+            <!-- <a href="#" class="dot">이미지2</a>
+            <a href="#" class="dot">이미지3</a>
+            <a href="#" class="dot">이미지4</a>
+            <a href="#" class="dot">이미지5</a> -->
+        </div>
+    </main>
+    
+    <!-- main -->
+    
+    <!-- <footer id="footer">
+        <a href="mailto:ture403@gmail.com">ture403@gmail.com</a>
+    </footer> -->
+    <!-- footer -->
+    <script>
+        // 선택자
+        const sliderWrap = document.querySelector(".slider_wrap");
+        const sliderImg = sliderWrap.querySelector(".slider_img");
+        const sliderInner = sliderWrap.querySelector(".slider_inner")
+        const slider = sliderWrap.querySelectorAll(".slider");
+        const sliderDot =document.querySelector(".slider_dot");
+        const sliderBtn = document.querySelectorAll(".slider_btn a");
+
+
+        let currentIndex = 0; //현재 보이는 이미지
+        let sliderCount = slider.length; //전체 이미지 갯수
+        let sliderInterval = 3000; //이미지 변경되는 간격 시간
+        let sliderWidth = slider[0].offsetWidth; //이미지 가로값
+        let dotIndex ="";
+        
+        function init(){
+            //이미지 갯수만큼 닷 메뉴 생성
+            slider.forEach(()=>{
+                dotIndex += "<a href='#' class='dot'>이미지1</a>";
+                sliderDot.innerHTML = dotIndex;
+
+                sliderDot.firstChild.classList.add("active");
+
+            });
+        }
+
+        init();
+
+        //이미지 이동시키기
+        function gotoslider(num){
+            sliderInner.style.transition = "all 400ms";
+            sliderInner.style.transform = "translateX("+ -sliderWidth * num +"px)";
+            currentIndex = num
+
+            let dotActive = document.querySelectorAll(".slider_dot .dot");
+                dotActive.forEach((el)=>{
+                    el.classList.remove("active");
+                });
+            dotActive[num].classList.add("active");
+        }
+
+        //버튼 클릭 했을때
+        sliderBtn.forEach((btn, index)=>{
+            btn.addEventListener("click",()=>{
+                let prevIndex = (currentIndex+(sliderCount-1)) % sliderCount; //123401234
+                let nextIndex = (currentIndex+1) % sliderCount; //123401234
+                
+                if(btn.classList.contains("prev")){
+                    gotoslider(prevIndex);
+                } else {
+                    gotoslider(nextIndex);
+                }
+            });
+            
+        })
+    </script>
+
+    <!-- 제이쿼리 -->
+    <script>
+        // 선택자
+        // const sliderWrap = $(".slider_wrap");
+        // const sliderImg = $(".slider_img");
+        // const sliderInner = $(".slider_inner");
+        // const slider = $(".slider");
+
+        // let currentIndex = 0; //현재 보이는 이미지
+        // let sliderCount = slider.length; //전체 이미지 갯수
+        // let sliderInterval = 3000; //이미지 변경되는 간격 시간
+        // let sliderWidth = slider.eq(0).outerWidth(); //이미지 가로값
+        // let sliderClone = sliderInner.find(".slider:first-child").clone(); //첫번쨰 이미지 복사
+
+        // //복사한 첫 번쨰 이미지 마지막에 붙여넣기
+        // sliderInner.append(sliderClone);
+
+        // function sliderEffect(){
+        //     currentIndex++;
+
+        //     sliderInner.css("transition", "all 0.6s");
+        //     sliderInner.css("transform", `translateX(-${sliderWidth * currentIndex}px)`);
+
+        //     //마지막 이미지에 위치 했을때
+        //     if(currentIndex == sliderCount){
+        //         setTimeout(()=>{
+        //             sliderInner.css("transition", "0s");
+        //             sliderInner.css("transform", `translateX(0px)`);
+        //         },700);
+        //         currentIndex = 0;
+        //     }
+        // }
+
+        // setInterval(sliderEffect, sliderInterval);
+    </script>
+</body>
+</html>
