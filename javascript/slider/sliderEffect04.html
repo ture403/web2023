@@ -76,40 +76,41 @@
     </footer>
     <!-- footer -->
     <script>
-        // //선택자
-        // const sliderWrap = document.querySelector(".slider_wrap");
-        // const sliderImg = sliderWrap.querySelector(".slider_img");
-        // const sliderInner = sliderWrap.querySelector(".slider_inner")
-        // const slider = sliderWrap.querySelectorAll(".slider");
+        //선택자
+        const sliderWrap = document.querySelector(".slider_wrap");
+        const sliderImg = sliderWrap.querySelector(".slider_img");
+        const sliderInner = sliderWrap.querySelector(".slider_inner")
+        const slider = sliderWrap.querySelectorAll(".slider");
 
-        // let currentIndex = 0; //현재 보이는 이미지
-        // let sliderCount = slider.length; //전체 이미지 갯수
-        // let sliderInterval = 3000; //이미지 변경되는 간격 시간
-        // let sliderWidth = slider[0].offsetWidth; //이미지 가로값
-        // let sliderClone = sliderInner.firstElementChild.cloneNode(true); //첫번쨰 이미지 복사
+        let currentIndex = 0; //현재 보이는 이미지
+        let sliderCount = slider.length; //전체 이미지 갯수
+        let sliderInterval = 3000; //이미지 변경되는 간격 시간
+        let sliderWidth = slider[0].offsetWidth; //이미지 가로값
+        
+        let sliderClone = sliderInner.firstElementChild.cloneNode(true); //첫번쨰 이미지 복사
 
-        // //복사한 첫 번쨰 이미지 마지막에 붙여넣기
-        // sliderInner.appendChild(sliderClone);
+        //복사한 첫 번쨰 이미지 마지막에 붙여넣기
+        sliderInner.appendChild(sliderClone);
 
-        // function sliderEffect(){
-        //     currentIndex++;
+        function sliderEffect(){
+            currentIndex++;
 
-        //     sliderInner.style.transition = "all 0.6s";
+            sliderInner.style.transition = "all 0.6s";
 
-        //     sliderInner.style.transform = `translateX(-${sliderWidth * currentIndex}px)`;
+            sliderInner.style.transform = `translateX(-${sliderWidth * currentIndex}px)`;
 
-        //     //마지막 이미지에 위치 했을때
+            //마지막 이미지에 위치 했을때
 
-        //     if(currentIndex == sliderCount){
-        //         setTimeout(()=>{
-        //             sliderInner.style.transition = "0s";
-        //         sliderInner.style.transform = `translateX(0px)`;
-        //         },700);
-        //         currentIndex = 0;
-        //     }
+            if(currentIndex == sliderCount){
+                setTimeout(()=>{
+                    sliderInner.style.transition = "0s";
+                sliderInner.style.transform = `translateX(0px)`;
+                },700);
+                currentIndex = 0;
+            }
 
-        // }
-        // setInterval(sliderEffect, sliderInterval);
+        }
+        setInterval(sliderEffect, sliderInterval);
         
     </script>
     <!-- 제이쿼리  -->
@@ -150,37 +151,37 @@
     <!-- GSAP -->
     <script>
         //선택자
-        const sliderWrap = document.querySelector(".slider_wrap");
-        const sliderImg = sliderWrap.querySelector(".slider_img");
-        const sliderInner = sliderWrap.querySelector(".slider_inner")
-        const slider = sliderWrap.querySelectorAll(".slider");
+        // const sliderWrap = document.querySelector(".slider_wrap");
+        // const sliderImg = sliderWrap.querySelector(".slider_img");
+        // const sliderInner = sliderWrap.querySelector(".slider_inner")
+        // const slider = sliderWrap.querySelectorAll(".slider");
 
-        let currentIndex = 0; //현재 보이는 이미지
-        let sliderCount = slider.length; //전체 이미지 갯수
-        let sliderInterval = 3; //이미지 변경되는 간격 시간
-        let sliderWidth = slider[0].offsetWidth; //이미지 가로값
-        let sliderClone = sliderInner.firstElementChild.cloneNode(true); //첫번쨰 이미지 복사
+        // let currentIndex = 0; //현재 보이는 이미지
+        // let sliderCount = slider.length; //전체 이미지 갯수
+        // let sliderInterval = 3; //이미지 변경되는 간격 시간
+        // let sliderWidth = slider[0].offsetWidth; //이미지 가로값
+        // let sliderClone = sliderInner.firstElementChild.cloneNode(true); //첫번쨰 이미지 복사
 
-        //복사한 첫 번쨰 이미지 마지막에 붙여넣기
-        sliderInner.appendChild(sliderClone);
+        // //복사한 첫 번쨰 이미지 마지막에 붙여넣기
+        // sliderInner.appendChild(sliderClone);
 
-        function sliderEffect(){
-            currentIndex++;
-            if(currentIndex == sliderCount){
-                currentIndex = 0;
-            }
-            gsap.to(sliderInner, {
-                x: -sliderWidth * currentIndex,
-                duration: 0.6,
-                ease: "power2.out",
-                onComplete: function() {
-                    if(currentIndex == 0) {
-                        gsap.set(sliderInner, {x: 0});
-                    }
-                }
-            });
-        }
-        setInterval(sliderEffect, sliderInterval * 1000);
+        // function sliderEffect(){
+        //     currentIndex++;
+        //     if(currentIndex == sliderCount){
+        //         currentIndex = 0;
+        //     }
+        //     gsap.to(sliderInner, {
+        //         x: -sliderWidth * currentIndex,
+        //         duration: 0.6,
+        //         ease: "power2.out",
+        //         onComplete: function() {
+        //             if(currentIndex == 0) {
+        //                 gsap.set(sliderInner, {x: 0});
+        //             }
+        //         }
+        //     });
+        // }
+        // setInterval(sliderEffect, sliderInterval * 1000);
     </script>
 </body>
 </html>
