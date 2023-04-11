@@ -180,7 +180,7 @@
         //버튼 클릭 했을때
         sliderBtn.forEach((btn, index)=>{
             btn.addEventListener("click",()=>{
-                let prevIndex = (currentIndex+(sliderCount-1)) % sliderCount; //123401234
+                let prevIndex = (currentIndex+(sliderCount-1)) % sliderCount; //43210
                 let nextIndex = (currentIndex+1) % sliderCount; //123401234
                 
                 if(btn.classList.contains("prev")){
@@ -197,9 +197,9 @@
 
             dotActive.forEach((el,index)=>{
                 el.addEventListener("click",()=>{
-                    dotActive.forEach((dot)=>{
+                    for(dot of dotActive){
                         dot.classList.remove("active")
-                    });
+                    }
                     el.classList.add("active");
                     sliderInner.style.transition = "all 400ms";
                     sliderInner.style.transform = "translateX("+ -sliderWidth * index +"px)";
