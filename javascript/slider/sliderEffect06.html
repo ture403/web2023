@@ -186,10 +186,8 @@
                 
                 if(btn.classList.contains("prev")){
                     gotoslider(prevIndex);
-                    dotclick(prevIndex);
                 } else {
                     gotoslider(nextIndex);
-                    dotclick(nextIndex);
                 }
             });
             
@@ -200,12 +198,7 @@
 
             dotActive.forEach((el,index)=>{
                 el.addEventListener("click",()=>{
-                    for(dot of dotActive) dot.classList.remove("active")
-                
-                    el.classList.add("active");
-                    sliderInner.style.transition = "all 400ms";
-                    sliderInner.style.transform = "translateX("+ -sliderWidth * index +"px)";
-                    
+                    gotoslider(index);
                 });
                 
             })
