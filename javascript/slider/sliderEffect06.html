@@ -177,7 +177,7 @@
                 });
             dotActive[num].classList.add("active");
         }
-
+        dotclick();
         //버튼 클릭 했을때
         sliderBtn.forEach((btn, index)=>{
             btn.addEventListener("click",()=>{
@@ -193,22 +193,17 @@
             
         })
         
-        function dotclick(){
+        function dotclick(num){
             let dotActive = document.querySelectorAll(".slider_dot .dot");
 
             dotActive.forEach((el,index)=>{
                 el.addEventListener("click",()=>{
-                    for(dot of dotActive) dot.classList.remove("active")
-                
-                    el.classList.add("active");
-                    sliderInner.style.transition = "all 400ms";
-                    sliderInner.style.transform = "translateX("+ -sliderWidth * index +"px)";
-                    
+                    gotoslider(index);
                 });
                 
             })
         }
-        dotclick();
+        
 
     </script>
 
