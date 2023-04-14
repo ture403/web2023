@@ -164,7 +164,7 @@
         }
 
         init();
-
+        
         //이미지 이동시키기
         function gotoslider(num){
             sliderInner.style.transition = "all 400ms";
@@ -212,40 +212,6 @@
 
     </script>
 
-    <!-- 제이쿼리 -->
-    <script>
-        // 선택자
-        // const sliderWrap = $(".slider_wrap");
-        // const sliderImg = $(".slider_img");
-        // const sliderInner = $(".slider_inner");
-        // const slider = $(".slider");
 
-        // let currentIndex = 0; //현재 보이는 이미지
-        // let sliderCount = slider.length; //전체 이미지 갯수
-        // let sliderInterval = 3000; //이미지 변경되는 간격 시간
-        // let sliderWidth = slider.eq(0).outerWidth(); //이미지 가로값
-        // let sliderClone = sliderInner.find(".slider:first-child").clone(); //첫번쨰 이미지 복사
-
-        // //복사한 첫 번쨰 이미지 마지막에 붙여넣기
-        // sliderInner.append(sliderClone);
-
-        // function sliderEffect(){
-        //     currentIndex++;
-
-        //     sliderInner.css("transition", "all 0.6s");
-        //     sliderInner.css("transform", `translateX(-${sliderWidth * currentIndex}px)`);
-
-        //     //마지막 이미지에 위치 했을때
-        //     if(currentIndex == sliderCount){
-        //         setTimeout(()=>{
-        //             sliderInner.css("transition", "0s");
-        //             sliderInner.css("transform", `translateX(0px)`);
-        //         },700);
-        //         currentIndex = 0;
-        //     }
-        // }
-
-        // setInterval(sliderEffect, sliderInterval);
-    </script>
 </body>
 </html>
