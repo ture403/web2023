@@ -1,94 +1,101 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP 블로그 만들기</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PHP 블로그 만들기</title>
 	<style>
 		body {
-		  background :#000;
+			background: #000;
 		}
+
 		#result {
-		  width: 100%;
-		  height: 500px;
-		  margin: 0 auto;
-		  color: #fff;
-		  text-align : center;
-		  padding: 100px 0 ;
-		  color : red;
-		  font-weight : bold;
-		  font-size : 20px;
-			
+			width: 100%;
+			height: 500px;
+			margin: 0 auto;
+			color: #fff;
+			text-align: center;
+			padding: 100px 0;
+			color: red;
+			font-weight: bold;
+			font-size: 20px;
+
 		}
+
 		#result div {
-		  margin-bottom :20px;
+			margin-bottom: 20px;
 		}
+
 		.num {
-			  font-size: 2vw;
-			  margin-bottom: 2vw;
-			  color : #cacaca;
+			font-size: 2vw;
+			margin-bottom: 2vw;
+			color: #cacaca;
 		}
+
 		.author {
 			color: #fff;
 		}
 	</style>
 </head>
+
 <body>
-    <div id="result">
+	<div id="result">
 		<div class="num"></div>
-		<div class="quote"></div> 
+		<div class="quote"></div>
 		<div class="author"></div>
-    </div>
-	
+	</div>
+
 	<script>
 		const num = document.querySelector(".num");
 		const quote = document.querySelector(".quote");
 		const author = document.querySelector(".author");
 		const result = document.querySelector("#result");
 
-		let jsonAll =[];
+		let jsonAll = [];
 
 		//JSON 파일 불러오기  fetch문
 		function delay() {
-		fetch('https://dummyjson.com/quotes')
-		  .then(response => response.json())
-		  .then(json => {
-			//변수 설정 
-			let quotes = json.quotes
-			//배열에 map을 써서 반복을 돌려서 값을 넣기
-			jsonAll = quotes.map((el,index)=>{
-			  // console.log(el);
+			fetch('https://dummyjson.com/quotes')
+				.then(response => response.json())
+				.then(json => {
+					//변수 설정 
+					let quotes = json.quotes
+					//배열에 map을 써서 반복을 돌려서 값을 넣기
+					jsonAll = quotes.map((el, index) => {
+						// console.log(el);
 
-			  //리턴을 위해서 변수로 저장함
-			  const quoteId = {
-				author :el.author,
-				quoteId : el.id,
-				queotes : el.quote
-			  }
+						//리턴을 위해서 변수로 저장함
+						const quoteId = {
+							author: el.author,
+							quoteId: el.id,
+							queotes: el.quote
+						}
 
-			  // console.log(queoteMain);
+						// console.log(queoteMain);
 
-			  //return으로 밖으로 꺼냄
-			  return quoteId
-			})
-			// console.log(jsonAll)
+						//return으로 밖으로 꺼냄
+						return quoteId
+					})
+					// console.log(jsonAll)
 
-			//변수 안에 랜덤하게 숫자를 저장
-			let ran = Math.floor(Math.random()*jsonAll.length);
-			// console.log(ran)
+					//변수 안에 랜덤하게 숫자를 저장
+					let ran = Math.floor(Math.random() * jsonAll.length);
+					// console.log(ran)
 
-			//출력
-			result.style.transition = "3s";
-			result.style.background = `center / contain no-repeat url(https:source.unsplash.com/random/?coding=${Math.random()})`;
-			num.innerHTML = jsonAll[ran].quoteId + ".";
-			quote.innerHTML = jsonAll[ran].queotes;
-			author.innerHTML = jsonAll[ran].author;
-		  })
-		  .catch((err) => console.log(err));
+					//출력
+					result.style.transition = "3s";
+					result.style.background = `center / contain no-repeat url(https://source.unsplash.com/random/?coding=${Math.random()})`;
+					num.innerHTML = jsonAll[ran].quoteId + ".";
+					quote.innerHTML = jsonAll[ran].queotes;
+					author.innerHTML = jsonAll[ran].author;
+				})
+				.catch((err) => console.log(err));
 		}
 		delay();
 		setInterval(delay, 10000);
 	</script>
 </body>
+
 </html>
