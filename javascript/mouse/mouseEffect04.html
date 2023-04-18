@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="view-transition" content="same-origin">
+    <title>04. 마우스 이펙트</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/mouse.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <style>
+        #header {
+            z-index: 100;
+        }
+        .mouse_cursor {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+            border-radius: 50%;
+            z-index: 1000;
+            user-select: none;
+            pointer-events: none;
+        }
+        .mouse_img {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .mouse_img figure {
+            width: 50vw;
+            height: 60vh;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 50px 100px rgba(0,0,0,0.3);
+            border-radius: 5px;
+            transition: transform 500ms ease;
+            cursor: none;
+        }
+        .mouse_img figure:hover{
+            transform: scale(1.025);
+        }
+        .mouse_img figure  img {
+            position: absolute;
+            left: -5%;
+            top: -5%;
+            width: 110%;
+            height: 110%;
+            object-fit: cover;
+            filter: sepia(60%);
+        }
+        .mouse_img figure figcaption {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-size: 16px;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body class="img01 bg02 font04">
+    <header id="header">
+        <h1>Javascript Mouse Effect03</h1>
+        <p>마우스 이펙트 - 마우스 따라다니기</p>
+        <ul>
+            <li><a href="mouseEffect01.html">1</a></li>
+            <li><a href="mouseEffect02.html">2</a></li>
+            <li><a href="mouseEffect03.html">3</a></li>
+            <li class="active"><a href="mouseEffect04.html">4</a></li>
+            <li><a href="mouseEffect05.html">5</a></li>
+            <li><a href="mouseEffect06.html">6</a></li>
+        </ul>
+    </header>
+    <!-- header -->
+    
+    <main id="main">
+        <div class="mouse_wrap">
+            <div class="mouse_cursor"></div>
+            <div class="mouse_img">
+                <figure>
+                    <img src="img/mouseEffect01-min.jpg" alt="이미지">
+                    <figcaption>
+                        <p>I wasted time, and now doth time waste me.</p>
+                        <p>나는 때를 놓쳤고, 그래서 지금은 시간이 나를 낭비하고 있는 거지.</p>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </main>
+    <!-- main -->
+    
+    <footer id="footer">
+        <a href="mailto:ture403@gmail.com">ture403@gmail.com</a>
+    </footer>
+    <!-- footer -->
+
+    <script>
+        document.querySelector(".mouse_img figure").addEventListener("mousemove",(e)=>{
+            gsap.to(".mouse_cursor", {
+                duration : .2,
+                left : e.pageX,
+                top : e.pageY
+            });
+
+            //마우스 좌표값
+            let mousePageX = e.pageX;
+            let mousePageY = e.pageY;
+
+            //전체 화면 가로 값
+            // window.innerWidth //1920 브라우저 크기
+            // window.outerWidth //1920 브라우저 크기(스크롤 바 포함)
+            // window.screen.Width //1920 화면 크기
+
+            //마우스 좌표값 기준점 가운데로 설정
+            let centerPageX = window.innerWidth /2 - mousePageX;
+            let centerPageY = window.innerHeight /2 - mousePageY;
+
+            // 이미지 움직이기
+            const imgmove = document.querySelector(".mouse_img figure img");
+
+            // imgmove.style.transform = `translate(${centerPageX/20}px, ${centerPageY/20}px)`;
+            
+            gsap.to(imgmove, {
+                x : centerPageX/20,
+                y : centerPageY/20
+            })
+        })
+    </script>
+</body>
+</html>
