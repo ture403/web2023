@@ -30,6 +30,8 @@
 
 슬라이더 이펙트 01 : https://ture403.github.io/web2023/javascript/slider/sliderEffect01.html
 
+패럴럭스 이렉트 01 :https://ture403.github.io/web2023/javascript/parallax/parallax_test.html
+
 # 사이트   
 이미지 유형 01 : https://ture403.github.io/web2023/site/imageType/imageType01.html   
 카드 유형01 : https://ture403.github.io/web2023/site/cardType/cardType01.html   
