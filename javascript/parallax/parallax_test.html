@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>패럴랙스 효과</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Cute+Font&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Cookie";
+        }
+        body {
+            /* height: 20000px; */
+            background-color: #E0E4DD;
+        }
+        .scrollTop {
+            position: fixed;
+            left: 10px;
+            top: 10px;
+            z-index: 1000;
+            width: 40px;
+            height: 40px;
+            color: #fff;
+            text-align: center;
+            font-size: 14px;
+            line-height: 40px;
+            background-color: rgba(0,0,0,0.6);
+        }
+        .fixed {
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+        .s1-text1 {
+            font-size: 30vw;
+            line-height: 1;
+            padding-top: 8vw;
+        }
+        .s1-text2 {
+            font-size: 0vw;
+            line-height: 1;
+            padding-top: 8vw;
+        }
+        .s1-text3 {
+            font-size: 0vw;
+            line-height: 1;
+            padding-top: 8vw;
+        }
+        .s1-img1 {
+            width: 250vw;
+            height: 100vh;
+        }
+        .s1-img1 > div {
+            height: 20vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .s1-img1 > div > div {
+            width: 38vh;
+            height: 19vh;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border: 5px solid #000;
+            /* filter: saturate(0%); */
+        }
+        .s1-img1-1 {height: 20vh;}
+        .s1-img1-1 > div:first-child {background-image: url(https://leeyouna21.github.io/web2023/assets/ico/icon01.jpg);}
+        .s1-img1-1 > div:nth-of-type(2) {background-image: url(https://hyejeong3283.github.io/web2023/assets/ico/icon%2001.jpg);}
+        .s1-img1-1 > div:nth-of-type(3) {background-image: url(https://dkdlelw.github.io/web2023/assets/ico/icon.jpg);}
+        .s1-img1-1 > div:nth-of-type(4) {background-image: url(https://xlsak5.github.io/testAnGyonam/assets/ico/icon.jpg);}
+        .s1-img1-1 > div:last-child {background-image: url(https://siyoenkim.github.io/web2023/assets/ico/icon.jpg);}
+        .s1-img1-2 {height: 20vh;}
+        .s1-img1-2 > div:first-child {background-image: url(https://seolhee313.github.io/web2023/assets/ico/icon.jpg);}
+        .s1-img1-2 > div:nth-of-type(2) {background-image: url(https://lee3ll.github.io/web2023/assets/ico/icon01.jpg);}
+        .s1-img1-2 > div:nth-of-type(3) {background-image: url(https://jo0132.github.io/web2023/assets/ico/icon.jpg);}
+        .s1-img1-2 > div:nth-of-type(4) {background-image: url(https://hyunmijin.github.io/web2023/assets/ico/icon.jpg);}
+        .s1-img1-2 > div:last-child {background-image: url(https://kebab000.github.io/web2023/assets/ico/icon01.jpg);}
+        .s1-img1-3 {height: 20vh;}
+        .s1-img1-3 > div:first-child {background-image: url(https://dkseho9121.github.io/web2023/assets/ico/icon01.jpg);}
+        .s1-img1-3 > div:nth-of-type(2) {background-image: url(https://dlgnsrb227.github.io/web2023/assets/ico/icon.jpg);}
+        .s1-img1-3 > div:nth-of-type(3) {background-image: url(https://dongjin6539.github.io/web2023/assets/ico/icon.jpg);}
+        .s1-img1-3 > div:nth-of-type(4) {background-image: url(https://daanbi1345.github.io/web2023/assets/ico/icon11.jpg);}
+        .s1-img1-3 > div:last-child {background-image: url(https://jinyongjang.github.io/web2023/assets/ico/icon01.jpg);}
+        .s1-img1-4 {height: 20vh;}
+        .s1-img1-4 > div:first-child {background-image: url(https://chohena.github.io/web2023/assets/ico/icon01.jpg);}
+        .s1-img1-4 > div:nth-of-type(2) {background-image: url(https://hyeonbeen97.github.io/web2023/assets/ico/icon.jpg);}
+        .s1-img1-4 > div:nth-of-type(3) {background-image: url(https://younajeong.github.io/web2023/assets/ico/icon.jpg);}
+        .s1-img1-4 > div:nth-of-type(4) {background-image: url(https://leeyanggoo.github.io/web2023/assets/ico/icon1.jpg);}
+        .s1-img1-4 > div:last-child {background-image: url(https://kimdohyun2002.github.io/web2023/assets/ico/icon.jpg);}
+        .s1-img1-5 {height: 20vh;}
+        .s1-img1-5 > div:first-child {background-image: url(https://jhwangwoo.github.io/web2023/assets/ico/icon.jpg);}
+        .s1-img1-5 > div:nth-of-type(2) {background-image: url(https://ehcjswo.github.io/web2023/assets/ico/icon.jpg);}
+        .s1-img1-5 > div:nth-of-type(3) {background-image: url(https://fitalux.github.io/web2023/assets/ico/icon01.jpg);}
+        .s1-img1-5 > div:nth-of-type(4) {background-image: url(https://aimeekwon.github.io/web2023/assets/ico/icon.jpg);}
+        .s1-img1-5 > div:last-child {background-image: url(https://yeodaseul4355.github.io/web2023/assets/ico/icon01.jpg);}
+
+        .inner {
+            width: 200vw;
+            
+        }
+        .p{
+            font-size: 0vw;
+            opacity: 0;
+            line-height: 1;
+            padding-top: 8vw;
+            font-family: 'Cute Font';
+        }
+    </style>
+</head>
+<body  
+data-0=""
+data-4000="background-color: #000;">
+    <div class="scrollTop"></div>
+
+    <section id="section">
+        <div class="s1-text1 fixed"
+            data-0="font-size : 0vw"
+            data-1000="font-size: 5vw; opacity: 1 ;"
+            data-2000="font-size: 10vw; opacity: 1 ;"
+            data-2500="font-size: 0vw; opacity: 0 ;"
+        >hello</div>
+        <div></div>
+        <div class="s1-text2 fixed"
+            data-2500="font-size : 0vw; transform: translate(-50%, -50%) rotate(0deg);"
+            data-3000="font-size: 10vw; transform : translate(-50%, -50%) rotate(720deg);"
+            data-3300="font-size: 40vw; transform : translate(-50%, -50%) rotate(720deg);"
+            data-3500="font-size: 0vw; transform : translate(-50%, -50%) rotate(720deg);"
+        >javascript,react,php</div>
+        <div class="s1-text3 fixed"
+            data-3500="font-size : 0vw; transform: translate(-50%, -50%) rotate(0deg);"
+            data-4000="font-size : 20vw; transform : translate(-50%, -50%) rotate(360deg);"
+            data-4500="font-size: 0vw; transform: translate(-50%, -50%) rotate(0deg)"
+        >to hard </div>
+        <div class="s1-img1 fixed"
+            data-3000="width: 200vw;"
+            data-4000="width: 20vw;"
+            data-5000="width: 200vw;"
+            
+        >
+            <div class="s1-img1-1">
+                <div data-3500="opacity : 0" data-4000=" opacity : 1; width: 40vw; transform: rotate3d(1, 1, 1, 90deg); border-radius:0;" data-4500="width: 20vw; transform: rotate3d(1, 1, 1, 180deg); border-radius: 50%;" data-4800="width: 20vw; transform: rotate3d(0, 0, 0, 0deg); border-radius: 50%;" data-5000="opacity:0"></div>
+                <div data-3500="opacity : 0" data-4000=" opacity : 1;width: 40vw; transform: rotate3d(1, 1, 1, 90deg); border-radius:0;" data-4500="width: 20vw; transform: rotate3d(1, 1, 1, 180deg); border-radius: 50%;" data-4800="width: 20vw; transform: rotate3d(0, 0, 0, 0deg); border-radius: 50%;"data-5000="opacity:0"></div>
+                <div data-3500="opacity : 0" data-4000=" opacity : 1;width: 40vw; transform: rotate3d(1, 1, 1, 90deg); border-radius:0;" data-4500="width: 20vw; transform: rotate3d(1, 1, 1, 180deg); border-radius: 50%;" data-4800="width: 20vw; transform: rotate3d(0, 0, 0, 0deg); border-radius: 50%;"data-5000="opacity:0"></div>
+                <div data-3500="opacity : 0" data-4000="opacity : 1;width: 40vw; transform: rotate3d(1, 1, 1, 90deg); border-radius:0;" data-4500="width: 20vw; transform: rotate3d(1, 1, 1, 180deg); border-radius: 50%;" data-4800="width: 20vw; transform: rotate3d(0, 0, 0, 0deg); border-radius: 50%;"data-5000="opacity:0"></div>
+                <div data-3500="opacity : 0" data-4000="opacity : 1;width: 40vw; transform: rotate3d(1, 1, 1, 90deg); border-radius:0;" data-4500="width: 20vw; transform: rotate3d(1, 1, 1, 180deg); border-radius: 50%;" data-4800="width: 20vw; transform: rotate3d(0, 0, 0, 0deg); border-radius: 50%;"data-5000="opacity:0"></div>
+            </div>
+            <div class="s1-img1-2">
+                <div data-3500="opacity : 0" data-4000="opacity : 1;width: 40vw; transform: rotate3d(1, 1, 1, 90deg); border-radius:0;" data-4500="width: 20vw; transform: rotate3d(1, 1, 1, 180deg); border-radius: 50%;" data-4800="width: 20vw; transform: rotate3d(0, 0, 0, 0deg); border-radius: 50%;"data-5000="opacity:0"></div>
+                <div data-3500="opacity : 0" data-4000="opacity : 1;width: 40vw; transform: rotate3d(1, 1, 1, 90deg); border-radius:0;" data-4500="width: 20vw; transform: rotate3d(1, 1, 1, 180deg); border-radius: 50%;" data-4800="width: 20vw; transform: rotate3d(0, 0, 0, 0deg); border-radius: 50%;"data-5000="opacity:0"></div>
+                <div data-3500="opacity : 0" data-4000="opacity : 1;width: 40vw; transform: rotate3d(1, 1, 1, 90deg); border-radius:0;" data-4500="width: 20vw; transform: rotate3d(1, 1, 1, 180deg); border-radius: 50%;" data-4800="width: 20vw; transform: rotate3d(0, 0, 0, 0deg); border-radius: 50%;"data-5000="opacity:0"></div>
+                <div data-3500="opacity : 0" data-4000="opacity : 1;width: 40vw; transform: rotate3d(1, 1, 1, 90deg); border-radius:0;" data-4500="width: 20vw; transform: rotate3d(1, 1, 1, 180deg); border-radius: 50%;" data-4800="width: 20vw; transform: rotate3d(0, 0, 0, 0deg); border-radius: 50%;"data-5000="opacity:0"></div>
+                <div data-3500="opacity : 0" data-4000="opacity : 1;width: 40vw; transform: rotate3d(1, 1, 1, 90deg); border-radius:0;" data-4500="width: 20vw; transform: rotate3d(1, 1, 1, 180deg); border-radius: 50%;" data-4800="width: 20vw; transform: rotate3d(0, 0, 0, 0deg); border-radius: 50%;"data-5000="opacity:0"></div>
+            </div>
+            <div class="s1-img1-3">
+                <div data-3500="opacity : 0" data-4000="opacity : 1;width: 40vw; transform: rotate3d(1, 1, 1, 90deg); border-radius:0;" data-4500="width: 20vw; transform: rotate3d(1, 1, 1, 180deg); border-radius: 50%;" data-4800="width: 20vw; transform: rotate3d(0, 0, 0, 0deg); border-radius: 50%;"data-5000="opacity:0"></div>
+                <div data-3500="opacity : 0" data-4000="opacity : 1;width: 40vw; transform: rotate3d(1, 1, 1, 90deg); border-radius:0;" data-4500="width: 20vw; transform: rotate3d(1, 1, 1, 180deg); border-radius: 50%;" data-4800="width: 20vw; transform: rotate3d(0, 0, 0, 0deg); border-radius: 50%;"data-5000="opacity:0"></div>
+                <div data-3500="opacity : 0" data-4000="opacity : 1;width: 40vw; transform: rotate3d(1, 1, 1, 90deg); border-radius:0;" data-4500="width: 20vw; transform: rotate3d(1, 1, 1, 180deg); border-radius: 50%;" data-4800="width: 20vw; transform: rotate3d(0, 0, 0, 0deg); border-radius: 50%;"data-5000="opacity:0"></div>
+                <div data-3500="opacity : 0" data-4000="opacity : 1;width: 40vw; transform: rotate3d(1, 1, 1, 90deg); border-radius:0;" data-4500="width: 20vw; transform: rotate3d(1, 1, 1, 180deg); border-radius: 50%;" data-4800="width: 20vw; transform: rotate3d(0, 0, 0, 0deg); border-radius: 50%;"data-5000="opacity:0"></div>
+                <div data-3500="opacity : 0" data-4000="opacity : 1;width: 40vw; transform: rotate3d(1, 1, 1, 90deg); border-radius:0;" data-4500="width: 20vw; transform: rotate3d(1, 1, 1, 180deg); border-radius: 50%;" data-4800="width: 20vw; transform: rotate3d(0, 0, 0, 0deg); border-radius: 50%;"data-5000="opacity:0"></div>
+            </div>
+            <div class="s1-img1-4">
+                <div data-3500="opacity : 0" data-4000="opacity : 1;width: 40vw; transform: rotate3d(1, 1, 1, 90deg); border-radius:0;" data-4500="width: 20vw; transform: rotate3d(1, 1, 1, 180deg); border-radius: 50%;" data-4800="width: 20vw; transform: rotate3d(0, 0, 0, 0deg); border-radius: 50%;"data-5000="opacity:0"></div>
+                <div data-3500="opacity : 0" data-4000="opacity : 1;width: 40vw; transform: rotate3d(1, 1, 1, 90deg); border-radius:0;" data-4500="width: 20vw; transform: rotate3d(1, 1, 1, 180deg); border-radius: 50%;" data-4800="width: 20vw; transform: rotate3d(0, 0, 0, 0deg); border-radius: 50%;"data-5000="opacity:0"></div>
+                <div data-3500="opacity : 0" data-4000="opacity : 1;width: 40vw; transform: rotate3d(1, 1, 1, 90deg); border-radius:0;" data-4500="width: 20vw; transform: rotate3d(1, 1, 1, 180deg); border-radius: 50%;" data-4800="width: 20vw; transform: rotate3d(0, 0, 0, 0deg); border-radius: 50%;"data-5000="opacity:0"></div>
+                <div data-3500="opacity : 0" data-4000="opacity : 1;width: 40vw; transform: rotate3d(1, 1, 1, 90deg); border-radius:0;" data-4500="width: 20vw; transform: rotate3d(1, 1, 1, 180deg); border-radius: 50%;" data-4800="width: 20vw; transform: rotate3d(0, 0, 0, 0deg); border-radius: 50%;"data-5000="opacity:0"></div>
+                <div data-3500="opacity : 0" data-4000="opacity : 1;width: 40vw; transform: rotate3d(1, 1, 1, 90deg); border-radius:0;" data-4500="width: 20vw; transform: rotate3d(1, 1, 1, 180deg); border-radius: 50%;" data-4800="width: 20vw; transform: rotate3d(0, 0, 0, 0deg); border-radius: 50%;"data-5000="opacity:0"></div>
+            </div>
+            <div class="s1-img1-5">
+                <div data-3500="opacity : 0" data-4000="opacity : 1;width: 40vw; transform: rotate3d(1, 1, 1, 90deg); border-radius:0;" data-4500="width: 20vw; transform: rotate3d(1, 1, 1, 180deg); border-radius: 50%;" data-4800="width: 20vw; transform: rotate3d(0, 0, 0, 0deg); border-radius: 50%;"data-5000="opacity:0"></div>
+                <div data-3500="opacity : 0" data-4000="opacity : 1;width: 40vw; transform: rotate3d(1, 1, 1, 90deg); border-radius:0;" data-4500="width: 20vw; transform: rotate3d(1, 1, 1, 180deg); border-radius: 50%;" data-4800="width: 20vw; transform: rotate3d(0, 0, 0, 0deg); border-radius: 50%;"data-5000="opacity:0"></div>
+                <div data-3500="opacity : 0" data-4000="opacity : 1;width: 40vw; transform: rotate3d(1, 1, 1, 90deg); border-radius:0;" data-4500="width: 20vw; transform: rotate3d(1, 1, 1, 180deg); border-radius: 50%;" data-4800="width: 20vw; transform: rotate3d(0, 0, 0, 0deg); border-radius: 50%;"data-5000="opacity:0"></div>
+                <div data-3500="opacity : 0" data-4000="opacity : 1;width: 40vw; transform: rotate3d(1, 1, 1, 90deg); border-radius:0;" data-4500="width: 20vw; transform: rotate3d(1, 1, 1, 180deg); border-radius: 50%;" data-4800="width: 20vw; transform: rotate3d(0, 0, 0, 0deg); border-radius: 50%;"data-5000="opacity:0"></div>
+                <div data-3500="opacity : 0" data-4000="opacity : 1;width: 40vw; transform: rotate3d(1, 1, 1, 90deg); border-radius:0;" data-4500="width: 20vw; transform: rotate3d(1, 1, 1, 180deg); border-radius: 50%;" data-4800="width: 20vw; transform: rotate3d(0, 0, 0, 0deg); border-radius: 50%;"data-5000="opacity:0"></div>
+            </div>
+            
+
+
+            <div class="p fixed"
+                data-0="font-size : 0vw; opacity : 0;"
+                data-1000="font-size : 0vw; opacity : 0;"
+                data-2000="font-size : 0vw; opacity : 0;"
+                data-3000="font-size : 0vw; opacity : 0;"
+                data-4000="font-size : 0vw; opacity : 0;"
+                data-8000="font-size : 20vw; opacity : 1"
+            >남은시간동안 잘 지내봐요</div>
+        </div>
+    </section>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+    <script type="text/javascript">
+        let s = skrollr.init();
+    </script>
+    <script>
+        window.addEventListener("scroll",()=>{
+            let scrollTop = window.pageYOffset || window.scrollY;
+
+            document.querySelector(".scrollTop").innerText = parseInt(scrollTop);
+        })
+    </script>
+</body>
+</html>
