@@ -204,15 +204,12 @@
         //     })
         // }
         function dot(){
-            let currentIndex = 0;
             let dotActive = document.querySelectorAll(".slider_dot .dot");
 
             dotActive.forEach((el,index)=>{
-                currentIndex++;
                 
                 el.addEventListener("click",()=>{
-                    for( dot of dotActive) dot.classList.remove("active")
-                    el.classList.add("active");
+                    gotoslider(index)
                 })
             })
         }
