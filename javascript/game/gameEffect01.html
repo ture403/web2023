@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAME Effect</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bg.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+</head>
+<body>
+    <div class="cursor">
+        <img src="img/game_mouse01.png" alt>
+    </div>
+    <header id="header">
+        <h1>hello Game World</h1>
+        <div class="time">2023년 4월 24일 16시 50분</div>
+    </header>
+
+    <main>
+        <div class="icon_box">
+            <div class="icon1">
+                <img src="img/game_icon01.png" alt="뮤직">
+                <span>뮤직 듣기</span>
+            </div>
+            <div class="icon2">
+                <img src="img/game_icon02.png" alt="뮤직">
+                <span>아이 듣기</span>
+            </div>
+            <div class="icon3">
+                <img src="img/game_icon03.png" alt="뮤직">
+                <span>소리 듣기</span>
+            </div>
+            <div class="icon4">
+                <img src="img/game_icon04.png" alt="뮤직">
+                <span>사운 듣기</span>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="info">현재 맥을 사용하고 있으면, 화면크기는 1920 X 760 입니다.</div>
+    </footer>
+    <script>
+        const Header = document.querySelector("#header");
+        const Time1 = document.querySelector(".time");
+        const info = document.querySelector(".info");
+        const iconBox = document.querySelectorAll(".icon_box  div");
+        const icon1 = document.querySelector(".icon1");
+
+        iconBox[0].addEventListener('dragstart', () => {
+            console.log('dragstart 이벤트 발생!');
+        });
+
+        iconBox[0].addEventListener('drag', () => {
+            console.log('drag 이벤트 발생!');
+        });
+
+        iconBox[0].addEventListener('dragend', () => {
+            console.log('dragend 이벤트 발생!');
+        });
+        
+        
+        $(".icon1").draggable({ 
+            containment: ".icon_box", 
+            scroll: false ,
+            start: function() {
+                $(".cursor img").attr("src", "img/game_mouse01.png")
+                $(".info").html("뮤직듣기가 드래그가 실행 되었습니다.");
+                $("#header").css("background-color", "#EC3A8B");
+            },
+            drag :function() {
+                $(".info").html("뮤직듣기가 드래그가 실행 중입니다..");
+            },
+            stop : function() {
+                $(".info").html("뮤직듣기가 드래그가 중지되었습니다..");
+                $("#header").css("background-color", "#000");
+                setTimeout(()=>{
+                    const width = window.screen.width;
+                    const height = window.screen.height;
+                    const os = navigator.userAgent.toLocaleLowerCase();
+                    if (os.includes('win')) {
+                        $(".info").html(`현재 window을 사용하고 있으면, 화면크기는 ${width} X ${height} 입니다.`);
+                    } else if (os.includes('mac')) {
+                        $(".info").html(`현재 mac을 사용하고 있으면, 화면크기는 ${width} X ${height} 입니다.`);
+                    } else if (os.includes('android')) {
+                        $(".info").html(`현재 android을 사용하고 있으면, 화면크기는 ${width} X ${height} 입니다.`);
+                    } else {
+                        $(".info").html(`현재 unknown을 사용하고 있으면, 화면크기는 ${width} X ${height} 입니다.`);
+                    }
+                },10000);
+            }
+        });
+        $(".icon2").draggable({ 
+            containment: ".icon_box", 
+            scroll: false,  
+            start: function() {
+                $(".cursor img").attr("src", "img/game_mouse02.png")
+                $(".info").html("뮤직듣기가 드래그가 실행 되었습니다.");
+                $("#header").css("background-color", "#3B5EC3")
+            },
+            drag :function() {
+                $(".info").html("뮤직듣기가 드래그가 실행 중입니다..");
+            },
+            stop : function() {
+                $(".info").html("뮤직듣기가 드래그가 중지되었습니다..");
+                $("#header").css("background-color", "#000");
+                setTimeout(()=>{
+                    const width = window.screen.width;
+                    const height = window.screen.height;
+                    const os = navigator.userAgent.toLocaleLowerCase();
+                    if (os.includes('win')) {
+                        $(".info").html(`현재 window을 사용하고 있으면, 화면크기는 ${width} X ${height} 입니다.`);
+                    } else if (os.includes('mac')) {
+                        $(".info").html(`현재 mac을 사용하고 있으면, 화면크기는 ${width} X ${height} 입니다.`);
+                    } else if (os.includes('android')) {
+                        $(".info").html(`현재 android을 사용하고 있으면, 화면크기는 ${width} X ${height} 입니다.`);
+                    } else {
+                        $(".info").html(`현재 unknown을 사용하고 있으면, 화면크기는 ${width} X ${height} 입니다.`);
+                    }
+                },10000);
+            }
+        });
+        $(".icon3").draggable({ 
+            containment: ".icon_box", 
+            scroll: false,  
+            start: function() {
+                $(".cursor img").attr("src", "img/game_mouse03.png")
+                $(".info").html("뮤직듣기가 드래그가 실행 되었습니다.");
+                $("#header").css("background-color", "#7FFF5B")
+            },
+            drag :function() {
+                $(".info").html("뮤직듣기가 드래그가 실행 중입니다..");
+            },
+            stop : function() {
+                $(".info").html("뮤직듣기가 드래그가 중지되었습니다..");
+                $("#header").css("background-color", "#000");
+                setTimeout(()=>{
+                    const width = window.screen.width;
+                    const height = window.screen.height;
+                    const os = navigator.userAgent.toLocaleLowerCase();
+                    if (os.includes('win')) {
+                        $(".info").html(`현재 window을 사용하고 있으면, 화면크기는 ${width} X ${height} 입니다.`);
+                    } else if (os.includes('mac')) {
+                        $(".info").html(`현재 mac을 사용하고 있으면, 화면크기는 ${width} X ${height} 입니다.`);
+                    } else if (os.includes('android')) {
+                        $(".info").html(`현재 android을 사용하고 있으면, 화면크기는 ${width} X ${height} 입니다.`);
+                    } else {
+                        $(".info").html(`현재 unknown을 사용하고 있으면, 화면크기는 ${width} X ${height} 입니다.`);
+                    }
+                },10000);
+            },
+        });
+        $(".icon4").draggable({ 
+            containment: ".icon_box", 
+            scroll: false, 
+            start: function() {
+                $(".cursor img").attr("src", "img/game_mouse02.png")
+                $(".info").html("뮤직듣기가 드래그가 실행 되었습니다.");
+                $("#header").css("background-color", "#FFFF50")
+            },
+            drag :function() {
+                $(".info").html("뮤직듣기가 드래그가 실행 중입니다..");
+            },
+            stop : function() {
+                $(".info").html("뮤직듣기가 드래그가 중지되었습니다..");
+                $("#header").css("background-color", "#000");
+                setTimeout(()=>{
+                    const width = window.screen.width;
+                    const height = window.screen.height;
+                    const os = navigator.userAgent.toLocaleLowerCase();
+                    if (os.includes('win')) {
+                        $(".info").html(`현재 window을 사용하고 있으면, 화면크기는 ${width} X ${height} 입니다.`);
+                    } else if (os.includes('mac')) {
+                        $(".info").html(`현재 mac을 사용하고 있으면, 화면크기는 ${width} X ${height} 입니다.`);
+                    } else if (os.includes('android')) {
+                        $(".info").html(`현재 android을 사용하고 있으면, 화면크기는 ${width} X ${height} 입니다.`);
+                    } else {
+                        $(".info").html(`현재 unknown을 사용하고 있으면, 화면크기는 ${width} X ${height} 입니다.`);
+                    }
+                },10000);
+            },
+        });
+        
+        window.onload = function(){
+            window.addEventListener("mousemove", e=>{
+            gsap.to(".cursor", {
+                duration: 0, 
+                left : e.pageX -5,
+                top: e.pageY -5
+                })
+            });
+            setInterval(printTime,1000)
+            printAgent(); // 하단 중앙
+        }
+        
+        function printTime(){
+            let now = new Date();
+            let year = now.getFullYear().toString();
+            let month = (now.getMonth() + 1).toString().padStart(2, '0');
+            let date = now.getDate().toString().padStart(2, '0'); 
+            let hours = now.getHours().toString().padStart(2, '0');
+            let minutes = now.getMinutes().toString().padStart(2, '0');
+            let seconds = now.getSeconds().toString().padStart(2, '0');
+            Time1.innerHTML = `${year}년 ${month}월 ${date}일 ${hours}시 ${minutes}분 ${seconds}초`;
+        }
+
+        function printAgent() {
+            const width = window.screen.width;
+            const height = window.screen.height;
+            const os = navigator.userAgent.toLocaleLowerCase();
+            if (os.includes('win')) {
+                $(".info").html(`현재 window을 사용하고 있으면, 화면크기는 ${width} X ${height} 입니다.`);
+            } else if (os.includes('mac')) {
+                $(".info").html(`현재 mac을 사용하고 있으면, 화면크기는 ${width} X ${height} 입니다.`);
+            } else if (os.includes('android')) {
+                $(".info").html(`현재 android을 사용하고 있으면, 화면크기는 ${width} X ${height} 입니다.`);
+            } else {
+                $(".info").html(`현재 unknown을 사용하고 있으면, 화면크기는 ${width} X ${height} 입니다.`);
+            }
+        }
+        
+
+
+        iconBox.forEach((icon, index) => {
+            icon.addEventListener("click", () => {
+                const colors = ["#EC3A8B", "#3B5EC3", "#7FFF5B", "#FFFF50"];
+                Header.style.backgroundColor = colors[index];
+                if (index === 3) {
+                Header.style.color = "#FFFF50";
+                } else {
+                Header.style.color = "";
+                }
+            });
+        });
+        
+    </script>
+</body>
+</html>

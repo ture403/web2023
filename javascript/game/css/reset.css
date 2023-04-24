@@ -1,0 +1,30 @@
+@import url('https://webfontworld.github.io/Cafe24SsurroundAir/Cafe24SsurroundAir.css');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-family: 'Orbitron';
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: #222;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+}
+ul,ol,li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+    width: 100%;
+}
+em {
+    font-style: normal;
+}
