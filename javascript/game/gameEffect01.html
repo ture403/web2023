@@ -52,19 +52,6 @@
         const info = document.querySelector(".info");
         const iconBox = document.querySelectorAll(".icon_box  div");
         const icon1 = document.querySelector(".icon1");
-
-        iconBox[0].addEventListener('dragstart', () => {
-            console.log('dragstart 이벤트 발생!');
-        });
-
-        iconBox[0].addEventListener('drag', () => {
-            console.log('drag 이벤트 발생!');
-        });
-
-        iconBox[0].addEventListener('dragend', () => {
-            console.log('dragend 이벤트 발생!');
-        });
-        
         
         $(".icon1").draggable({ 
             containment: ".icon_box", 
