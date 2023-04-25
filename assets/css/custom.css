@@ -52,7 +52,10 @@ body {background:#f1f4fb url(../img/body_bg.gif)}
 /* Header  */
 
 #header{
-	background:#a5d5fa center 57px;
+	background-image: url(../ico/banner1.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 	padding: 10px 0 10px 0px;
 }
 #header.sub {

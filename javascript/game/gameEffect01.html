@@ -8,10 +8,12 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/bg.css">
+    <link rel="stylesheet" href="css/music.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>  
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script defer src="js/music.js"></script>
 </head>
 <body>
     <div class="cursor">
@@ -41,6 +43,52 @@
                 <span>사운 듣기</span>
             </div>
         </div>
+
+        <!-- 뮤직 플레이어 -->
+        <div class="music_wrap">
+            <div class="music_inner">
+                <div class="music_header">
+                    <span class="left"></span>
+                    <h2>music player</h2>
+                    <span class="right"></span>
+                </div>
+                <div class="music_contents">
+                    <div class="music_view">
+                        <div class="images">
+                            <img src="img/music_view01.png" alt="음악">
+                        </div>
+                        
+                    </div>
+                    <div class="music_control">
+                        <div class="title">
+                            <h3>노래 제목</h3>
+                            <p>노래 작가</p>
+                        </div>
+                        <div class="progress">
+                            <div class="bar">
+                                <audio src="audio/music_audio01.mp3" autoplay></audio>
+                            </div>
+                            <div class="timer">
+                                <span class="current">0:00</span>
+                                <span class="duration">3:55</span>
+                            </div>
+                        </div>
+                        <div class="control">
+                            <span>전체 반복</span>
+                            <span>이전곡 재생</span>
+                            <span>재생 버튼</span>
+                            <span>다음곡 재생</span>
+                            <span>재생목록</span>
+                            <!-- <span>한곡반복</span>
+                            <span>랜덤반복</span>
+                            <span>정지반복</span> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="music_footer"></div>
+            </div>
+        </div>
+        <!-- 뮤직 플레이어 -->
     </main>
 
     <footer id="footer">
