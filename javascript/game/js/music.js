@@ -50,4 +50,26 @@ const allMusic = [
         img : "music_view10",
         audio : "music_audio10"
     },
-]
+];
+
+const musicWrap  = document.querySelector(".music_wrap");
+const musicName = musicWrap.querySelector(".music_control .title h3");
+const musicArtist = musicWrap.querySelector(".music_control .title p");
+const musicView = musicWrap.querySelector(".music_view .images img");
+const musicAudio = musicWrap.querySelector("#main-audio");
+let musicIndex = 10; //현재 음악 인덱스
+
+//음악재생
+const loadMusic = (num) => {
+    musicName.innerText = allMusic[num-1].name; //뮤직 이름
+    musicArtist.innerText = allMusic[num-1].artist; //뮤직 아티스트
+    musicView.src = `img/${allMusic[num-1].img}.png`; //뮤직 이미지
+    musicView.alt = allMusic[num-1].name; //뮤직이미지 alt
+    musicAudio.src =`audio/${allMusic[num-1].audio}.mp3`; //뮤직이미지 alt
+}
+
+window.addEventListener("load",()=>{
+    loadMusic(musicIndex);
+
+    musicAudio.play();
+});
