@@ -205,7 +205,7 @@
             containment: ".icon_box", 
             scroll: false, 
             start: function() {
-                $(".cursor img").attr("src", "img/game_mouse02.png")
+                $(".cursor img").attr("src", "img/game_mouse04.png")
                 $(".info").html("뮤직듣기가 드래그가 실행 되었습니다.");
                 $("#header").css("background-color", "#FFFF50")
             },
@@ -277,9 +277,9 @@
                 const colors = ["#EC3A8B", "#3B5EC3", "#7FFF5B", "#FFFF50"];
                 Header.style.backgroundColor = colors[index];
                 if (index === 3) {
-                Header.style.color = "#FFFF50";
+                    Header.style.color = "#FFFF50";
                 } else {
-                Header.style.color = "";
+                    Header.style.color = "";
                 }
             });
         });
