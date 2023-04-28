@@ -1,50 +1,291 @@
-<h3 data-ke-size="size23">01. SQL문의 빈칸을 완성하시오.</h3>
-<p style="color: #666666; text-align: start;" data-ke-size="size16">[학생] 테이블에서 전화번호가 NULL 값이 아닌 학생명을 모두 검색하기 위한 SQL문의 작성하시오.</p>
-<div style="color: #000000; text-align: start;">
-<pre class="n1ql"><code>SELECT 학생명 FROM 학생 WHERE 전화번호 _____;</code></pre>
-</div>
-<h3 data-ke-size="size23">02. SQL문의 빈칸을 완성하시오.</h3>
-<p style="color: #666666; text-align: start;" data-ke-size="size16">사용자 "HWANG"에게 테이블을 생성할 수 있는 권한을 부여하기 위한 SQL문을 작성하시오.</p>
-<div style="color: #000000; text-align: start;">
-<pre class="markdown"><code>_____ CREATE TABLE _____ HWANG</code></pre>
-</div>
-<h3 data-ke-size="size23">03. SQL문의 빈칸을 완성하시오.</h3>
-<p style="color: #666666; text-align: start;" data-ke-size="size16">[성적] 테이블에서 점수가 90점 이상 95점 이하인 '컴퓨터공학과' 학생의 정보를 검색한 SQL문을 작성하시오.</p>
-<div style="color: #000000; text-align: start;">
-<pre class="sqf"><code>SELECT * FROM 성적 WHERE (점수 _____ 90 _____ 95) AND 학과 = '컴퓨터공학과';</code></pre>
-</div>
-<h3 data-ke-size="size23">04. SQL문의 빈칸을 완성하시오.</h3>
-<p style="color: #666666; text-align: start;" data-ke-size="size16">[성적] 테이블에서 점수가 높은 학생 순으로 이름(Name)과 점수(Score)가 출력되도록 SQL문을 작성하시오.</p>
-<div style="color: #000000; text-align: start;">
-<pre class="sqf"><code>SELECT Name, Score FROM 성적 _____ BY Score _____</code></pre>
-</div>
-<h3 data-ke-size="size23">05. SQL문의 빈칸을 완성하시오.</h3>
-<p style="color: #666666; text-align: start;" data-ke-size="size16">[학생] 테이블에서 '안중근' 학생의 점수를 95점으로 갱신하는 SQL문을 작성하시오.</p>
-<div style="color: #000000; text-align: start;">
-<pre class="sqf"><code>_____ 학생 _____ 점수 = 95 WHERE 이름 = "안중근";</code></pre>
-</div>
-<h3 data-ke-size="size23">06. SQL문의 빈칸을 완성하시오.</h3>
-<p style="color: #666666; text-align: start;" data-ke-size="size16">[학생] 테이블에서 '주소' 속성을 추가하는 SQL문을 작성하시오.</p>
-<div style="color: #000000; text-align: start;">
-<pre class="markdown"><code>_____ TABLE 학생 _____ 주소 VARCHAR(20)</code></pre>
-</div>
-<h3 data-ke-size="size23">07. SQL문의 빈칸을 완성하시오.</h3>
-<p style="color: #666666; text-align: start;" data-ke-size="size16">[학생] 테이블에서 '이'로 시작하는 학생들의 학번을 검색하여 학년이 높은 학생 순으로 출력하는 SQL문을 작성하시오.</p>
-<div style="color: #000000; text-align: start;">
-<pre class="pgsql"><code>SELECT 학번 FROM 학생 WHERE 이름 = "_____" ORDER BY 학년 _____</code></pre>
-</div>
-<h3 data-ke-size="size23">08. SQL문의 빈칸을 완성하시오.</h3>
-<p style="color: #666666; text-align: start;" data-ke-size="size16">[학생정보] 테이블과 [학과정보] 테이블을 결합하여 학생명과 학과명을 출력하는 SQL문을 작성하시오.</p>
-<div style="color: #000000; text-align: start;">
-<pre class="armasm"><code>SELECT A.이름, B.학과명 FROM 학생정보 A _____ 학과정보 B ON A.학과 = B.학과 </code></pre>
-</div>
-<h3 data-ke-size="size23">09. SQL문의 빈칸을 완성하시오.</h3>
-<p style="color: #666666; text-align: start;" data-ke-size="size16">[Exam] 테이블의 모든 레코드를 지우기 위한 명령어 SQL문을 작성하시오.</p>
-<div style="color: #000000; text-align: start;">
-<pre class="sqf"><code>_____ from Exam</code></pre>
-</div>
-<h3 data-ke-size="size23">10. SQL문의 빈칸을 완성하시오.</h3>
-<p style="color: #666666; text-align: start;" data-ke-size="size16">[Exam] 테이블의 구조를 변화시키며 삭제하기 위한 명령어 SQL문을 작성하시오.</p>
-<div style="color: #000000; text-align: start;">
-<pre class="sqf"><code>_____ from Exam</code></pre>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//01. 다음의 결괏값을 작성하시오.
+{
+    let i = 0;
+    let sum = 0;
+    
+    while(i < 10){
+        i = i+1;
+        if( i % 3 == 0) sum -= i;
+        if( i % 3 == 1) sum += i;
+        if( i % 3 == 2) sum *= i 
+    }
+
+    console.log(sum) // 129
+}
+
+//02. 다음의 결괏값을 작성하시오.
+{
+    let num = [10, 20, 30, 40, 50];
+    let i, max, min;
+    max = min = num[0];
+
+    for(i=0; i<5; i++){
+        if(num[i] > max) max = num[i];
+        if(num[i] < min) min = num[i];
+    }
+
+    console.log(max, min); //50 10
+}
+//03. 다음의 결괏값을 작성하시오.
+{
+    function func(begin, diff, n){
+        cnt = 1;
+        ret = begin;
+        while(true){
+            cnt += 1;
+            ret *= diff;
+            if(cnt == n) return ret;
+        }
+    }
+
+    console.log(func(1, 3, 4)); //27
+}
+//04. 다음의 결괏값을 작성하시오.
+{
+    let i = 0;
+    let sum = 0;
+    while(i < 10){
+        i = i + 1;
+        if(i % 2 == 0){
+            continue
+        }
+        sum += i;
+    }
+
+    console.log(sum) //25
+}
+//05. 다음의 결괏값을 작성하시오.
+{
+    let num = [56, 4, 3, 65, 78];
+    let temp;
+
+    for(let i=0; i<1; i++){
+        for(let j=0; j<num.length-i-1; j++){
+            if(num[j]>num[j+1]){
+                temp = num[j];
+                num[j] = num[j+1];
+                num[j+1] = temp;
+            }
+        }
+    }
+
+    console.log(num) //4,3,56,65,78
+}
+//06. 다음의 결괏값을 작성하시오.
+{
+    let num = [56, 4, 3, 65, 78];
+    let min = 9999;
+
+    for(let i=0; i<10; i++){
+        if(min > num[i]){
+            min = num[i];
+        }
+    }
+
+    console.log(min) //3
+}
+//07. 다음의 결괏값을 작성하시오.
+{
+    let num = [3, 4, 5, 7, 8];
+    let temp;
+
+    for(let i=0; i<=3; i++){
+        for(let j=i+1; j<=4; j++){
+            if(num[i] < num[j]){
+                temp = num[i];
+                num[i] = num[j];
+                num[j] = temp;
+            }
+        }
+    }
+
+    console.log(num); //8,7,5,4,3
+}
+//08. 다음의 결괏값을 작성하시오.
+{
+    let num = [1,2,3,4,5];
+    let sum = 1;
+    
+    function func(arr){
+        for(let i=0; i<arr.length; i++) {
+            sum += arr[i];
+        }
+
+        for(let i=0; i<arr.length; i++){
+            if(arr[i] % 2 == 0) sum -= arr[i];
+        }
+        return sum;            
+    }
+
+    console.log(func(num)); //10
+}
+//09. 다음의 결괏값을 작성하시오.
+{
+    let num = ["0","1","2","3","4","5","6","7","8","9"];
+    let sum = 100;
+
+    for(let i=0; i<num.length; i++){
+        num[i] = i+1;
+    }
+    for(let i=0; i<num.length; i++){
+        if(i % 3 == 1){
+            sum -= num[i];
+        }
+    }
+    console.log(sum) //85
+}
+//10. 다음의 결괏값을 작성하시오.
+{
+    let arr = [1,2,3,4,5];
+    let temp = [1,2,4,6,8];
+    let idx = 0;
+    let flag = true;
+
+    for(let i=0; i<arr.length; i++){
+        flag = false;
+        if(arr[i] == temp[i]){
+            flag = true;
+        }
+        if(!flag){
+            temp[idx++] = arr[i];
+            console.log(temp[idx]); //2
+        }
+    }
+}
+//11. 다음은 최솟값을 출력하는 예제이다. 밑줄에 적합한 표현을 작성하시오.
+{
+    let num = [30,40,24,80,99];
+    let min = 9999;
+
+    for(let i=0; i<5; i++){
+        if(min > num[i]){
+            min = num[i];
+        }
+    }
+
+    console.log("최소값 : ", min); //24
+}
+//12. 다음의 결괏값을 작성하시오.
+{
+    let s1 = "Remember november";
+    let s2 = s1.slice(0, 3) + s1.slice(12, 16);
+    let s3 = "r AND you";
+
+    console.log(s2 + s3); // Remember AND you
+}
+//13. 다음의 결괏값을 작성하시오.
+{
+    let x = 1;
+
+    console.log( !(x>0) ); //false
+    console.log( x>0 || x<4 ); //true
+    console.log( x<<2 ); //4
+    console.log( x&2 );  //0
+    console.log( x&3 );  //1
+}
+//14. 다음의 결괏값을 작성하시오.
+{
+    let num = 0;
+    let i = 1;
+
+    while(i<=50){
+        if(i%7 == 0){
+            num += i;
+        }
+        i++;
+    }
+    console.log(num); //196
+}
+//15. 다음의 결괏값을 작성하시오.
+{
+    let result = 0;
+    for(let i=1; i<999; i++){
+        if(i%3==0 && i%2 !=0){
+            result = i;
+        }
+    }
+    console.log(result); //993
+}
+//16. 다음의 결괏값을 작성하시오.
+{
+    function func(num){
+        if(num <= 1){
+            return 1;
+        } else {
+            return num + func(num - 2);
+        }
+    }
+    function main(){
+        let num = 5;
+        console.log(func(num)) //9
+    }
+    main();
+}
+//17. 다음의 결괏값을 작성하시오.
+{
+    let a=1, b=1, num;
+
+    for(let i=0; i<6; i++){
+        num = a + b;
+        a = b;
+        b = num;
+    }
+    console.log(num) //21
+}
+//18. 다음의 결괏값을 작성하시오.
+{
+    function func(num1, num2){
+        let res = 1;
+        for(let i=0; i<num2; i++){
+            res *= num1;
+        }
+        return res;
+    }
+    let res = func(2, 10);
+
+    console.log(res); //1024
+}
+//19. 다음의 결괏값을 작성하시오.
+{
+    let a = func(4);
+
+    for(let i=0; i<a.length; i++){
+        console.log(a[i]); //0
+    }
+
+    function func(n){
+        let num = [];
+        for(let i=0; i<n; i++){
+            num[i] = i;
+        }
+        return num;
+    }
+}
+//20. 다음의 결괏값을 작성하시오.
+{
+    let a = 3, b = 4, c = 3, d = 5;
+
+    if( (a == 2 | a == c) & !(c > d) & (1 == b ^ c != d) ){
+        a = b + c;
+        if( 7 == b ^ c != a ){
+            console.log(a); 
+        } else {
+            console.log(b);
+        }
+    } else {
+        console.log(a + b); //7
+    }
+}
+    </script>
+</body>
+</html>

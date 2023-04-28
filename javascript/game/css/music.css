@@ -2,7 +2,8 @@
 
 .music_inner {
     width: 350px;
-    background: rgba(0,0,0,0.5);
+    /* background: rgba(0,0,0,0.5); */
+    filter: blur(0.3);
     backdrop-filter: blur(20px);
     position: absolute;
     left: 50%;

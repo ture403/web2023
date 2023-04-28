@@ -1,3 +1,4 @@
+//전체 이미지와 오디오 객체에 저장
 const allMusic = [
     {
         name : "1. 저리가라",
@@ -52,6 +53,7 @@ const allMusic = [
     },
 ];
 
+//선언자
 const musicWrap  = document.querySelector(".music_wrap");
 const musicName = musicWrap.querySelector(".music_control .title h3");
 const musicArtist = musicWrap.querySelector(".music_control .title p");
@@ -64,6 +66,7 @@ const musicProgress = musicWrap.querySelector(".progress");
 const musicProgressBar = musicWrap.querySelector(".progress .bar");
 const musicProgressCurrent = musicWrap.querySelector(".progress .timer .current");
 const musicProgressDuration = musicWrap.querySelector(".progress .timer .duration");
+
 
 let musicIndex = 1; //현재 음악 인덱스
 
@@ -78,9 +81,9 @@ const loadMusic = (num) => {
 
 //재생버튼
 const playMusic = () => {
-    musicWrap.classList.add("paused");
-    musicplay.setAttribute("title", "정지");
-    musicplay.setAttribute("class", "stop");
+    musicWrap.classList.add("paused"); //paused를 클래스에 추가
+    musicplay.setAttribute("title", "정지"); //musicplay에 title 을 정지로 변경
+    musicplay.setAttribute("class", "stop"); //musicplay에 class 을 stop로 변경
 
     musicAudio.play();
 }
@@ -122,6 +125,7 @@ musicAudio.addEventListener("timeupdate", e => {
     //전체 시간
     musicAudio.addEventListener("loadeddata",()=>{
         let audiodrutaion = musicAudio.duration;
+        console.log(audiodrutaion)
         let totalMin = Math.floor(audiodrutaion / 60);
         let totalSec = Math.floor(audiodrutaion % 60);
         if(totalSec < 10) totalSec = `0${totalSec}`;
