@@ -50,5 +50,8 @@ https://ture403.github.io/web2023/animation/webgl/webgl01.html
 #퀴즈 문제
 https://ture403.github.io/web2023/javascript/quiz/quizEffect_test.html   
 
+#웹디자인기능사
+https://ture403.github.io/web2023/webd/index.html
+
 
 
