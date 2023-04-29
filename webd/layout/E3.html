@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디자인 기능사 실기 E유형 3번 레이아웃</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #wrap {
+            width: 100%;
+            height: 100vh;
+        }
+        .section {
+            display: flex;
+            width: 100%;
+            height: calc(100% - 100px);
+            background-color: aqua;
+        }
+        .section .aside {
+            width: 200px;
+        }
+        .section .aside h1 {
+            height: 10%;
+            background-color: #555;
+        }
+        .section .aside nav {
+            height: 90%;
+            background-color: aquamarine;
+        }
+        .article {
+            width:  400px;
+        } 
+        .article div:nth-child(1) {
+            height: 10%;
+            background-color: #111;
+        }
+        .article div:nth-child(2) {
+            height: 45%;
+            background-color: #222;
+        }
+        .article div:nth-child(3) {
+            height: 45%;
+            background-color: #333;
+        }
+        .section1 {
+            width: calc(100% - 600px);
+            background-color: blueviolet;
+        }
+        .footer {
+            display: flex;
+        }
+        .footer .logo {
+            width: 200px;
+            height: 100px;
+            background-color: rgb(27, 68, 54);
+        }
+        .footer .inner {
+            height: 100px;
+            width: calc(100% - 200px);
+            background-color: brown;
+            display: flex;
+        }
+        .footer .inner .copyirght {
+            width: 100%;
+            width: 80%;
+            background-color: antiquewhite;
+        }
+        .footer .inner .site {
+            width: 100%;
+            width: 20%;
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="section">
+            <aside class="aside">
+                <h1></h1>
+                <nav></nav>
+            </aside>
+            <article class="article">
+                <div></div>
+                <div></div>
+                <div></div>
+            </article>
+            <section class="section1"></section>
+        </div>
+        <footer class="footer">
+            <div class="logo"></div>
+            <div class="inner">
+                <div class="copyirght"></div>
+                <div class="site"></div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
