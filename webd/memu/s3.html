@@ -44,6 +44,7 @@
         width: 6000px;
         height: 100%;
         display: flex;
+        z-index: -1;
     }
     #section .inner div {
         width: 1200px;
@@ -230,7 +231,7 @@
             count = (count+1) % innerImg.length;
             console.log(count)
             inner.style.transform = `translate(${-1200 * count}px)`;
-        }, 5000);
+        }, 2000);
 
     </script>
 </body>
