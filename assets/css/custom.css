@@ -1,4 +1,9 @@
-body {background:#f1f4fb url(../img/body_bg.gif)}
+body {
+	background-image: url(../ico/banner.gif);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
 
 
 
@@ -52,10 +57,10 @@ body {background:#f1f4fb url(../img/body_bg.gif)}
 /* Header  */
 
 #header{
-	background-image: url(../ico/banner1.svg);
+	/* background-image: url(../ico/banner1.svg);
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: cover;
+	background-size: cover; */
 	padding: 10px 0 10px 0px;
 }
 #header.sub {
@@ -78,7 +83,7 @@ body {background:#f1f4fb url(../img/body_bg.gif)}
 #header img {width: 190px; display: block; margin: 0 auto; padding-right: 50px;}
 
 #header h1{
-	color: #fff;
+	color: #000;
 	margin-bottom: 0px;
 	margin-top: 20px;
 	font-weight: 500;
@@ -177,7 +182,7 @@ padding: 8px 12px;
 #footer{
 	margin-top: 80px;
 	padding: 20px;
-	background: #f3f3f3;
+	/* background: #f3f3f3; */
 	text-align: center
 }
 .twitter-share-button{
