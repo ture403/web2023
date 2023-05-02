@@ -136,7 +136,7 @@ pre.pre-show{
 .header_tit {margin-top:70px; }
 .header_tit h1 {display:inline-block; font-size: 45px; text-transform:uppercase; color:#fff;}
 .header_tit h2 {margin-top:4px;}
-.header_tit h2 a {font-size:30px; font-family: 'Abel'; color:#fff; b}
+.header_tit h2 a {font-size:30px; font-family: 'Abel'; color:#fff; }
 .header_icon {margin: 20px 0; }
 .header_icon ul {margin:20px 0;}
 
@@ -444,10 +444,8 @@ background: url('../img/AjaxLoader.gif') no-repeat center center #aebab6;
 	}
 	#header h1{
 	color: #3692b8;
-	
-
+	}
 }
-
 
 
 
@@ -478,31 +476,36 @@ background: url('../img/AjaxLoader.gif') no-repeat center center #aebab6;
 /*NO MORE TABLES!! ;) 
 */
 @media (max-width: 767px) {
-	table, thead, tbody, th, td, tr { 
-		display: block; 
+
+	table,
+	thead,
+	tbody,
+	th,
+	td,
+	tr {
+		display: block;
 	}
-	thead tr { 
+
+	thead tr {
 		display: none;
 	}
-	tr { border: 0px solid #ccc; margin-bottom: 10px; }
-	
-	td:before { 
+
+	tr {
+		border: 0px solid #ccc;
+		margin-bottom: 10px;
+	}
+
+	td:before {
 		top: 6px;
 		left: 6px;
-		width: 45%; 
-		padding-right: 10px; 
+		width: 45%;
+		padding-right: 10px;
 		white-space: nowrap;
 	}
 
-	td:nth-of-type(2):before { content: "" ;font-weight: bold;}
-    
-   
+	td:nth-of-type(2):before {
+		content: "";
+		font-weight: bold;
+	}
+
 }
-
-
-
-
-
-
-
-
