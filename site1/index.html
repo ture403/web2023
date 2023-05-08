@@ -21,8 +21,18 @@
     <link rel="stylesheet" href="asset/css/fonts.css">
     <link rel="stylesheet" href="asset/css/reset.css">
     <link rel="stylesheet" href="asset/css/common.css">
+    <link rel="stylesheet" href="asset/css/swiper.css">
     <link rel="stylesheet" href="asset/css/style.css">
 
+    <!-- 스와이퍼 CDN -->
+    
+
+    <style>
+        .swiper {
+            width: 100%;
+            height: 600px;
+            }
+    </style>
 </head>
 <body>
     <div id="skip">
@@ -58,33 +68,102 @@
     <!-- headerType -->
 
     <main id="mainType">
-        <section id="silderType" class="nexon hide">
+        <section id="silderType" class="nexon">
             <h2 class="blind">슬라이드 영역</h2>
             <div class="slider_inner">
-                <div class="slider">
-                    <div class="silder_info container">
-                        <span class="small">event</span>
-                        <h3 class="title">반려묘와 함께하는 싸이트</h3>
-                        <p class="desc">고양이와 놀기, 고양이와 함께 책읽기 ,고양이와 함께 TV 시청, 
-                            고양이와와 함께 산책, 고양이와 함께 요리, 고양이와 함께 수면, 
-                            고양이와 함께 휴식을 공유 합니다.</p>
-                        <div class="btn">
-                            <a href="#">자세히 보기</a>
-                            <a href="#">상담 신청</a>
+
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="slider img1">
+                                <div class="silder_info container">
+                                    <span class="small">event</span>
+                                    <h3 class="title">반려묘와 함께하는 싸이트</h3>
+                                    <p class="desc">고양이와 놀기, 고양이와 함께 책읽기 ,고양이와 함께 TV 시청, 
+                                        고양이와와 함께 산책, 고양이와 함께 요리, 고양이와 함께 수면, 
+                                        고양이와 함께 휴식을 공유 합니다.</p>
+                                    <div class="btn">
+                                        <a href="#">자세히 보기</a>
+                                        <a href="#">상담 신청</a>
+                                    </div>
+                                </div>
+                                <!-- <div class="slider_arrow">
+                                    <a href="#"><span class="blind">이전 이미지</span></a>
+                                    <a href="#"><span class="blind">다음 이미지</span></a>
+                                </div> -->
+                                <!-- <div class="slider_dot">
+                                    <a href="#" class="dot active"><span class="blind">첫번쨰 이미지</span></a>
+                                    <a href="#" class="dot"><span class="blind">두번쨰 이미지</span></a>
+                                    <a href="#" class="dot"><span class="blind">세번째 이미지</span></a>
+                                    <a href="#" class="play"><span class="blind">플레이</span></a>
+                                    <a href="#" class="stop"><span class="blind">정지</span></a>
+                                </div> -->
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider img2">
+                                <div class="silder_info container">
+                                    <span class="small">event</span>
+                                    <h3 class="title">반려묘와 함께하는 싸이트</h3>
+                                    <p class="desc">고양이와 놀기, 고양이와 함께 책읽기 ,고양이와 함께 TV 시청, 
+                                        고양이와와 함께 산책, 고양이와 함께 요리, 고양이와 함께 수면, 
+                                        고양이와 함께 휴식을 공유 합니다.</p>
+                                    <div class="btn">
+                                        <a href="#">자세히 보기</a>
+                                        <a href="#">상담 신청</a>
+                                    </div>
+                                </div>
+                                <!-- <div class="slider_arrow">
+                                    <a href="#"><span class="blind">이전 이미지</span></a>
+                                    <a href="#"><span class="blind">다음 이미지</span></a>
+                                </div> -->
+                                <!-- <div class="slider_dot">
+                                    <a href="#" class="dot active"><span class="blind">첫번쨰 이미지</span></a>
+                                    <a href="#" class="dot"><span class="blind">두번쨰 이미지</span></a>
+                                    <a href="#" class="dot"><span class="blind">세번째 이미지</span></a>
+                                    <a href="#" class="play"><span class="blind">플레이</span></a>
+                                    <a href="#" class="stop"><span class="blind">정지</span></a>
+                                </div> -->
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider img3">
+                                <div class="silder_info container">
+                                    <span class="small">event</span>
+                                    <h3 class="title">반려묘와 함께하는 싸이트</h3>
+                                    <p class="desc">고양이와 놀기, 고양이와 함께 책읽기 ,고양이와 함께 TV 시청, 
+                                        고양이와와 함께 산책, 고양이와 함께 요리, 고양이와 함께 수면, 
+                                        고양이와 함께 휴식을 공유 합니다.</p>
+                                    <div class="btn">
+                                        <a href="#">자세히 보기</a>
+                                        <a href="#">상담 신청</a>
+                                    </div>
+                                </div>
+                                <!-- <div class="slider_arrow">
+                                    <a href="#"><span class="blind">이전 이미지</span></a>
+                                    <a href="#"><span class="blind">다음 이미지</span></a>
+                                </div> -->
+                                <!-- <div class="slider_dot">
+                                    <a href="#" class="dot active"><span class="blind">첫번쨰 이미지</span></a>
+                                    <a href="#" class="dot"><span class="blind">두번쨰 이미지</span></a>
+                                    <a href="#" class="dot"><span class="blind">세번째 이미지</span></a>
+                                    <a href="#" class="play"><span class="blind">플레이</span></a>
+                                    <a href="#" class="stop"><span class="blind">정지</span></a>
+                                </div> -->
+                            </div>
                         </div>
                     </div>
-                    <div class="slider_arrow">
-                        <a href="#"><span class="blind">이전 이미지</span></a>
-                        <a href="#"><span class="blind">다음 이미지</span></a>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button">
+                        <div class="swiper-button-play"><span class="ir">play</span></div>
+                        <div class="swiper-button-stop"><span class="ir">stop</span></div>
                     </div>
-                    <div class="slider_dot">
-                        <a href="#" class="dot active"><span class="blind">첫번쨰 이미지</span></a>
-                        <a href="#" class="dot"><span class="blind">두번쨰 이미지</span></a>
-                        <a href="#" class="dot"><span class="blind">세번째 이미지</span></a>
-                        <a href="#" class="play"><span class="blind">플레이</span></a>
-                        <a href="#" class="stop"><span class="blind">정지</span></a>
-                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
+                
                 <!-- <div class="slider"></div>
                 <div class="slider"></div> -->
             </div>
@@ -307,5 +386,44 @@
         </address>
     </footer>
     <!-- footerType -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+        
+        direction: 'horizontal',
+        loop: true,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction : false,
+        },
+        
+        pagination: {
+            el: '.swiper-pagination',
+            clickable : true,
+        },
+
+        
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        });
+
+        const btnStop =document.querySelector(".swiper-button-stop");
+        const btnStart =document.querySelector(".swiper-button-play");
+
+        btnStart.style.display= "none";
+
+        btnStart.addEventListener("click",()=>{
+            swiper.autoplay.stop();
+            btnStart.style.display = "none";
+            btnStop.style.display = "block";
+        })
+        btnStop.addEventListener("click",()=>{
+            swiper.autoplay.start();
+            btnStart.style.display = "block";
+            btnStop.style.display = "none";
+        })
+    </script>
 </body>
 </html>
