@@ -4,42 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>패럴랙스 이펙트02</title>
+    <title>패럴랙스 이펙트05</title>
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/parallax.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    
 </head>
 <body class="img01 bg01 font10">
     <header id="header">
-        <h1>Javascript parallax Effect02</h1>
-        <p>패럴랙스 이펙트 - 사이드 메뉴</p>
+        <h1>Javascript parallax Effect05</h1>
+        <p>패럴랙스 이펙트 - 이질감 효과</p>
         <ul>
             <li><a href="parallax01.html">1</a></li>
-            <li class="active"><a href="parallax02.html">2</a></li>
+            <li><a href="parallax02.html">2</a></li>
             <li><a href="parallax03.html">3</a></li>
             <li><a href="parallax04.html">4</a></li>
-            <li><a href="parallax05.html">5</a></li>
+            <li class="active"><a href="parallax05.html">5</a></li>
             <li><a href="parallax06.html">6</a></li>
         </ul>
     </header>
     <!-- header -->
 
-    <nav class="parallax__dot">
-        <ul>
-            <li class="active"><a href="#section1">메뉴1</a></li>
-            <li><a href="#section2">메뉴2</a></li>
-            <li><a href="#section3">메뉴3</a></li>
-            <li><a href="#section4">메뉴4</a></li>
-            <li><a href="#section5">메뉴5</a></li>
-            <li><a href="#section6">메뉴6</a></li>
-            <li><a href="#section7">메뉴7</a></li>
-            <li><a href="#section8">메뉴8</a></li>
-            <li><a href="#section9">메뉴9</a></li>
-        </ul>
-    </nav>
-    <!-- parallax__dot -->
-    
     <main id="main">
         <div class="parallax__wrap">
             <section id="section1" class="parallax__item">
@@ -126,52 +112,33 @@
         </div>
     </main>
     <!-- main -->
-    <aside class="parallax_info">
-        <div class="scroll">scrollTop : <span>0</span>px</div>
-    </aside>
-    <!-- parallax_info -->
-
     <footer id="footer">
         <a href="mailto:ture403@gmail.com">ture403@gmail.com</a>
     </footer>
-    
+
     <script>
-        document.querySelectorAll(".parallax__dot li a").forEach((el)=>{
-            el.addEventListener("click",(e)=>{
-                e.preventDefault();
-                document.querySelector(el.getAttribute("href")).scrollIntoView({behavior :"smooth"})
-            })
-        })
+        function scroll(){
+            let scrollTop = window.pageXOffset || document.documentElement.scrollTop;
 
-        window.addEventListener("scroll",()=>{
-            let scrollTop = window.pageYOffset || window.scrollY;
+            document.querySelectorAll(".parallax__item").forEach((item)=>{
+                const target1 = item.querySelector(".parallax_item-img");
+                const target2 = item.querySelector(".parallax__item_desc");
+                const target3 = item.querySelector(".parallax_item_num");
 
-            document.querySelector(".scroll span").innerHTML  = parseInt(scrollTop);
+                let offset1 = (scrollTop - item.offsetTop) *0.1 ;
+                let offset2 = (scrollTop - item.offsetTop) *0.2 ;
+                
+                target1.style.transform = `translateY(${offset1}px)`;
+                
+                gsap.to(target1, {duration : .3, y: offset1, })
+                gsap.to(target2, {duration : .3, y: offset1, ease : "power.out"})
+                gsap.to(target3, {duration : .3, y: offset1, ease : "expo.out"})
+            });
 
-            document.querySelectorAll(".parallax__item").forEach((el, index)=>{
-                if(scrollTop > el.offsetTop-2){
-                    document.querySelectorAll(".parallax__dot li").forEach( (li) => {
-                        
-                        li.classList.remove("active");
-                    })
-                    document.querySelector(`.parallax__dot li:nth-child(${index+1})`).classList.add("active");
-                    
+            requestAnimationFrame(scroll);
+        }
 
-                }
-            })
-        })
-        
-        // window.scroll(0,10000);
-        // window.scroll({left : 100, top: 3000});
-        // window.scroll({left : 100, top: 4000, behavior:"smooth"});
-        
-        // window.scrollTo(0,1000);
-        // window.scrollTo({left : 0, top:1000});
-        // window.scrollTo({left : 0, top:1000, behavior:"smooth"});
-
-        // window.scrollBy(0,1000);
-        // window.scrollBy({left : 0, top:1000});
-        // window.scrollBy({left : 0, top:1000, behavior:"smooth"});
+        scroll();
     </script>
 </body>
 </html>

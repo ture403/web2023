@@ -9,6 +9,15 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/parallax.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <style>
+        .parallax__nav {
+            top: -100px;
+            transition: all 0.6s;
+        }
+        .parallax__nav.show {
+            top: 10px;
+        }
+    </style>
 </head>
 <body class="img01 bg01 font10">
     <header id="header">
@@ -18,9 +27,9 @@
             <li><a href="parallax01.html">1</a></li>
             <li><a href="parallax02.html">2</a></li>
             <li class="active"><a href="parallax03.html">3</a></li>
-            <li><a href="parallax01.html">4</a></li>
-            <li><a href="parallax01.html">5</a></li>
-            <li><a href="parallax01.html">6</a></li>
+            <li><a href="parallax04.html">4</a></li>
+            <li><a href="parallax05.html">5</a></li>
+            <li><a href="parallax06.html">6</a></li>
         </ul>
     </header>
     <!-- header -->
@@ -130,17 +139,67 @@
     </aside>
     <!-- parallax_info -->
 
-    <div class="parallax_top">Top</div>
+    <div class="parallax_top"><a href="#">Top</a></div>
 
     <footer id="footer">
         <a href="mailto:ture403@gmail.com">ture403@gmail.com</a>
     </footer>
-    
+
     <script>
         window.addEventListener("scroll", ()=> {
             let scrollTop = window.pageYOffset || window.scrollY;
+            // if(scrollTop > 0){
+            //     document.querySelector(".parallax__nav").classList.add("show");
+            // } else {
+            //     document.querySelector(".parallax__nav").classList.remove("show");
+            // }
+            
+            //탑버튼 나오게
+            if(scrollTop > document.body.scrollHeight -1000){
+                document.querySelector(".parallax_top").classList.add("show");
+            } else {
+                document.querySelector(".parallax_top").classList.remove("show");
+            }
+
             const scroll1 = document.querySelector(".scroll span");
             scroll1.innerText = Math.round(scrollTop);
-        })
+        });
+
+        //탑 버튼 애니메이션
+        document.querySelector(".parallax_top a").addEventListener("click", function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+        
+        // 03: 메뉴
+        let nowscroll = true;
+        let lastScroll = 0;
+
+        function scrollProgeress (){
+            nowscroll = true;
+            setInterval(() => {
+                if(nowscroll){
+                    nowscroll = false;
+                    hasScroll();
+                }
+            }, 300);
+        }
+        function hasScroll(){
+            let scrollTop = window.pageYOffset || window.scrollY;
+
+            if(scrollTop < lastScroll){
+                document.querySelector(".parallax__nav").classList.add("show");
+            } else {
+                document.querySelector(".parallax__nav").classList.remove("show");
+            }
+            lastScroll = scrollTop;
+            const scroll1 = document.querySelector(".scroll span");
+            scroll1.innerText = Math.round(scrollTop)
+        }
+        window.addEventListener("scroll", scrollProgeress);
     </script>
+</body>
 </html>

@@ -1,3 +1,7 @@
+main {
+    width: 100%;
+    overflow: hidden;
+}
 /* header */
 #header {
     position: absolute;
@@ -111,6 +115,7 @@
     padding-bottom: 56.25%;
     position: relative;
     z-index: -1;
+    overflow: hidden;
 }
 .parallax_item-img {
     position: absolute;
@@ -118,10 +123,10 @@
     top: 0;
     background-image: url(../img/sliderEffect05-1-min.jpg);
     background-size: cover;
-    width: 100%;
-    height: 100%;
-    filter: saturate(0);
-    transition: all 1s;
+    width: 110%;
+    height: 110%;
+    filter: saturate(0%);
+    transition: filter 1s;
 }
 .parallax__item:nth-child(1) .parallax_item-img {
     background-image: url(../img/sliderEffect01-min.jpg);
@@ -209,9 +214,16 @@
 }
 .parallax_top {
     position: fixed;
-    right: 20px;
-    bottom: -200px;
+    right: -200px;
+    bottom: 20px;
     z-index: 1000;
+    transition : all 0.3s;
+}
+.parallax_top.show {
+    right: 20px;
+}
+.parallax_top a {
+    display: block;
     width: 40px;
     height: 40px;
     background-color: rgba(255,255,255,1);
@@ -221,12 +233,8 @@
     line-height: 40px;
     font-size: 14px;
     cursor: pointer;
-    transition : all 0.3s;
 }
-.parallax_top.show {
-    bottom: 20px;
-}
-.parallax_top:hover {
+.parallax_top a:hover {
     background-color: #000;
     color: #fff;
 }
