@@ -14,6 +14,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>  
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script defer src="js/music.js"></script>
+    <script defer src="js/tetris.js"></script>
 </head>
 <body>
     <div class="cursor">
@@ -115,6 +116,22 @@
             </div>
         </div>
         <!-- 뮤직 플레이어 -->
+        <!-- 테트리스 -->
+        <div class="tetris__wrap">
+            <div class="tetris__start"></div>
+            <div class="tetris__text"></div>
+            <div class="tetris__score"> </div>
+            <div class="tetris__play">
+                <div class="view">
+                    <ul></ul>
+                </div>
+            </div>
+            <div class="tetris__result">
+                <div class="tetris_result"></div>
+                <button class="eightbit-btn eightbit-btn--reset close">닫기</button>
+            </div>
+        </div>
+        <!-- //테트리스 -->
     </main>
 
     <footer id="footer">
