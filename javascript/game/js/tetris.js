@@ -1,4 +1,3 @@
-    
 const tetResultWrap = document.querySelector(".tetris__result");
 const tetResult = document.querySelector(".tetris__result .tetris_result");
 
