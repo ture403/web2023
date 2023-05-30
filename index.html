@@ -105,6 +105,49 @@
       margin-right: 20px;
       margin-top: 40px;
     }
+    #header {
+      background: #34495e;
+      position: relative;
+    }
+
+    .banner {
+      display: block;
+      min-height: 200px;
+      width: 100%;
+      position: absolute;
+      top: 40px;
+      left: 0;
+    }
+    .typed_wrap {
+      display: block;
+      border: 4px solid #ecf0f1;
+      width: 500px;
+      height: auto;
+      padding: 30px;
+      text-align: center;      
+      /*centers it in the .banner*/
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%,-50%);
+      -moz-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+      -o-transform: translate(-50%,-50%);
+      transform: translate(-50%,-50%);
+    }
+
+    .typed_wrap h1 {
+      display: inline;
+    }
+
+    /*Add custom cursor so it auto inherits font styles*/
+    .typed::after {
+      content: '|';
+      display: inline;
+      -webkit-animation: blink 0.7s infinite;
+      -moz-animation: blink 0.7s infinite;
+      animation: blink 0.7s infinite;
+    }
   </style>
 </head>
 
@@ -132,7 +175,14 @@
 
   <!-- header -->
   <div id="header">
-    <div class="container">
+    <div class="canvas">
+      <div class="banner">
+        <div class="typed_wrap">
+          <h1>We Are developer<span class="typed"></span></h1>
+        </div>
+      </div>
+    </div>
+    <div class="container mt100">
       <div class="row">
         <div class="span12" style="text-align:center;">
           <div class="header_tit">
@@ -172,7 +222,6 @@
   <!-- contents -->
   <div id="customizing">
     <div class="container">
-
       <div class="row">
         <div id="options" class="gridly">
           <ul class="filter option-set" data-filter-group="color">
@@ -189,7 +238,7 @@
         <div id="container" class="clearfix">
 
           <!-- box -->
-          <section class="color-shape class">
+          <section class="color-shape class rotate-on-hover">
             <a href="class/index.html" target="_blank">
               <div class="image-wrap">
                 <div class="hover-wrap">
@@ -198,7 +247,7 @@
                   <span class="overlay-text-thumb1-cherries">클래스</span>
                   <span class="overlay-text-thumb2-cherries">CLASS</span>
                 </div>
-                <img src="assets/ico/card01.png" alt="portfolio">
+                <img src="assets/img/class.png" alt="portfolio">
                 <div class="img-text cherriesImg">
                   <h5>CLASS</h5>
                   <p>클래스</p>
@@ -219,7 +268,7 @@
                   <span class="overlay-text-thumb1-pear">자바스크립트</span>
                   <span class="overlay-text-thumb2-pear">JAVASCRIPT</span>
                 </div>
-                <img src="assets/ico/card02.png" alt="portfolio">
+                <img src="assets/img/javascript_.png" alt="portfolio">
                 <div class="img-text pearImg">
                   <h5>JAVASCRIPT</h5>
                   <p>자바스크립트</p>
@@ -240,7 +289,7 @@
                   <span class="overlay-text-thumb1-apple">레이아웃</span>
                   <span class="overlay-text-thumb2-apple">HTML</span>
                 </div>
-                <img src="assets/ico/card03.png" alt="portfolio">
+                <img src="assets/img/html.png" alt="portfolio">
                 <div class="img-text appleImg">
                   <h5>HTML</h5>
                   <p>레이아웃</p>
@@ -261,7 +310,7 @@
                   <span class="overlay-text-thumb1-carrot">사이트 만들기</span>
                   <span class="overlay-text-thumb2-carrot">SITE</span>
                 </div>
-                <img src="assets/ico/card04.png" alt="portfolio">
+                <img src="assets/img/site.png" alt="portfolio">
                 <div class="img-text carrotImg">
                   <h5>SITE</h5>
                   <p>사이트 만들기</p>
@@ -282,7 +331,7 @@
                   <span class="overlay-text-thumb1-carrot">SITE 1 완성</span>
                   <span class="overlay-text-thumb2-carrot">SITE 1</span>
                 </div>
-                <img src="assets/ico/card04.png" alt="portfolio">
+                <img src="assets/img/site.png" alt="portfolio">
                 <div class="img-text carrotImg">
                   <h5>SITE 1</h5>
                   <p>SITE 1 완성</p>
@@ -303,7 +352,7 @@
                   <span class="overlay-text-thumb1-carrot">SITE 2 완성</span>
                   <span class="overlay-text-thumb2-carrot">SITE 2</span>
                 </div>
-                <img src="assets/ico/card04.png" alt="portfolio">
+                <img src="assets/img/site.png" alt="portfolio">
                 <div class="img-text carrotImg">
                   <h5>SITE 2</h5>
                   <p>스크롤 이펙트 사이트</p>
@@ -324,7 +373,7 @@
                   <span class="overlay-text-thumb1-carrot">SITE 3 완성</span>
                   <span class="overlay-text-thumb2-carrot">SITE 3</span>
                 </div>
-                <img src="assets/ico/card04.png" alt="portfolio">
+                <img src="assets/img/site.png" alt="portfolio">
                 <div class="img-text carrotImg">
                   <h5>SITE 3</h5>
                   <p>PHP 블로그 사이트</p>
@@ -345,7 +394,7 @@
                   <span class="overlay-text-thumb1-carrot">SITE 4 완성</span>
                   <span class="overlay-text-thumb2-carrot">SITE 4</span>
                 </div>
-                <img src="assets/ico/card04.png" alt="portfolio">
+                <img src="assets/img/site.png" alt="portfolio">
                 <div class="img-text carrotImg">
                   <h5>SITE 4</h5>
                   <p>PHP 팀프로젝트 사이트</p>
@@ -366,7 +415,7 @@
                   <span class="overlay-text-thumb1-lemon">MYSQL</span>
                   <span class="overlay-text-thumb2-lemon">MYSQL</span>
                 </div>
-                <img src="assets/ico/card01.png" alt="portfolio">
+                <img src="assets/img/mysql.png" alt="portfolio">
                 <div class="img-text lemonImg">
                   <h5>MYSQL</h5>
                   <p>MYSQL</p>
@@ -387,7 +436,7 @@
                   <span class="overlay-text-thumb1-lemon">GAME</span>
                   <span class="overlay-text-thumb2-lemon">GAME</span>
                 </div>
-                <img src="assets/ico/card02.png" alt="portfolio">
+                <img src="assets/img/javascript_.png" alt="portfolio">
                 <div class="img-text lemonImg">
                   <h5>GAME</h5>
                   <p>GAME</p>
@@ -408,7 +457,7 @@
                   <span class="overlay-text-thumb1-lemon">MOUSE</span>
                   <span class="overlay-text-thumb2-lemon">MOUSE</span>
                 </div>
-                <img src="assets/ico/card02.png" alt="portfolio">
+                <img src="assets/img/javascript_.png" alt="portfolio">
                 <div class="img-text lemonImg">
                   <h5>MOUSE</h5>
                   <p>MOUSE</p>
@@ -429,7 +478,7 @@
                   <span class="overlay-text-thumb1-lemon">PARALLAX</span>
                   <span class="overlay-text-thumb2-lemon">PARALLAX</span>
                 </div>
-                <img src="assets/ico/card02.png" alt="portfolio">
+                <img src="assets/img/javascript_.png" alt="portfolio">
                 <div class="img-text lemonImg">
                   <h5>PARALLAX</h5>
                   <p>PARALLAX</p>
@@ -450,7 +499,7 @@
                   <span class="overlay-text-thumb1-lemon">QUIZ</span>
                   <span class="overlay-text-thumb2-lemon">QUIZ</span>
                 </div>
-                <img src="assets/ico/card02.png" alt="portfolio">
+                <img src="assets/img/javascript_.png" alt="portfolio">
                 <div class="img-text lemonImg">
                   <h5>QUIZ</h5>
                   <p>QUIZ</p>
@@ -471,7 +520,7 @@
                   <span class="overlay-text-thumb1-lemon">SEARCH</span>
                   <span class="overlay-text-thumb2-lemon">SEARCH</span>
                 </div>
-                <img src="assets/ico/card02.png" alt="portfolio">
+                <img src="assets/img/javascript_.png" alt="portfolio">
                 <div class="img-text lemonImg">
                   <h5>SEARCH</h5>
                   <p>SEARCH</p>
@@ -492,7 +541,7 @@
                   <span class="overlay-text-thumb1-lemon">SLIDER</span>
                   <span class="overlay-text-thumb2-lemon">SLIDER</span>
                 </div>
-                <img src="assets/ico/card02.png" alt="portfolio">
+                <img src="assets/img/javascript_.png" alt="portfolio">
                 <div class="img-text lemonImg">
                   <h5>SLIDER</h5>
                   <p>SLIDER</p>
@@ -513,7 +562,7 @@
                   <span class="overlay-text-thumb1-lemon">PORTFOLIO</span>
                   <span class="overlay-text-thumb2-lemon">PORTFOLIO</span>
                 </div>
-                <img src="assets/ico/card02.png" alt="portfolio">
+                <img src="assets/img/javascript_.png" alt="portfolio">
                 <div class="img-text lemonImg">
                   <h5>PORTFOLIO</h5>
                   <p>PORTFOLIO</p>
@@ -554,7 +603,8 @@
 
 
   <!-- script -->
-  <script src="assets/js/jquery-1.9.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  <!-- <script src="assets/js/jquery-1.9.1.min.js"></script> -->
   <script src="assets/js/bootstrap-collapse.js"></script>
   <script src="assets/js/bootstrap-transition.js"></script>
   <script src="assets/js/jquery.isotope.min.js"></script>
@@ -634,6 +684,46 @@
       });
 
     });
+  </script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js"></script>
+  <script>
+    $(function () {
+      new typed($(".typed"),{
+        strings: ["Developers.", "Designers.", "People."],
+        // Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
+        stringsElement: null,
+        // typing speed
+        typeSpeed: 30,
+        // time before typing starts
+        startDelay: 1200,
+        // backspacing speed
+        backSpeed: 20,
+        // time before backspacing
+        backDelay: 500,
+        // loop
+        loop: true,
+        // false = infinite
+        loopCount: 5,
+        // show cursor
+        showCursor: false,
+        // character for cursor
+        cursorChar: "|",
+        // attribute to type (null == text)
+        attr: null,
+        // either html or text
+        contentType: "html",
+        // call when done callback function
+        callback: function () {},
+        // starting callback function before each string
+        preStringTyped: function () {},
+        //callback for every typed string
+        onStringTyped: function () {},
+        // callback for reset
+        resetCallback: function () {}
+      });
+  });
+
   </script>
 </body>
 
