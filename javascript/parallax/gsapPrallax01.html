@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gasp패럴렉스 이펙트01</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/parallax.css">
+    <style>
+            #header {
+                position: fixed;
+                z-index: 10000;
+            }
+            .parallaxs__wrap {
+            }
+            .parallaxs__item {
+                width: 100vw;
+                height: 100vh;
+                position: relative;
+            }
+            #section1 {
+                background-color: #111;
+            }
+            #section2 {
+                background-color: #222;
+            }
+            #section3 {
+                background-color: #111;
+            }
+            #section4 {
+                background-color: #222;
+            }
+            #section5 {
+                background-color: #111;
+            }
+            #section6 {
+                background-color: #222;
+            }
+            #section7 {
+                background-color: #111;
+            }
+            #section8 {
+                background-color: #222;
+            }
+            #section9 {
+                background-color: #111;
+            }
+            .parallaxs_item_num {
+                position: absolute;
+                right: 10%;
+                top: 20%;
+                transform: translate(-50%, -50%);
+                color: #fff;
+                font-size: 15vw;
+                z-index: 1000;
+            }
+            .parallaxs_item_img {
+                width: 50vw;
+                height: 50vh;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                background-position: center;
+                background-size: cover;
+                filter: saturate(0%);
+                opacity: 0;
+            }
+            .parallaxs__item:nth-child(1) .parallaxs_item_img {
+                background-image: url(img/silderEffect01-1-min.jpg);
+            }
+            .parallaxs__item:nth-child(2) .parallaxs_item_img {
+                background-image: url(img/sliderEffect02-1-min.jpg);
+            }
+            .parallaxs__item:nth-child(3) .parallaxs_item_img {
+                background-image: url(img/sliderEffect03-1-min.jpg);
+            }
+            .parallaxs__item:nth-child(4) .parallaxs_item_img {
+                background-image: url(img/sliderEffec0t4-1-min.jpg);
+            }
+            .parallaxs__item:nth-child(5) .parallaxs_item_img {
+                background-image: url(img/sliderEffect05-1-min.jpg);
+            }
+            .parallaxs__item:nth-child(6) .parallaxs_item_img {
+                background-image: url(img/sliderEffect06-1-min.jpg);
+            }
+            .parallaxs__item:nth-child(7) .parallaxs_item_img {
+                background-image: url(img/sliderEffect07-1-min.jpg);
+            }
+            .parallaxs__item:nth-child(8) .parallaxs_item_img {
+                background-image: url(img/sliderEffect08-min.jpg);
+            }
+            .parallaxs__item:nth-child(9) .parallaxs_item_img {
+                background-image: url(img/sliderEffect09-1-min.jpg);
+            }
+            .Parallax__info {
+                z-index: 10000;
+            }
+            progress {
+                position: fixed;
+                top: 0;
+                left: 0;
+                appearance: none;
+                width: 100%;
+                height: 5px;
+                border: none;
+                background: transparent;
+            }
+            progress::-webkit-progress-bar {
+                background: transparent;
+            }
+            progress::-webkit-progress-value {
+                background: linear-gradient(
+                    to left,
+                    #DB38B5,
+                    #01B3E3,
+                    #25CE7B,
+                    #FDC741,
+                    #FF6B01,
+                    #FC4236
+                );
+                background-attachment: fixed;
+            }
+            progress::-moz-progress-bar {
+                background: linear-gradient(
+                    to left,
+                    #DB38B5,
+                    #01B3E3,
+                    #25CE7B,
+                    #FDC741,
+                    #FF6B01,
+                    #FC4236
+                );
+                background-attachment: fixed;
+            }
+    </style>
+</head>
+<body class="img05 bg01 font07">
+    <header id="header">
+        <h1>Javascript gsapParallax Effect01</h1>
+        <p>패럴렉스 이펙트 : 나타나기</p>
+        <ul>
+            <li class="active"><a href="gsapPrallax01.html">1</a></li>
+            <li><a href="gsapPrallax01.html">2</a></li>
+            <li><a href="gsapPrallax01.html">3</a></li>
+            <li><a href="gsapPrallax01.html">4</a></li>
+            <li><a href="gsapPrallax01.html">5</a></li>
+            <li><a href="gsapPrallax01.html">6</a></li>
+            
+        </ul>
+    </header>
+    <!-- header -->
+    <main id="main">
+        <div class="parallaxs__wrap">
+            <section id="section1" class="parallaxs__item">
+                <span class="parallaxs_item_num">01</span>
+                <div class="parallaxs_item_img"></div>
+                
+            </section>
+            <!-- //section1 -->
+            <section id="section2" class="parallaxs__item">
+                <span class="parallaxs_item_num">02</span>
+                <div class="parallaxs_item_img"></div>
+                
+            </section>
+            <!-- //section2 -->
+            <section id="section3" class="parallaxs__item">
+                <span class="parallaxs_item_num">03</span>
+                <div class="parallaxs_item_img"></div>
+                
+            </section>
+            <!-- //section3 -->
+            <section id="section4" class="parallaxs__item">
+                <span class="parallaxs_item_num">04</span>
+                <div class="parallaxs_item_img"></div>
+
+            </section>
+            <!-- //section4 -->
+            <section id="section5" class="parallaxs__item">
+                <span class="parallaxs_item_num">05</span>
+                <div class="parallaxs_item_img"></div>
+
+            </section>
+            <!-- //section5 -->
+            <section id="section6" class="parallaxs__item">
+                <span class="parallaxs_item_num">06</span>
+                <div class="parallaxs_item_img"></div>
+
+            </section>
+            <!-- //section6 -->
+            <section id="section7" class="parallaxs__item">
+                <span class="parallaxs_item_num">07</span>
+                <div class="parallaxs_item_img"></div>
+
+            </section>
+            <!-- //section7 -->
+            <section id="section8" class="parallaxs__item">
+                <span class="parallaxs_item_num">08</span>
+                <div class="parallaxs_item_img"></div>
+
+            </section>
+            <!-- //section8 -->
+            <section id="section9" class="parallaxs__item">
+                <span class="parallaxs_item_num">09</span>
+                <div class="parallaxs_item_img"></div>
+
+            </section>
+            <!-- //section9 -->
+        </div>
+    </main>
+    <!-- main -->
+    <aside class="parallax_info">
+        <div class="scroll">scrollTop : <span>0</span>px</div>
+    </aside>
+    <!-- Parallax__info -->
+    <footer id="footer">
+        <a href="mailto:ghkddn132@naver.com">ghkddn132@naver.com</a>
+    </footer>
+    <!-- footer -->
+    <progress max="100" value="0">
+
+    </progress>
+    <!-- progress -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script>
+        gsap.utils
+            .toArray(".parallaxs_item_num")
+            .forEach(function (item) {
+                item_tl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: item,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        scrub: true,
+                        markers: true,
+                    },
+                });
+                item_tl.from(item, { opacity: 0, duration: 0.5 });
+                item_tl.to(item, { opacity: 0, duration: 0.5 });
+            });
+        gsap.utils.toArray(".parallaxs_item_img").forEach(function (img) {
+            ScrollTrigger.create({
+                trigger: img, //자기자신에기방아쇠
+                start: "top 80%",
+                end: "bottom 20%",
+                markers: true,
+                onEnter: function () {
+                    gsap.fromTo(
+                        img,
+                        { x: 200, autoAlpha: 0 },
+                        {
+                            duration: 1.25,
+                            x: 0,
+                            autoAlpha: 1,
+                            ease: "back",
+                            overwrite: "auto",
+                        }
+                    ); //fromTo()전,후의 애니메이션을 설정가능
+                },
+                onLeave: function () {
+                    gsap.fromTo(
+                        img,
+                        { autoAlpha: 1 },
+                        { autoAlpha: 0, overwrite: "auto" }
+                    );
+                }, //처음만났을때
+                onEnterBack: function () {
+                    gsap.fromTo(
+                        img,
+                        { x: -200, autoAlpha: 0 },
+                        {
+                            duration: 1.25,
+                            x: 0,
+                            autoAlpha: 1,
+                            ease: "back",
+                            overwrite: "auto",
+                        }
+                    );
+                },
+                onLeaveBack: function () {
+                    gsap.fromTo(
+                        img,
+                        { autoAlpha: 1 },
+                        { autoAlpha: 0, overwrite: "auto" }
+                    );
+                }, //만나고 지나갔을떄
+            });
+        });
+        gsap.to("progress", {
+            value:100,
+            ease: "none",
+            scrollTrigger: {scrub: 0.3}
+        });
+    </script>
+</body>
+</html>
