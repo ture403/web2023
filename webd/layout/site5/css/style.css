@@ -1,0 +1,319 @@
+@charset "UTF-8";
+
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: #333;
+}
+
+ul,li{
+    list-style: none;
+}
+body{
+    color: #333;
+    overflow: hidden;
+}
+img {
+    vertical-align: top;
+}
+#wrap {
+    width: 100%;
+    display: flex;
+}
+#header{
+    width: 200px;
+    height: 850px;
+    background-color: #3166c9;
+}
+#header h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    text-align: center;
+}
+#header nav >ul {
+    margin-top: 20px;
+    position: relative;
+    z-index: 3000;
+}
+#header nav >ul.active::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3000px;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    opacity: 1;
+}
+#header nav >ul >li {
+    position: relative;
+    transition: 0.5s;
+}
+#header nav >ul >li > a {
+    display: block;
+    padding: 10px;
+    background-color: aliceblue;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 1s;
+}
+#header nav >ul >li > a:hover{
+    color: #fff;
+    background-color: #000;
+    text-align: center;
+}
+#header nav >ul >li > ul {
+    position: absolute;
+    top: 7px;
+    left: 200px;
+    z-index: 3000;
+    width: 500px;
+    display: flex;
+    opacity: 0;
+}
+#header nav >ul >li > ul > li > a {
+    padding: 5px 20px;
+    text-align: left;
+    color: #fff;
+}
+#header nav >ul >li > ul > li > a:hover {
+    color: #000;
+    background-color: #fff;
+}
+#header .join {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#header .join .login {
+    padding: 10px 20px;
+    background-color: #5e7db8;
+}
+#header .join .password {
+    padding: 10px 20px;
+    background-color: #5e7db8;
+}
+#main {
+    width: calc(100% - 200px);
+    height: 850px;
+}
+.section {
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
+.section .notice {
+    position: absolute;
+    top: 0;
+    right: 10px;    
+    z-index: 4000;
+}
+.section .notice span {
+    width: 100px;
+    display: block;
+}
+.section .notice span img{
+    width: 100px;
+    height: 100px;
+}
+.section .sliderWrap {
+    height: 400px;
+    overflow: hidden;
+}
+.section .sliderWrap .inner {
+    width: 100%;
+    height: 1200px;
+    transform: translateY(-1200px);
+}
+.section .sliderWrap .slider{
+    height: 400px;
+}
+.section .sliderWrap .slider img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+.banner{
+    height: 200px;
+    display: flex;
+    padding: 25px;
+}
+.banner .desc {
+    padding: 30px 20px;
+    margin-left: 40px;
+}
+.banner .desc h3 {
+    font-size: 30px;
+}
+.banner .desc p {
+    font-size: 20px;
+}
+.galleryWrap{
+    height: 250px;
+    background-color: #5e7db8;
+    display: flex;
+    padding: 20px;
+    position: relative;
+}
+.galleryWrap .notice {
+    width: 100%;
+    display: inline-block;
+}
+.galleryWrap .notice h4 {
+    width: 150px;
+    font-size: 30px;
+    border: 1px solid #aaa;
+    text-align: center;
+}
+.galleryWrap .notice h4:hover{
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
+.galleryWrap .notice ul{
+    display: none;
+}
+.galleryWrap .notice ul.active{
+    display: block;
+}
+.galleryWrap .notice ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.galleryWrap .notice ul li a {
+    font-size: 20px;
+    display: inline-block;
+    padding: 5px 0;
+}
+.galleryWrap .notice ul li a:hover{
+    text-decoration: underline;
+    text-underline-position: under;
+}
+.galleryWrap .gallery {
+    position: absolute;
+    top: 0;
+    left: 150px;
+    padding: 20px;
+}
+.galleryWrap .gallery h4{
+    width: 150px;
+    font-size: 30px;
+    border: 1px solid #aaa;
+    border-left: none;
+    text-align: center;
+}
+.galleryWrap .gallery h4:hover{
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
+.galleryWrap .gallery .imgInner {
+    width: 1000px;
+    display: none;
+}
+.galleryWrap .gallery .imgInner.active {
+    display: block;
+}
+.galleryWrap .gallery .imgInner .inner {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+}
+.galleryWrap .gallery .imgInner .inner h5 {
+    text-align: center;
+    font-size: 18px;
+}
+#footer{
+    width: 100%;
+    height: 120px;
+    display: flex;
+}
+#footer .logo {
+    width: 200px;
+    height: 120px;
+    background-color: #405c91;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+
+#footer .desc {
+    width: calc(100% - 200px);
+    height: 120px;
+    background-color: #5785db;
+}
+#footer .desc ul li {
+    display: inline-block;
+    padding: 20px;
+}
+#footer .desc ul a::before{
+    content: "";
+    width: 1px;
+    height: 15px;
+    background-color: #000;
+    position: absolute;
+    top: 6px;
+    right: -20px;
+}
+#footer .desc ul li a {
+    position: relative;
+}
+#footer .desc ul li:last-child a::before {
+    width: 0;
+    height: 0;
+}
+#footer .desc address {
+    font: 16px normal;
+    margin-top: 20px;
+    padding-left: 20px;
+    position: relative;
+}
+#footer .desc address::before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    border: 1px dotted #000;
+    position: absolute;
+    top: -20px;
+    left: 0;
+}
+.modal {
+    width: 500px;
+    height: 500px;
+    border: 1px solid #000;
+    padding: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    background-color: #fff;
+}
+.modal h5 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+.modal p {
+    font-size: 30px;
+    margin-bottom: 100px;
+}
+.modal span {
+    float: right;
+}
+.modal span:hover {
+    cursor: pointer;
+}
