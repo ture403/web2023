@@ -200,31 +200,46 @@
             <!-- //section4 -->
             <section id="section5" class="parallaxs__item">
                 <span class="parallaxs_item_num">05</span>
-                <div class="parallaxs_item_img"></div>
+                <div class="parallaxs_item_img s1" style="opacity: 0;"></div>
+                <div class="parallaxs_item_img s2" style="opacity: 0;"></div>
+                <div class="parallaxs_item_img s3" style="opacity: 0;"></div>
+                <div class="parallaxs_item_img s4" style="opacity: 0;"></div>
 
             </section>
             <!-- //section5 -->
             <section id="section6" class="parallaxs__item">
                 <span class="parallaxs_item_num">06</span>
-                <div class="parallaxs_item_img"></div>
+                <div class="parallaxs_item_img s1" style="opacity: 0;"></div>
+                <div class="parallaxs_item_img s2" style="opacity: 0;"></div>
+                <div class="parallaxs_item_img s3" style="opacity: 0;"></div>
+                <div class="parallaxs_item_img s4" style="opacity: 0;"></div>
 
             </section>
             <!-- //section6 -->
             <section id="section7" class="parallaxs__item">
                 <span class="parallaxs_item_num">07</span>
-                <div class="parallaxs_item_img"></div>
+                <div class="parallaxs_item_img s1" style="transform: translateY(-100px); opacity: 0;"></div>
+                <div class="parallaxs_item_img s2" style="transform: translateX(-100px); opacity: 0;"></div>
+                <div class="parallaxs_item_img s3" style="transform: translateY(100px); opacity: 0;"></div>
+                <div class="parallaxs_item_img s4" style="transform: translateX(100px); opacity: 0;"></div>
 
             </section>
             <!-- //section7 -->
             <section id="section8" class="parallaxs__item">
                 <span class="parallaxs_item_num">08</span>
-                <div class="parallaxs_item_img"></div>
+                <div class="parallaxs_item_img s1"></div>
+                <div class="parallaxs_item_img s2"></div>
+                <div class="parallaxs_item_img s3"></div>
+                <div class="parallaxs_item_img s4"></div>
 
             </section>
             <!-- //section8 -->
             <section id="section9" class="parallaxs__item">
                 <span class="parallaxs_item_num">09</span>
-                <div class="parallaxs_item_img"></div>
+                <div class="parallaxs_item_img s1" style="position: absolute; top: 0; left: 0;"></div>
+                <div class="parallaxs_item_img s2" style="position: absolute; top: 0; left: 0;"></div>
+                <div class="parallaxs_item_img s3" style="position: absolute; top: 0; left: 0;"></div>
+                <div class="parallaxs_item_img s4" style="position: absolute; top: 0; left: 0;"></div>
 
             </section>
             <!-- //section9 -->
@@ -324,15 +339,100 @@
             markers : true,
         }) 
 
-        // gsap.to("#section1 .parallaxs_item_img", {
-        //     duration: 2, 
-        //     rotation: 720,
-        //     scale : 0.1,
-        //     scrollTrigger: {
-        //         trigger: "#section1",
-        //         scrub: true, // true, 1, 2,.....
-        //     }
-        // });
+        const ani5 = gsap.timeline();
+        ani5.to("#section5 .parallaxs_item_img.s1",{y: -200, duration:1, autoAlpha:1},"a")
+            .to("#section5 .parallaxs_item_img.s2",{y: 200, duration:1, autoAlpha:1},"a")
+            .to("#section5 .parallaxs_item_img.s3",{y: -200, duration:1, autoAlpha:1},"a")
+            .to("#section5 .parallaxs_item_img.s4",{y: 200, duration:1, autoAlpha:1},"a")
+
+        ScrollTrigger.create({
+            animation: ani5,
+            trigger: "#section5",
+            start: "top top",
+            end: "+=2000",
+            scrub: true,
+            pin: true,
+            anticipatePin :1,
+            markers : true,
+        }) 
+
+        const ani6 = gsap.timeline();
+        ani6.to("#section6 .parallaxs_item_img.s1",{y: -200, duration:1, autoAlpha:1},)
+            .to("#section6 .parallaxs_item_img.s2",{y: 200, duration:1,  autoAlpha:1},)
+            .to("#section6 .parallaxs_item_img.s3",{y: -200, duration:1, autoAlpha:1},)
+            .to("#section6 .parallaxs_item_img.s4",{y: 200, duration:1,  autoAlpha:1},)
+
+        ScrollTrigger.create({
+            animation: ani6,
+            trigger: "#section6",
+            start: "top top",
+            end: "+=2000",
+            scrub: true,
+            pin: true,
+            anticipatePin :1,
+            markers : true,
+        }) 
+
+        const ani7 = gsap.timeline();
+        ani7.to("#section7 .parallaxs_item_img.s1",{x: -200, duration:1, autoAlpha:1},)
+            .to("#section7 .parallaxs_item_img.s2",{y: 200, duration:1,  autoAlpha:1},)
+            .to("#section7 .parallaxs_item_img.s3",{y: -200, duration:1, autoAlpha:1},)
+            .to("#section7 .parallaxs_item_img.s4",{x: 200, duration:1,  autoAlpha:1},)
+
+        ScrollTrigger.create({
+            animation: ani7,
+            trigger: "#section7",
+            start: "top top",
+            end: "+=2000",
+            scrub: true,
+            pin: true,
+            anticipatePin :1,
+            markers : true,
+        }) 
+
+
+    
+        const ani8 = gsap.timeline();
+        ani8.fromTo("#section8 .parallaxs_item_img.s1",{x:0, y:0},{x:-3000, y:500, delay:0.5})
+        ani8.fromTo("#section8 .parallaxs_item_img.s2",{x:0, y:0},{x:500, y:-3000, delay:0.6})
+        ani8.fromTo("#section8 .parallaxs_item_img.s3",{x:0, y:0},{x:-3000, y:500, delay:0.7})
+        ani8.fromTo("#section8 .parallaxs_item_img.s4",{x:0, y:0},{x:500, y:-3000, delay:0.8})
+        
+
+        ScrollTrigger.create({
+            animation: ani8,
+            trigger: "#section8",
+            start: "top top",
+            end: "+=5000",
+            scrub: true,
+            pin: true,
+            anticipatePin :1,
+            markers : true,
+        }) 
+        
+        const ani9 = gsap.timeline();
+        ani9.fromTo(["#section9 .parallaxs_item_img.s1","#section9 .parallaxs_item_img.s2","#section9 .parallaxs_item_img.s3","#section9 .parallaxs_item_img.s4"],{x:0, y:0},{x:100, y:500, stagger:0.5})
+        ani9.to(["#section9 .parallaxs_item_img.s1","#section9 .parallaxs_item_img.s2","#section9 .parallaxs_item_img.s3","#section9 .parallaxs_item_img.s4"],
+        {x:400, y:0, stagger:0.5})
+        ani9.to(["#section9 .parallaxs_item_img.s1","#section9 .parallaxs_item_img.s2","#section9 .parallaxs_item_img.s3","#section9 .parallaxs_item_img.s4"],
+        {x:600, y:500, stagger:0.5})
+        ani9.to(["#section9 .parallaxs_item_img.s1","#section9 .parallaxs_item_img.s2","#section9 .parallaxs_item_img.s3","#section9 .parallaxs_item_img.s4"],
+        {x:800, y:0, stagger:0.5})
+        ani9.to(["#section9 .parallaxs_item_img.s1","#section9 .parallaxs_item_img.s2","#section9 .parallaxs_item_img.s3","#section9 .parallaxs_item_img.s4"],
+        {x:900, y:1000, stagger:0.5})
+        
+
+        ScrollTrigger.create({
+            animation: ani9,
+            trigger: "#section9",
+            start: "top top",
+            end: "+=5000",
+            scrub: true,
+            pin: true,
+            anticipatePin :1,
+            markers : true,
+        }) 
+        
     </script>
 </body>
 </html>
