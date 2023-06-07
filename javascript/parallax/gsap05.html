@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gasp패럴렉스 이펙트05</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/parallax.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
+    <style>
+        
+            #header {
+                position: fixed;
+                z-index: 10000;
+            }
+            .parallaxs__item {
+                width: 100vw;
+                height: 100vh;
+                padding: 20vh 0;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            #section1 {
+                background-color: #111;
+            }
+            #section2 {
+                background-color: #222;
+            }
+            #section3 {
+                background-color: #111;
+            }
+            #section4 {
+                background-color: #222;
+            }
+            #section5 {
+                background-color: #111;
+            }
+            #section6 {
+                background-color: #222;
+            }
+            #section7 {
+                background-color: #111;
+            }
+            #section8 {
+                background-color: #222;
+
+            }
+            #section9 {
+                background-color: #111;
+            }
+            .parallaxs_item_num {
+                position: absolute;
+                right: 20px;
+                top: 20px;
+                color: #fff;
+                font-family: "Lato";
+                font-size: 5vw;
+                font-weight: 100;
+                z-index: 1000;
+            }
+            .parallaxs_item_img {
+                width: 200px;
+                height: 200px;
+                background-size: cover;
+                border-radius: 20px;
+                transition: border-radius 0.3s;
+                margin: 10px;
+            }
+            .parallaxs_item_img.active {
+                border-radius: 50%;
+            }
+            .parallaxs__item:nth-child(1) .parallaxs_item_img {
+                background-image: url(img/silderEffect01-1-min.jpg);
+            }
+            .parallaxs__item:nth-child(2) .parallaxs_item_img {
+                background-image: url(img/sliderEffect02-1-min.jpg);
+            }
+            .parallaxs__item:nth-child(3) .parallaxs_item_img {
+                background-image: url(img/sliderEffect03-1-min.jpg);
+            }
+            .parallaxs__item:nth-child(4) .parallaxs_item_img {
+                background-image: url(img/sliderEffec0t4-1-min.jpg);
+            }
+            .parallaxs__item:nth-child(5) .parallaxs_item_img {
+                background-image: url(img/sliderEffect05-1-min.jpg);
+            }
+            .parallaxs__item:nth-child(6) .parallaxs_item_img {
+                background-image: url(img/sliderEffect06-1-min.jpg);
+            }
+            .parallaxs__item:nth-child(7) .parallaxs_item_img {
+                background-image: url(img/sliderEffect07-1-min.jpg);
+            }
+            .parallaxs__item:nth-child(8) .parallaxs_item_img {
+                background-image: url(img/sliderEffect08-min.jpg);
+            }
+            .parallaxs__item:nth-child(9) .parallaxs_item_img {
+                background-image: url(img/sliderEffect09-1-min.jpg);
+            }
+            .prallax_item_title {
+                font-size: 10vw;
+            }
+            .parallaxs_item_text {
+                font-size: 10vw;
+                font-weight: 800;
+                text-transform: uppercase;
+            }
+            progress {
+                position: fixed;
+                top: 0;
+                left: 0;
+                appearance: none;
+                width: 100%;
+                height: 5px;
+                border: none;
+                background: transparent;
+            }
+            progress::-webkit-progress-bar {
+                background: transparent;
+            }
+            progress::-webkit-progress-value {
+                background: linear-gradient(
+                    to left,
+                    #DB38B5,
+                    #01B3E3,
+                    #25CE7B,
+                    #FDC741,
+                    #FF6B01,
+                    #FC4236
+                );
+                background-attachment: fixed;
+            }
+            progress::-moz-progress-bar {
+                background: linear-gradient(
+                    to left,
+                    #DB38B5,
+                    #01B3E3,
+                    #25CE7B,
+                    #FDC741,
+                    #FF6B01,
+                    #FC4236
+                );
+                background-attachment: fixed;
+            }
+    </style>
+</head>
+<body class="img05 bg01 font07">
+    <header id="header">
+        <h1>Javascript gsapParallax Effect05</h1>
+        <p>패럴렉스 이펙트 : PIN 애니메이션</p>
+        <ul>
+            <li><a href="gsap01.html">1</a></li>
+            <li><a href="gsap02.html">2</a></li>
+            <li><a href="gsap03.html">3</a></li>
+            <li><a href="gsap04.html">4</a></li>
+            <li class="active"><a href="gsap05.html">5</a></li>
+            <li><a href="gsap06.html">6</a></li>
+            <li><a href="gsap07.html">7</a></li>
+            <li><a href="gsap08.html">8</a></li>
+            <li><a href="gsap09.html">9</a></li>
+            <li><a href="gsap10.html">10</a></li>
+            
+        </ul>
+    </header>
+    <!-- header -->
+    <main id="main">
+        <div class="parallaxs__wrap">
+            <section id="section1" class="parallaxs__item">
+                <span class="parallaxs_item_num">01</span>
+                <div class="parallaxs_item_img"></div>
+                
+            </section>
+            <!-- //section1 -->
+            <section id="section2" class="parallaxs__item">
+                <span class="parallaxs_item_num">02</span>
+                <div class="parallaxs_item_text">section2</div>
+                
+            </section>
+            <!-- //section2 -->
+            <section id="section3" class="parallaxs__item">
+                <span class="parallaxs_item_num">03</span>
+                <div class="parallaxs_item_img s1"></div>
+                <div class="parallaxs_item_img s2 "></div>
+                <div class="parallaxs_item_img s3"></div>
+                
+            </section>
+            <!-- //section3 -->
+            <section id="section4" class="parallaxs__item">
+                <span class="parallaxs_item_num">04</span>
+                <div class="parallaxs_item_img i1"></div>
+                <div class="parallaxs_item_img i2"></div>
+                <div class="parallaxs_item_img i3"></div>
+                <div class="parallaxs_item_img i4"></div>
+
+            </section>
+            <!-- //section4 -->
+            <section id="section5" class="parallaxs__item">
+                <span class="parallaxs_item_num">05</span>
+                <div class="parallaxs_item_img"></div>
+
+            </section>
+            <!-- //section5 -->
+            <section id="section6" class="parallaxs__item">
+                <span class="parallaxs_item_num">06</span>
+                <div class="parallaxs_item_img"></div>
+
+            </section>
+            <!-- //section6 -->
+            <section id="section7" class="parallaxs__item">
+                <span class="parallaxs_item_num">07</span>
+                <div class="parallaxs_item_img"></div>
+
+            </section>
+            <!-- //section7 -->
+            <section id="section8" class="parallaxs__item">
+                <span class="parallaxs_item_num">08</span>
+                <div class="parallaxs_item_img"></div>
+
+            </section>
+            <!-- //section8 -->
+            <section id="section9" class="parallaxs__item">
+                <span class="parallaxs_item_num">09</span>
+                <div class="parallaxs_item_img"></div>
+
+            </section>
+            <!-- //section9 -->
+            
+        </div>
+    </main>
+    <!-- main -->
+    <aside class="parallax_info">
+        <div class="scroll">scrollTop : <span>0</span>px</div>
+    </aside>
+    <!-- Parallax__info -->
+    <footer id="footer">
+        <a href="mailto:dbsrl6587@naver.com">dbsrl6587@naver.com</a>
+    </footer>
+    <!-- footer -->
+    <progress max="100" value="0">
+
+    </progress>
+    <!-- progress -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script>
+        const box1 = document.querySelector("#section1 .parallaxs_item_img");
+        const box2 = document.querySelector("#section2 .parallaxs_item_img");
+        const box3 = document.querySelectorAll("#section3 .parallaxs_item_img");
+        const box4 = document.querySelector("#section4 .parallaxs_item_img");
+        const box5 = document.querySelector("#section5 .parallaxs_item_img");
+        const box6 = document.querySelector("#section6 .parallaxs_item_img");
+        const box7 = document.querySelector("#section7 .parallaxs_item_img");
+        const box8 = document.querySelector("#section8 .parallaxs_item_img");
+        const box9 = document.querySelector("#section9 .parallaxs_item_img");
+
+        gsap.defaults({ease: "none", duration: 2});
+
+        const ani1 = gsap.timeline();
+        ani1.to(box1,{rotation:720, scale:0.1, borderRadius: 200})
+            .to(box1,{rotation:0, scale:1, borderRadius: 20})
+
+        ScrollTrigger.create({
+            animation: ani1,
+            trigger: "#section1",
+            start: "top top",
+            end: "+=2000",
+            scrub: true,
+            pin: true,
+            anticipatePin :1,
+            markers : true,
+            
+        })
+
+        const ani2 = gsap.timeline();
+        ani2.to(".parallaxs_item_text",{scale:50})
+            .to("parallaxs_item_text",{scale:1})
+
+        ScrollTrigger.create({
+            animation: ani2,
+            trigger: "#section2",
+            start: "top top",
+            end: "+=4000",
+            scrub: true,
+            pin: true,
+            anticipatePin :1,
+            markers : true,
+            
+        })   
+        
+        const ani3 = gsap.timeline();
+        ani3.to("#section3 .parallaxs_item_img.s1",{y: -200, duration:1},"a")
+            .to("#section3 .parallaxs_item_img.s2",{y: 200, duration:1},"a")
+            .to("#section3 .parallaxs_item_img.s3",{y: -200, duration:1},"a")
+
+        ScrollTrigger.create({
+            animation: ani3,
+            trigger: "#section3",
+            start: "top top",
+            end: "+=2000",
+            scrub: true,
+            pin: true,
+            anticipatePin :1,
+            markers : true,
+        })    
+        
+        const ani4 = gsap.timeline();
+        ani4.fromTo("#section4 .parallaxs_item_img",
+        {y: -200, autoAlpha:0},
+        {y: 0, autoAlpha:1})
+
+        ScrollTrigger.create({
+            animation: ani4,
+            trigger: "#section4",
+            start: "top top",
+            end: "+=2000",
+            scrub: true,
+            pin: true,
+            anticipatePin :1,
+            markers : true,
+        }) 
+
+        // gsap.to("#section1 .parallaxs_item_img", {
+        //     duration: 2, 
+        //     rotation: 720,
+        //     scale : 0.1,
+        //     scrollTrigger: {
+        //         trigger: "#section1",
+        //         scrub: true, // true, 1, 2,.....
+        //     }
+        // });
+    </script>
+</body>
+</html>

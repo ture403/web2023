@@ -114,7 +114,7 @@ main {
     width: 100%;
     padding-bottom: 56.25%;
     position: relative;
-    z-index: -1;
+    /* z-index: -1; */
     overflow: hidden;
 }
 .parallax_item-img {
@@ -123,10 +123,17 @@ main {
     top: 0;
     background-image: url(../img/sliderEffect05-1-min.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
     width: 110%;
     height: 110%;
     filter: saturate(0%);
-    transition: filter 1s;
+    transition: all 1s;
+    
+}
+.parallax_item-img:hover {
+    filter: saturate(100%);
+    transform: scale(1.025);
 }
 .parallax__item:nth-child(1) .parallax_item-img {
     background-image: url(../img/sliderEffect01-min.jpg);
@@ -161,6 +168,8 @@ main {
     margin-top: -5vw;
     margin-left: -4vw;
     word-break: keep-all;
+    position: relative;
+    z-index: 100;
 }
 .parallax__item_desc:nth-child(even) .prallax_item_desc {
     margin-left: auto;
