@@ -1,0 +1,51 @@
+#cardType{
+    margin-top: 80px;
+    margin-bottom: 64px;
+}
+#cardType .card__desc {
+    display: flex;
+    justify-content: space-between;
+}
+#cardType .card__desc .title {
+    font-size: 22px;
+    font-weight: 700;
+}
+#cardType .card__desc .card_desc a{
+    font-size: 14px;
+    color: #858589;
+}
+#cardType .card__desc .card_desc em {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/icon-more.png);
+    background-position: 50% 50%;
+    vertical-align: top;
+    
+}
+#cardType .cardWrap {
+    margin-top: 36px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#cardType .cardWrap > div {
+    width: 49%;
+    margin-bottom: 56px;
+}
+#cardType .cardWrap > div figure a img {
+    width: 100%;
+    height: auto;
+}
+#cardType .cardWrap > div h3 {
+    margin-top: 24px;
+    font-weight: 700;
+    font-size: 26px;
+}
+#cardType .cardWrap > div p {
+    margin-top: 16px;
+    font-size: 16px;
+    line-height: 160%;
+}
+
+

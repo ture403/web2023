@@ -1,0 +1,123 @@
+#imgTextType{
+    margin-top: 80px;
+}
+#imgTextType .title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 32px;
+}
+.imgTextWrap {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.imgTextWrap > div {
+    width: 23%;
+    min-height: 445px;
+    margin-bottom: 56px;
+}
+.imgTextWrap > div figure {
+    width: 100%;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    position: relative;
+}
+.imgTextWrap > div figure img {
+    min-width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+.imgTextWrap > div figure button {
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    border: none;
+    border-radius: 6px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,.1);
+}
+.imgTextWrap > div figure button span {
+    background-image: url(../img/cart.svg);
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.imgTextWrap .imgText__content {
+    margin-top: 16px;
+}
+.imgTextWrap .imgText__content > span{
+    border: 1px solid #ff5c35;
+    color: #ff5c35;
+    box-sizing: border-box;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 10px;
+    font-weight: 700;
+}
+.imgTextWrap .imgText__content .pack {
+    border: 1px solid #000;
+    color: #000;
+}
+.imgTextWrap .imgText__content h3{
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 400;
+    white-space: break-spaces;
+}
+.imgTextWrap .imgText__content h3 em{
+    margin-right: 8px;
+    font-weight: 700;
+}
+.imgTextWrap .imgText__content > p{
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: 700;
+}
+.imgTextWrap .imgText__content .after{
+    margin-top: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 14px;
+}
+.imgTextWrap .imgText__content .after span {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url(../img/star.svg);
+    margin-right: 4px;
+    margin-top: -2px;
+}
+.imgTextWrap .imgText__content .after div:first-child{
+    margin-right: 5px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.imgTextWrap .imgText__content .after div:last-child{
+    margin-right: 4px;
+}
+
+.imgTextWrap .imgText__content .hashtag {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 8px;
+    font-size: 12px;
+}
+.imgTextWrap .imgText__content .hashtag div {
+    display: inline;
+    margin-top: 4px;
+    margin-right: 6px;
+    background-color: #f2f2f2;
+    padding: 4px 9px;
+    border: 1px solid #eaeaea;
+    border-radius: 4px;
+    color: #636366;
+}

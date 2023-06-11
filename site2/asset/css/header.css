@@ -1,0 +1,136 @@
+#headerType {
+    width: 100%;
+    background-color: #fff;
+    /* position: fixed; */
+    z-index: 1000;
+}
+.heaer_banner {
+    background-color: #ff5c35;
+    height: 40px;
+    color: #fff;
+}
+.header_banner_inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: 40px;
+}
+.header_banner_inner p{
+    padding: 0 24px 0px 24px;
+    font-weight: 700;
+    font-size: 15px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header_banner_inner p span {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-image: url(../img/icon-arrow-right.png);
+}
+.header_banner_inner p::after{
+    content: "";
+    width: 1px;
+    height: 16px;
+    background-color: #fff;
+    position: absolute;
+    top: 4px;
+    right: 0;
+}
+.header_banner_inner p:last-child:after{
+    display: none;
+}
+.header_title{
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+.header__memu a span{
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-image: url(../img/icon-menu.png);
+    padding-bottom: 10px;
+    background-repeat: no-repeat;
+}
+.header__logo a span{
+    display: block;
+    width: 53px;
+    height: 30px;
+    background-image: url(../img/icon-logo.png);
+}
+.header__img{
+    padding-bottom: 10px;
+}
+.header__img .inner{
+    display: flex;
+}
+.header__img .inner .barket span {
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-image: url(../img/icon-cart.png);
+    background-repeat: no-repeat;
+    padding-right: 20px;
+}
+.header__img .inner .info {
+    position: relative;
+}
+.header__img .inner .info span {
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-image: url(../img/icon-user.png);
+    position: relative;
+}
+.header__img .inner .info span::after{
+    content: "";
+    background-image: url(../img/icon-badge-welcome.png);
+    width: 112px;
+    height: 26px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    bottom: -25px;
+    right: 0;
+}
+.header_nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.header_nav_list ul li {
+    display: inline-block;
+}
+.header_nav_list ul li a {
+    font-size: 100%;
+    margin-right: 36px;
+    font-weight: 700;
+}
+.header_nav_list ul li:first-child{
+    position: relative;
+}
+.header_nav_list .hot {
+    display: block;
+    position: absolute;
+    top: -12px;
+    left: 25px;
+    font-size: 10px;
+    text-align: center;
+    color: #ff5c35;
+}
+.header_nav_desc ul li {
+    display: inline-block;
+}
+.header_nav_desc ul li a{
+    font-weight: 400;
+    font-size: 14px;
+    margin-left: 24px;
+}

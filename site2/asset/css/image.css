@@ -1,0 +1,57 @@
+#imageType{
+    margin-top: 80px;
+}
+#imageType .image_title {
+    padding-top: 11px;
+    font-size: 22px;
+    font-weight: 700;
+}
+#imageType .image_title em{
+    color: #ff5c35;
+}
+#imageType .image_desc {
+    margin-top: 6px;
+    color: #858589;
+    font-size: 14px;
+}
+#imageType .movie_title {
+    width: 100%;
+    margin-top: 32px;
+}
+#imageType .movie_title a {
+    line-height: 24px;
+    font-size: 14px;
+    color: #858589;
+}
+#imageType .movie_title em {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url(../img/icon-more.png);
+    background-position: 50% 50%;
+    vertical-align: top;
+}
+#imageType .movie{
+    width: 100%;
+    height: 758px;
+    margin-top: 32px;
+    overflow: hidden;
+}
+#imageType .image_content {
+    margin-top: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#imageType .image_content > div {
+    width: 30%;
+}
+#imageType .image_content > div h4 {
+    font-size: 24px;
+    color: #ff5c35;
+    font-weight: 700;
+}
+#imageType .image_content > div p {
+    margin-top: 18px;
+    font-size: 16px;
+}
