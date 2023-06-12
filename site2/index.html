@@ -375,23 +375,35 @@
     <script>
         const swiper = new Swiper('.swiper', {
             slidesPerView: 3,
+            centeredSlides: true,
             loop: true,
-            loopAdditionalSlides: 3, // 추가적인 슬라이드 개수
             // slidesPerGroup: 3,
             // centeredSlides: true, 
                 autoplay: {
                 delay: 2000,
                 disableOnInteraction: false,
             },
+            
         });
     </script>
     <script>
         const header = document.querySelector("#headerType")
         const banner = document.querySelector(".heaer_banner");
-        const banner_desc = document.querySelector(".header_banner_inner")
-        window.addEventListener("scroll",()=>{
+        const title = document.querySelector(".header_title");
+        const bannerType = document.querySelector("#bannerType");
+        const banner_desc = document.querySelector(".header_banner_inner");
+
+        window.addEventListener("scroll",(e)=>{
             banner_desc.style.display ="none";
             banner.style.backgroundColor = "#fff";
+            header.style.position="fixed";
+            bannerType.style.marginTop = "0"
+            if(window.scrollY == 0){
+                banner_desc.style.display ="flex";
+                banner.style.backgroundColor = "#ff5c35";
+                header.style.position="relative";
+                bannerType.style.marginTop = "20px"
+            }
         })
     </script>
 </body>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="webstoryboy">
+    <meta name="description" content="웹 퍼블리셔를 위한 정보 공유 사이트입니다.">
+    <meta name="keywords"
+        content="웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, publisher, css3, html, markup, design, Webstoryboy">
+    <title>june | Class</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/css/bootstrap.css" rel="stylesheet">
+    <link href="../assets/css/docs.min.css" rel="stylesheet">
+    <link href="../assets/css/prism.css" rel="stylesheet">
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon" sizes="57x57" href="../assets/ico/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../assets/ico/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../assets/ico/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/ico/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../assets/ico/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../assets/ico/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../assets/ico/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../assets/ico/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/ico/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../assets/ico/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../assets/ico/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/ico/favicon-16x16.png">
+    <link rel="manifest" href="../assets/ico/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="../assets/ico/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+        
+
+    <!-- Facebook meta tags -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="웹스토리보이" />
+    <meta property="og:url" content="http://ture403.dothome.co.kr/" />
+    <meta property="og:image" content="http://ture403.dothome.co.kr//assets/ico/icon.jng" />
+    <meta property="og:site_name" content="웹스토리보이" />
+    <meta property="og:description" content="웹과 관련된 정보를 제공합니다." />
+
+    <!-- twitter meta tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@webstoryboy" />
+    <meta name="twitter:title" content="웹스토리보이" />
+    <meta name="twitter:description" content="웹과 관련된 정보를 제공합니다." />
+    <meta property="twitter:image" content="http://ture403.dothome.co.kr//assets/ico/icon.jng" />
+
+    <!-- 웹 폰트 -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gaegu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.../assets2/js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+    <a class="sr-only" href="#content">Skip to main content</a>
+
+    <header class="navbar navbar-inverse navbar-static-top bs-docs-nav" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="../index.html" class="navbar-brand">jun yun gi`s &lt;/doc&gt;</a>
+            </div>
+            <nav class="collapse navbar-collapse bs-navbar-collapse pull-right" role="navigation">
+                <ul class="nav navbar-nav">
+                    <li><a href="https://ture403.tistory.com/">Blog</a></li>
+                    <li><a href="https://github.com/ture403/web2023">Github</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="bs-header bgs1" id="content">
+        <div class="container">
+            <h1>vue v1.0 &lt;/doc&gt;</h1>
+            <p><a href="https://ture403.tistory.com/" target="_blank">ture403.tistory.com</a></p>
+        </div>
+    </div>
+
+    <div class="container bs-docs-container">
+        <div class="row">
+            <div class="col-md-9">
+
+                <div class="bs-docs-section">
+                    <h3 id="intro1" class="page-header">vue</h3>
+                    <p class="lead">Vue.js는 JavaScript 프론트엔드 프레임워크로, 사용자 인터페이스를 개발하기 위해 사용됩니다. Vue.js는 MVVM (Model-View-ViewModel) 패턴을 기반으로 하며, 가볍고 유연한 구조를 가지고 있어 개발자들이 웹 애플리케이션을 구축하고 관리하는 데 도움이 됩니다.</p>
+                </div>
+                <!-- intro1 -->
+                <div class="bs-docs-section">
+                    <h3 id="intro2" class="page-header">vue 설치</h3>
+                    <h4 id="intro2-1">2.1 node.js 설치하기</h4>
+                    <p>
+                        웹팩을 시작하기 전에 node.js를 설치해야 합니다.
+                    </p>
+                    <h4 id="intro2-2">2.3 vue 설치</h4>
+<pre><code class="language-js">npm i -g @vue/cli</code></pre>
+
+                    <h4 id="intro2-3">2.4 vue.cli 설정</h4>
+                    <p><code>vue create site-vue</code>을 작성하면 파일이 번들링 됩니다.</p>
+<pre><code class="language-js">Vue CLI v5.0.8
+? Please pick a preset:
+Default ([Vue 3] babel, eslint)
+Default ([Vue 2] babel, eslint)
+> Manually select features
+</code></pre>
+                    <h4 id="intro2-4">2.5 vue.cli 상세 설정</h4>
+<pre><code class="language-js">Vue CLI v5.0.8
+? Please pick a preset: Manually select features
+? Check the features needed for your project: (Press <space> to select, <a> to toggle all, <i> to invert selection, and <enter> to proceed)
+>(*) Babel
+? Check the features needed for your project: (Press <space> to select, <a> to toggle all, <i> to invert selection, and <enter> to proceed)
+(*) Babel
+? Check the features needed for your project: (Press <space> to select, <a> to toggle all, <i> to invert selection, and <enter> to proceed)
+(*) Babel
+? Check the features needed for your project: (Press <space> to select, <a> to toggle all, <i> to invert selection, and <enter> to proceed)
+(*) Babel
+? Check the features needed for your project: (Press <space> to select, <a> to toggle all, <i> to invert selection, and <enter> to proceed)
+(*) Babel
+? Check the features needed for your project: (Press <space> to select, <a> to toggle all, <i> to invert selection, and <enter> to proceed)
+? Check the features needed for your project: Babel, Router, Vuex, CSS Pre-processors, Linter
+? Choose a version of Vue.js that you want to start the project with 3.x
+? Use history mode for router? (Requires proper server setup for index fallback in production) Yes
+? Pick a CSS pre-processor (PostCSS, Autoprefixer and CSS Modules are supported by default): Sass/SCSS (with dart-sass)
+? Pick a linter / formatter config: Prettier
+? Pick additional lint features: Lint on save
+? Where do you prefer placing config for Babel, ESLint, etc.? In dedicated config files
+? Save this as a preset for future projects? No
+? Pick the package manager to use when installing dependencies: NPM
+
+</code></pre>
+                
+    </div>
+    </div>
+            <div class="col-md-3">
+                <div class="bs-sidebar hidden-print affix-top" role="complementary">
+                    <ul class="nav bs-sidenav">
+                        <li class="active"><a href="#intro1">vue 개념</a></li>
+                        <li><a href="#intro2">vue 설치</a>
+                            <ul class="nav">
+                                <li><a href="#intro2-1">Node.js 설치하기</a></li>
+                                <li><a href="#intro2-2">vue 설치</a></li>
+                                <li><a href="#intro2-3">vue.cli 설치</a></li>
+                                <li><a href="#intro2-4">vue.cli 상세 설정</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        <!-- //row -->
+
+    </div>
+    <!-- //container -->
+
+
+    <!-- Footer -->
+    <footer class="bs-footer" role="contentinfo">
+        <div class="container">
+            <ul class="footer-links muted">
+                <li><a href="https://ture403.tistory.com/">juneyungi</a></li>
+            </ul>
+        </div>
+    </footer>
+    <!-- //Footer -->
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../assets/js/jquery-1.9.1.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/docs.min.js"></script>
+    <script src="../assets/js/prism.js"></script>
+</body>
+
+</html>
