@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,9 +13,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
     <style>
-        
+
     </style>
 </head>
+
 <body class="img01 bg01 font10">
     <header id="header">
         <h1>Javascript parallax Effect09</h1>
@@ -110,7 +112,7 @@
                 <figure class="prallax_item_imgWrap">
                     <div class="parallax_item-img"></div>
                 </figure>
-                <p class="parallax__item_desc" >평생 살 것처럼 꿈을 꾸어라.그리고 내일 죽을 것처럼 오늘을 살아라.</p>
+                <p class="parallax__item_desc">평생 살 것처럼 꿈을 꾸어라.그리고 내일 죽을 것처럼 오늘을 살아라.</p>
             </section>
             <!-- //section7 -->
             <section id="section8" class="parallax__item">
@@ -119,7 +121,7 @@
                 <figure class="prallax_item_imgWrap">
                     <div class="parallax_item-img"></div>
                 </figure>
-                <p class="parallax__item_desc" >꿈을 계속 간직하고 있으면 반드시 실현할 때가 온다. </p>
+                <p class="parallax__item_desc">꿈을 계속 간직하고 있으면 반드시 실현할 때가 온다. </p>
             </section>
             <!-- //section8 -->
             <section id="section9" class="parallax__item">
@@ -128,7 +130,7 @@
                 <figure class="prallax_item_imgWrap">
                     <div class="parallax_item-img"></div>
                 </figure>
-                <p class="parallax__item_desc" >길을 잃는 다는 것은 곧 길을 알게 된다는 것이다.</p>
+                <p class="parallax__item_desc">길을 잃는 다는 것은 곧 길을 알게 된다는 것이다.</p>
             </section>
             <!-- //section9 -->
         </div>
@@ -145,12 +147,12 @@
         const lenis = new Lenis()
 
         lenis.on('scroll', (e) => {
-        console.log(e)
+            console.log(e)
         })
 
         function raf(time) {
-        lenis.raf(time)
-        requestAnimationFrame(raf)
+            lenis.raf(time)
+            requestAnimationFrame(raf)
         }
 
         requestAnimationFrame(raf)
@@ -159,22 +161,23 @@
         let proxy = { skew: 0 },
             skewSetter = gsap.quickSetter(".prallax_item_imgWrap", "skewY", "deg"), // fast
             clamp = gsap.utils.clamp(-20, 20);
-            ScrollTrigger.create({
-                onUpdate: (self) => {
-                    let skew = clamp(self.getVelocity() / -300);
-                    if (Math.abs(skew) > Math.abs(proxy.skew)) {
-                        proxy.skew = skew;
-                        gsap.to(proxy, {
-                            skew: 0,
-                            duration: 0.8,
-                            ease: "power3",
-                            overwrite: true,
-                            onUpdate: () => skewSetter(proxy.skew)
-                        });
-                    }
+        ScrollTrigger.create({
+            onUpdate: (self) => {
+                let skew = clamp(self.getVelocity() / -300);
+                if (Math.abs(skew) > Math.abs(proxy.skew)) {
+                    proxy.skew = skew;
+                    gsap.to(proxy, {
+                        skew: 0,
+                        duration: 0.8,
+                        ease: "power3",
+                        overwrite: true,
+                        onUpdate: () => skewSetter(proxy.skew)
+                    });
                 }
-            });
+            }
+        });
     </script>
-</body>
-</html>
 
+</body>
+
+</html>

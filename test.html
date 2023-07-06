@@ -1,24 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
+
 <body>
+  <iframe src="https://www.veed.io/embed/1db2f652-8eea-4e6d-8eda-7e022b2fc26e" width="744" height="504" frameborder="0" title="KakaoTalk_20230615_195610454" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
   <script>
-    function solution(num_list) {
-    var answer = [0,0];
+    const link = [
+      {
+        1: {
+          id: 1,
+          title: "페이스북",
+        },
+        2: {
+          id: 2,
+          title: "인스타",
+        },
+        3: {
+          id: 3,
+          title: "유투브",
+        },
+        4: {
+          id: 4,
+          title: "깃",
+        },
+      },
+      {
+        1: {
+          id: 1,
+          title: "웹표준 사이트",
+        },
+        2: {
+          id: 2,
+          title: "반응형 사이트",
+        },
+        3: {
+          id: 3,
+          title: "패럴랙스 사이트",
+        },
+        4: {
+          id: 4,
+          title: "포트폴리오 사이트",
+        },
+      },
+      {
+        1: {
+          id: 1,
+          title: "이미지 유형",
+        },
+        2: {
+          id: 2,
+          title: "카드 유형",
+        },
+        3: {
+          id: 3,
+          title: "이미지/텍스트 유형",
+        },
+        4: {
+          id: 4,
+          title: "배너 유형",
+        },
+        5: {
+          id: 5,
+          title: "텍스트 유형",
+        },
+        6: {
+          id: 6,
+          title: "푸터 유형",
+        },
+      },
+      {
+        1: {
+          id: 1,
+          title: "검색 이펙트",
+        },
+        2: {
+          id: 2,
+          title: "퀴즈 이팩트",
+        },
+        3: {
+          id: 3,
+          title: "마우스 이펙트",
+        },
+        4: {
+          id: 4,
+          title: "슬라이드 이펙트",
+        },
+        5: {
+          id: 5,
+          title: "패럴랙스 이펙트",
+        },
+        6: {
+          id: 6,
+          title: "게임 이펙트",
+        },
+      },
+      {
+        1: {
+          id: 1,
+          title: "CSS",
+        },
+        2: {
+          id: 2,
+          title: "FONTS",
+        },
+        3: {
+          id: 3,
+          title: "HTML",
+        },
+        4: {
+          id: 4,
+          title: "JAVASCRIPT",
+        },
+        5: {
+          id: 5,
+          title: "REACT",
+        },
+      },
+    ];
 
-    for(let a of num_list){
-        answer[a%2] += 1
-    }
+    // map() 함수를 사용하여 link 배열을 변환합니다.
+    const mappedArray = link.map((item) => {
+      // 현재 객체의 값을 배열로 변환합니다.
+      const values = Object.values(item);
 
-    return answer;
-}
-    solution([1,2,3,4])
+      // 배열의 첫 번째 요소를 추출합니다.
+      const firstValue = values[0];
 
+      // 추출한 요소를 반환합니다.
+      return {
+        id: firstValue.id,
+        title: firstValue.title,
+      };
+    });
+
+    console.log(mappedArray);
+    console.log(link[0][2].id)
   </script>
 </body>
+
 </html>
